@@ -1,0 +1,168 @@
+<!-- spellAttackTemplate -->
+<rolltemplate class="sheet-rolltemplate-spellattack">
+    <div class="sheet-template-container">
+	    <div class="sheet-template-header">Spell Attack Roll: {{rollmade}}</div>
+        <!-- if roll over 95 automatic fail -->
+        <div class="sheet-normal">
+            <span>Attack power: {{ attackpower }}</span>
+        </div>
+        {{#rollLess() rollmade 6 }}
+            <div class="sheet-special">
+                <span>Beats opponent power of:&nbsp;{{ roll5 }} or less</span>
+            </div>
+        {{/rollLess() rollmade 6 }}
+
+        {{#rollGreater() rollmade 5}}
+            {{#rollLess() rollmade 11}}
+                <div class="sheet-special">
+                    <span>Beats opponent power of:&nbsp;{{ roll10 }} or less</span>
+                </div>
+            {{/rollLess() rollmade 11}}
+        {{/rollGreater() rollmade 5}}
+
+        {{#rollGreater() rollmade 10}}
+            {{#rollLess() rollmade 16}}
+                <div class="sheet-special">
+                    <span>Beats opponent power of:&nbsp;{{ roll15 }} or less</span>
+                </div>
+            {{/rollLess() rollmade 16}}
+        {{/rollGreater() rollmade 10}}
+
+        {{#rollGreater() rollmade 15}}
+            {{#rollLess() rollmade 21}}
+                <div class="sheet-special">
+                    <span>Beats opponent power of:&nbsp;{{ roll20 }} or less</span>
+                </div>
+            {{/rollLess() rollmade 21}}
+        {{/rollGreater() rollmade 15}}
+
+        {{#rollGreater() rollmade 20}}
+            {{#rollLess() rollmade 26}}
+                <div class="sheet-special">
+                    <span>Beats opponent power of:&nbsp;{{ roll25 }} or less</span>
+                </div>
+            {{/rollLess() rollmade 26}}
+        {{/rollGreater() rollmade 20}}
+
+        {{#rollGreater() rollmade 25}}
+            {{#rollLess() rollmade 31}}
+                <div class="sheet-special">
+                    <span>Beats opponent power of:&nbsp;{{ roll30 }} or less</span>
+                </div>
+            {{/rollLess() rollmade 31}}
+        {{/rollGreater() rollmade 25}}
+
+        {{#rollGreater() rollmade 30}}
+            {{#rollLess() rollmade 36}}
+                <div class="sheet-special">
+                    <span>Beats opponent power of:&nbsp;{{ roll35 }} or less</span>
+                </div>
+            {{/rollLess() rollmade 36}}
+        {{/rollGreater() rollmade 30}}
+
+        {{#rollGreater() rollmade 35}}
+            {{#rollLess() rollmade 41}}
+                <div class="sheet-special">
+                    <span>Beats opponent power of:&nbsp;{{ roll40 }} or less</span>
+                </div>
+            {{/rollLess() rollmade 41}}
+        {{/rollGreater() rollmade 35}}
+
+        {{#rollGreater() rollmade 40}}
+            {{#rollLess() rollmade 46}}
+                <div class="sheet-special">
+                    <span>Beats opponent power of:&nbsp;{{ roll45 }} or less</span>
+                </div>
+            {{/rollLess() rollmade 46}}
+        {{/rollGreater() rollmade 40}}
+
+        {{#rollGreater() rollmade 45}}
+            {{#rollLess() rollmade 51}}
+                <div class="sheet-special">
+                    <span>Beats opponent power of:&nbsp;{{ roll50 }} or less</span>
+                </div>
+            {{/rollLess() rollmade 51}}
+        {{/rollGreater() rollmade 45}}
+
+        {{#rollGreater() rollmade 50}}
+            {{#rollLess() rollmade 56}}
+                <div class="sheet-normal">
+                    <span>Beats opponent power of:&nbsp;{{ roll55 }} or less</span>
+                </div>
+            {{/rollLess() rollmade 56}}
+        {{/rollGreater() rollmade 50}}
+
+        {{#rollGreater() rollmade 55}}
+            {{#rollLess() rollmade 61}}
+                <div class="sheet-fail">
+                    <span>Beats opponent power of:&nbsp;{{ roll60 }} or less</span>
+                </div>
+            {{/rollLess() rollmade 61}}
+        {{/rollGreater() rollmade 55}}
+
+        {{#rollGreater() rollmade 60}}
+            {{#rollLess() rollmade 66}}
+                <div class="sheet-fail">
+                    <span>Beats opponent power of:&nbsp;{{ roll65 }} or less</span>
+                </div>
+            {{/rollLess() rollmade 66}}
+        {{/rollGreater() rollmade 60}}
+
+        {{#rollGreater() rollmade 65}}
+            {{#rollLess() rollmade 71}}
+                <div class="sheet-fail">
+                    <span>Beats opponent power of:&nbsp;{{ roll70 }} or less</span>
+                </div>
+            {{/rollLess() rollmade 71}}
+        {{/rollGreater() rollmade 65}}
+
+        {{#rollGreater() rollmade 70}}
+            {{#rollLess() rollmade 76}}
+                <div class="sheet-fail">
+                    <span>Beats opponent power of:&nbsp;{{ roll75 }} or less</span>
+                </div>
+            {{/rollLess() rollmade 76}}
+        {{/rollGreater() rollmade 70}}
+
+        {{#rollGreater() rollmade 75}}
+            {{#rollLess() rollmade 81}}
+                <div class="sheet-fail">
+                    <span>Beats opponent power of:&nbsp;{{ roll80 }} or less</span>
+                </div>
+            {{/rollLess() rollmade 81}}
+        {{/rollGreater() rollmade 75}}
+
+        {{#rollGreater() rollmade 80}}
+            {{#rollLess() rollmade 86}}
+                <div class="sheet-fail">
+                    <span>Beats opponent power of:&nbsp;{{ roll85 }} or less</span>
+                </div>
+            {{/rollLess() rollmade 86}}
+        {{/rollGreater() rollmade 80}}
+
+        {{#rollGreater() rollmade 85}}
+            {{#rollLess() rollmade 91}}
+                <div class="sheet-fail">
+                    <span>Beats opponent power of:&nbsp;{{ roll90 }} or less</span>
+                </div>
+            {{/rollLess() rollmade 91}}
+        {{/rollGreater() rollmade 85}}
+
+        {{#rollGreater() rollmade 90}}
+            {{#rollLess() rollmade 96}}
+                <div class="sheet-fail">
+                    <span>Beats opponent power of:&nbsp;{{ roll95 }} or less</span>
+                </div>
+            {{/rollLess() rollmade 96}}
+        {{/rollGreater() rollmade 90}}
+
+        {{#rollGreater() rollmade 95}}
+            {{#rollLess() rollmade 101}}
+                <div class="sheet-fail">
+                    <span>Beats opponent power of:&nbsp;{{ roll100 }} or less</span>
+                </div>
+            {{/rollLess() rollmade 101}}
+        {{/rollGreater() rollmade 95}}
+
+    </div>
+</rolltemplate>

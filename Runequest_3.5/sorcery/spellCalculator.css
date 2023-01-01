@@ -1,0 +1,99 @@
+/* style for sorcery spell calculator grid */
+.sheet-rq35-spell-calculator {
+    display: grid;
+    width: 860px;
+    background: #fff;
+    border: thick double #32a1ce;
+    grid-template-columns: repeat(4, 105px 111px);
+}
+.sheet-rq35-spell-calculator label {
+    color: #5e5e5e;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 12px;
+    grid-column: span 2;
+    margin: 0 auto -6px;
+}
+.sheet-rq35-spell-calculator label.sheet-span1 {
+    grid-column: span 1;
+}
+.sheet-rq35-spell-calculator span {
+    color: #5e5e5e;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 10px;;
+}
+.sheet-rq35-spell-calculator input {
+    margin: 0 auto 10px;
+    text-align: center;
+    font-weight: normal;
+}
+.sheet-rq35-spell-calculator input.sheet-bold-green {
+    font-weight: bold;
+    background-color: #a1fd8e;
+}
+.sheet-rq35-spell-calculator input.sheet-bold-amber {
+    font-weight: bold;
+    background-color: #f3cd20;
+}
+
+.sheet-rq35-spell-calculator input[type=number] {
+    width: 75px !important;
+}
+.sheet-rq35-spell-calculator input[type=text] {
+    width: 90px;
+}
+.sheet-rq35-spell-calculator button[type=action] {
+    width: 53px;
+    height: 25px;
+    margin-bottom: 11px;
+    margin-left: 17px;
+    font-size: 13px;
+    background-image: -webkit-linear-gradient(top, #8ee8fd, #32a1ce);
+    background-repeat: repeat-x;
+}
+.sheet-rq35-spell-calculator button[type=action]:hover{
+    background-image: -webkit-linear-gradient(top, #32a1ce, #8ee8fd);
+    background-repeat: repeat-x;
+}
+.sheet-rq35-spell-calculator button[type=roll] {
+    grid-row: span 3;
+    width: 25px;
+    margin: 0 auto 10px auto !important;
+}
+.sheet-span2 {
+    grid-column: span 2 !important;
+}
+input.sheet-span2 {
+    width: 200px !important;
+}
+.sheet-row3 {
+    grid-row: span 3 !important;
+}
+div.sheet-spell-title {
+    grid-column-start: 1;
+    grid-column-end: span 8;
+    font-weight: bold;
+    color: #32a1ce;
+    font-size: 14px;
+    border-top: #32a1ce70 solid 1px;
+    border-bottom: #32a1ce70 solid 1px;
+    margin: 10px 0;
+    padding: 10px 0 2px;
+    display: grid;
+    grid-template-columns: 400px 20px 40px 400px;
+}
+
+div.sheet-spell-title > label {
+    color: #32a1ce;
+    border-bottom: none !important;
+}
+
+.sheet-right {
+    text-align: right !important;
+}
+.sheet-left {
+    text-align: left !important;
+}

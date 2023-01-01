@@ -1,0 +1,59 @@
+/* style for melee combat grid */
+.sheet-rq35-combat {
+    display: grid;
+    width: 860px;
+    background: #fff;
+    border: thick double #32a1ce;
+    grid-template-columns: 45px 119px repeat(5, 60px) 45px 55px 55px 55px 50px 45px 45px 45px;
+    grid-template-rows: auto;
+}
+.sheet-rq35-combat div.repcontainer {
+    grid-column-start: 1;
+    grid-column-end: 16;
+}
+.sheet-rq35-combat div.repcontainer div.repitem {
+    display: inline-grid;
+    width: 860px;
+    grid-template-columns: 45px 119px repeat(5, 60px) 45px 55px 55px 55px 50px 45px 45px 45px;
+    grid-template-rows: auto;
+}
+.sheet-rq35-combat div.repcontainer input[type="checkbox"] {
+    margin: 6px 0 0 5px;
+    width: 45px;
+}
+.sheet-rq35-combat div.repcontainer input[type="text"] {
+    margin-left: auto;
+    margin-right: auto;
+    width: 115px;
+}
+.sheet-rq35-combat div.repcontainer button {
+    margin-left: auto;
+    margin-right: auto;
+    width: 16px;
+}
+.sheet-rq35-combat label {
+    color: #5e5e5e;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 11px
+}
+.sheet-rq35-combat input {
+    margin-left: auto;
+    margin-right: auto;
+}
+.sheet-rq35-combat button {
+    margin-left: auto;
+    margin-right: auto;
+}
+/* combat multiline display */
+div.repcontrol {
+    grid-column-start: 1;
+    grid-column-end: span 15;
+    padding: 10px 20px 5px 20px;
+}
+div.sheet-navigation {
+    display: inline-grid;
+    grid-template-columns: 1px repeat(10, 87px) 1px;
+}
+

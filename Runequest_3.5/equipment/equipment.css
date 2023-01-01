@@ -1,0 +1,56 @@
+/* style for elementals grid */
+.sheet-rq35-equipment {
+    display: grid;
+    width: 860px;
+    background: #fff;
+    border: thick double #32a1ce;
+    grid-template-columns: 100px 280px 100px 100px 280px;
+    grid-template-rows: auto;
+}
+.sheet-rq35-equipment div.repcontainer {
+    grid-column-start: 1;
+    grid-column-end: span 5;
+}
+.sheet-rq35-equipment div.repcontainer div.repitem {
+    display: inline-grid;
+    width: 860px;
+    grid-template-columns: 100px 280px 100px 100px 280px;
+    grid-template-rows: auto;
+}
+.sheet-rq35-equipment div.repcontainer input[type="text"] {
+    margin-left: auto;
+    margin-right: auto;
+    width: 260px;
+}
+.sheet-rq35-equipment div.repcontainer input[type="text"].sheet-rq35-smalltext  {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60px;
+}
+.sheet-rq35-equipment div.repcontainer input[type="number"] {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60px;
+}
+.sheet-rq35-equipment div.repcontainer button {
+    margin-left: auto;
+    margin-right: auto;
+    width: 16px;
+}
+.sheet-rq35-equipment label {
+    color: #5e5e5e;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 11px
+}
+.sheet-rq35-equipment input {
+    margin-left: auto;
+    margin-right: auto;
+}
+/* sorcery-spells multiline display */
+.sheet-rq35-equipment div.repcontrol {
+    grid-column-start: 1;
+    grid-column-end: span 8;
+    padding: 10px 20px 5px 20px;
+}

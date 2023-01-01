@@ -1,0 +1,59 @@
+/* style for spirits and ghosts grid */
+.sheet-rq35-bound-spirit {
+    display: grid;
+    width: 860px;
+    background: #fff;
+    border: thick double #32a1ce;
+    grid-template-columns: 120px repeat(2, 80px) 120px 460px;
+    grid-template-rows: auto;
+}
+.sheet-rq35-bound-spirit div.repcontainer {
+    grid-column-start: 1;
+    grid-column-end: span 5;
+}
+.sheet-rq35-bound-spirit div.repcontainer div.repitem {
+    display: inline-grid;
+    width: 860px;
+    grid-template-columns: 120px repeat(2, 80px) 120px 460px;
+    grid-template-rows: auto;
+}
+.sheet-rq35-bound-spirit div.repcontainer input[type="text"] {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    height: 28px;
+}
+.sheet-rq35-bound-spirit div.repcontainer input[type="number"] {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60px;
+}
+.sheet-rq35-bound-spirit div.repcontainer button {
+    margin-left: auto;
+    margin-right: auto;
+    width: 16px;
+}
+.sheet-rq35-bound-spirit label {
+    color: #5e5e5e;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 11px
+}
+.sheet-rq35-bound-spirit textarea {
+    width: 95%;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.sheet-rq35-bound-spirit input {
+    margin-left: auto;
+    margin-right: auto;
+    height: 28px;
+}
+/* spirit-skills multiline display */
+.sheet-rq35-bound-spirit div.repcontrol {
+    grid-column-start: 1;
+    grid-column-end: span 5;
+    padding: 10px 20px 5px 20px;
+}

@@ -1,0 +1,145 @@
+<!-- HeldSpellTemplate -->
+<rolltemplate class="sheet-rolltemplate-spellcalculator">
+    <div class="sheet-template-container">
+	    <div class="sheet-template-header">Casting Spell {{name}}<br>
+        Rolled: {{rollmade}}</div>
+        {{#rollLess() shortfall 1}}
+        <div class="sheet-info">
+            <span>Range: {{rangemeter}} <strong>meters</strong></span><br>
+            {{#rollGreater() multispell 0}}
+                <span>Multispell: {{multispell}}</span><br>
+            {{/rollGreater() multispell 0}}
+            {{#rollGreater() accuracy 0}}
+                 <span>Accuracy: {{accuracy}}</span><br>
+            {{/rollGreater() accuracy 0}}
+            {{#rollGreater() ease 0}}
+                 <span>Ease: {{ease}}</span><br>
+            {{/rollGreater() ease 0}}
+            {{#rollGreater() force 0}}
+                 <span>Force: {{force}}</span><br>
+            {{/rollGreater() force 0}}
+            {{#rollGreater() hold 0}}
+                 <span>Hold: {{hold}}</span><br>
+            {{/rollGreater() hold 0}}
+            {{#rollGreater() permanence 0}}
+                 <span>Permanence: {{permanence}}</span><br>
+            {{/rollGreater() permanence 0}}
+            {{#rollGreater() reinforce 0}}
+                 <span>Reinforce: {{reinforce}}</span><br>
+            {{/rollGreater() reinforce 0}}
+            {{#rollGreater() speed 0}}
+                 <span>Speed: {{speed}}</span><br>
+            {{/rollGreater() speed 0}}
+            <span>Spell cost:&nbsp;&nbsp;&nbsp;&nbsp; {{totalmp}} Magic Points</span><br>
+            <span>Time to cast: {{totalsr}} Strike Ranks</span>
+        </div>
+        <!-- if roll over 99 automatic fumble -->
+        {{#rollGreater() rollmade 99 }}
+            <div class="sheet-fumble">
+                <span>Fumbled Roll:&nbsp;&nbsp;&nbsp;{{ normal }} &#10005; &#10005;</span>
+            </div>
+        {{/rollGreater() rollmade 99 }}
+        <!-- rolled 99 or less check for fumbles etc. -->
+        {{#rollLess() rollmade 100}}
+            <!-- if roll over 95 automatic fail -->
+            {{#rollGreater() rollmade 95}}
+                <!-- they failed but did they fumble? -->
+                {{#rollGreater() rollmade fumbleminus}}
+                    <div class="sheet-fumble">
+                        <span>Fumbled Roll:&nbsp;&nbsp;&nbsp;{{ normal }} &#10005; &#10005;</span>
+                    </div>
+                {{/rollGreater() rollmade fumbleminus}}
+                <!-- not a fumble but still a fail -->
+                {{#rollLess() rollmade fumble}}
+                    <div class="sheet-fail">
+                        <span>Missed Roll:&nbsp;&nbsp;&nbsp;&nbsp;{{ normal }} &#10005;</span>
+                    </div>
+                {{/rollLess() rollmade fumble}}
+            {{/rollGreater() rollmade 95}}
+            <!-- Not an automatic miss so check against their skill -->
+            {{#rollLess() rollmade 96}}
+                {{#rollGreater() rollmade normal}}
+                    <div class="sheet-fail">
+                        <span>Missed Roll:&nbsp;&nbsp;&nbsp;&nbsp;{{ normal }} &#10005;</span>
+                    </div>
+                {{/rollGreater() rollmade normal}}
+                {{#rollLess() rollmade normalplus}}
+                    <div class="sheet-normal">
+                        <span>Normal success: {{ normal }} &#10004;</span>
+                    </div>
+                {{/rollLess() rollmade normalplus}}
+                <!-- special must be a minimum of 1 (use specmin) -->
+                {{#rollLess() special 1}}
+                    {{#rollGreater() rollmade 1}}
+                        <div class="sheet-special">
+                            <span>Special success: {{ specmin }} &#10005;</span>
+                        </div>
+                    {{/rollGreater() rollmade 1}}
+                    {{#rollLess() rollmade 2}}
+                        <div class="sheet-special">
+                            <span>Special success: {{ specmin }} &#10004;&#10004;</span>
+                        </div>
+                    {{/rollLess() rollmade 2}}
+                {{/rollLess() special 1}}
+
+                <!-- player has special of at least 1 (use special) -->
+                {{#rollGreater() special 0}}
+                    {{#rollGreater() rollmade special}}
+                        <div class="sheet-special">
+                            <span>Special success: {{ special }} &#10005;</span>
+                        </div>
+                    {{/rollGreater() rollmade special}}
+                    {{#rollLess() rollmade specialplus}}
+                        <div class="sheet-special">
+                            <span>Special success: {{ special }} &#10004;&#10004;</span>
+                        </div>
+                    {{/rollLess() rollmade specialplus}}
+                {{/rollGreater() special 0}}
+
+                <!-- critical must be minimum 1 -->
+                {{#rollLess() critical 1}}
+                    {{#rollGreater() rollmade 1}}
+                        <div class="sheet-critical">
+                            <span>Critical success:&nbsp;&nbsp;{{ critmin }} &#10005;</span>
+                        </div>
+                    {{/rollGreater() rollmade 1}}
+                    {{#rollLess() rollmade 2}}
+                        <div class="sheet-critical">
+                            <span>Critical success:&nbsp;&nbsp;{{ critmin }} &#10004;&#10004;&#10004;</span>
+                        </div>
+                    {{/rollLess() rollmade 2}}
+                {{/rollLess() critical 1}}
+
+                <!-- player has critical of at least 1 -->
+                {{#rollGreater() critical 0}}
+                    {{#rollGreater() rollmade critical}}
+                        <div class="sheet-critical">
+                            <span>Critical success:&nbsp;&nbsp;{{ critical }} &#10005;</span>
+                        </div>
+                    {{/rollGreater() rollmade critical}}
+                    {{#rollLess() rollmade criticalplus}}
+                        <div class="sheet-critical">
+                            <span>Critical success:&nbsp;&nbsp;{{ critical }} &#10004;&#10004;&#10004;</span>
+                        </div>
+                    {{/rollLess() rollmade criticalplus}}
+                {{/rollGreater() critical 0}}
+
+            {{/rollLess() rollmade 96}}
+
+        {{/rollLess() rollmade 100}}
+
+        {{/rollLess() shortfall 1}}
+        <!-- not enough skill to cast -->
+        {{#rollGreater() shortfall 0}}
+        <div class="sheet-fumble">
+            <span>You have a short fall of {{shortfall}} points</span>
+            <span>Maximum Spell Skill is {{totalskill}} but you need at least {{skillneeded}} to cast this!</span>
+        </div>
+        <div class="sheet-fumble">
+            <span>Try increasing your ceremony or reducing the number of arts in the spell.</span>
+        </div>
+        {{/rollGreater() shortfall 0}}
+
+
+    </div>
+</rolltemplate>

@@ -1,0 +1,2454 @@
+.charsheet .sheet-rq35 {
+  background: white;
+  color: black;
+  font-size: 13px;
+  line-height: 13px;
+  margin: 0;
+  overflow: visible;
+  padding: 0;
+}
+.charsheet p {
+    margin: 20px 0 0 10px;
+    color: #32a1ce;
+}
+.sheet-rq35-title {
+    display: grid;
+    width: 860px;
+    background: #fff;
+    border: thick double #32a1ce;
+    grid-template-columns:
+            [label-a] 8% [value-a] 15% [label-b] 8% [value-b] 15%
+            [label-c] 10% [value-c] 15% [label-d] 10% [value-d] 15%;
+    grid-template-rows: 3fr;
+    padding: 5px 0;
+}
+.sheet-rq35-title label {
+    color: #5e5e5e;
+    padding-top: 5px;
+    text-align: right;
+    font-size: 11px;
+    font-weight: bold;
+    width: 90px;
+}
+.sheet-rq35-title input {
+    align-self: center;
+    width: 129px;
+}
+.center {
+    text-align: center!important;
+}
+.red {
+    color: #ce3232 !important;
+}.sheet-rq35-stats {
+    display: grid;
+    background: #fff;
+    border: thick double #32a1ce;
+    width: 860px;
+    grid-template-columns: 100px 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    padding: 5px 0;
+}
+.sheet-rq35-stats input {
+    width: 90px;
+    alignment: center;
+}
+.sheet-rq35-stats label {
+    color: #5e5e5e;
+    text-align: right;
+    padding-top: 5px;
+    font-weight: bold;
+    font-size: 11px;
+}
+p.sheet-header {
+    grid-row-start: 1;
+    grid-row-end: -1;
+}
+.sheet-rq35-stats label.sheet-title {
+    font-size: 14px;
+    text-align: center;
+}
+.sheet-rq35-stats input.sheet-stats {
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.sheet-rq35-stats button {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 22px;
+    height: 22px;
+}/* style for human armour grid */
+.sheet-rq35-armour {
+    display: grid;
+    background: #fff;
+    border: thick double #32a1ce;
+    width: 860px;
+    grid-template-columns: 60px 60px 60px 260px 60px 60px 60px 60px repeat(3, 60px);
+    grid-template-rows: repeat(8,3em);
+}
+.sheet-rq35-armour input.sheet-stats {
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.sheet-rq35-armour label {
+    color: #5e5e5e;
+    text-align: center;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 11px;
+}
+.sheet-rq35-armour p {
+    color: #5e5e5e;
+    text-align: left;
+    font-size: 10px;
+    margin-top: 11px;
+}
+
+/* armour navigation tabs */
+.sheet-armour-tabs {
+    display: inline-grid;
+    grid-template-columns: 1px 174px repeat(8, 87px) 1px;
+}
+/* style for four-legged armour grid */
+.sheet-fourlegged-armour {
+    display: grid;
+    background: #fff;
+    border: thick double #32a1ce;
+    width: 860px;
+    grid-template-columns: 59px 60px 100px 220px 60px 60px 60px 60px repeat(3, 59px);
+    grid-template-rows: repeat(8,3em);
+}
+.sheet-fourlegged-armour input.sheet-stats {
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.sheet-fourlegged-armour label {
+    color: #5e5e5e;
+    text-align: center;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 11px;
+}
+.sheet-fourlegged-armour p {
+    color: #5e5e5e;
+    text-align: left;
+    font-size: 10px;
+    margin-top: 11px;
+}
+/* style for four-legged armour grid */
+.sheet-griffin-armour {
+    display: grid;
+    background: #fff;
+    border: thick double #32a1ce;
+    width: 860px;
+    grid-template-columns: 59px 60px 100px 220px 60px 60px 60px 60px repeat(3, 59px);
+    grid-template-rows: repeat(10,3em);
+}
+.sheet-griffin-armour input.sheet-stats {
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.sheet-griffin-armour label {
+    color: #5e5e5e;
+    text-align: center;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 11px;
+}
+.sheet-griffin-armour p {
+    color: #5e5e5e;
+    text-align: left;
+    font-size: 10px;
+    margin-top: 11px;
+}
+.sheet-wyrm-armour {
+    display: grid;
+    background: #fff;
+    border: thick double #32a1ce;
+    width: 860px;
+    grid-template-columns: 60px 60px 60px 260px 60px 60px 60px 60px repeat(3, 60px);
+    grid-template-rows: repeat(7,3em);
+}
+
+.sheet-wyrm-armour input.sheet-stats  {
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sheet-wyrm-armour label {
+    color: #5e5e5e;
+    text-align: center;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+.sheet-wyrm-armour p {
+    color: #5e5e5e;
+    text-align: left;
+    font-size: 10px;
+    margin-top: 11px;
+}
+/* style for attributes grid */
+.sheet-rq35-attributes {
+    display: grid;
+    width: 860px;
+    background: #fff;
+    border: thick double #32a1ce;
+    grid-template-columns: repeat(4, 135px 80px);
+    grid-template-rows: repeat(2, 3em);
+    padding: 5px 0;
+}
+.sheet-rq35-attributes input {
+    width: 90px;
+    align-self: center;
+    margin-left: 5px;
+}
+.sheet-rq35-attributes input[type="text"] {
+    width: 46px;
+    align-self: center;
+}
+.sheet-rq35-attributes label {
+    color: #5e5e5e;
+    text-align: right;
+    padding-top: 10px;
+    font-weight: bold;
+    font-size: 11px;
+}
+/* style for power gain qualified grid */
+.sheet-rq35-power-gain {
+    display: grid;
+    width: 860px;
+    background: #fff;
+    border: thick double #32a1ce;
+    grid-template-columns: 80px 400px repeat(3, 100px);
+    grid-template-rows: auto;
+    padding: 5px 0;
+}
+.sheet-rq35-power-gain div.repcontainer {
+    grid-column-start: 1;
+    grid-column-end: span 5;
+}
+.sheet-rq35-power-gain div.repcontainer div.repitem {
+    display: inline-grid;
+    width: 860px;
+    grid-template-columns: 80px 400px repeat(3, 100px);
+    grid-template-rows: auto;
+}
+.sheet-rq35-power-gain div.repcontainer input[type="text"] {
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+}
+.sheet-rq35-power-gain div.repcontainer button {
+    margin-left: auto;
+    margin-right: auto;
+    width: 16px;
+}
+.sheet-rq35-power-gain label {
+    color: #5e5e5e;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 11px
+}
+.sheet-rq35-power-gain input {
+    margin-left: auto;
+    margin-right: auto;
+}
+.sheet-rq35-power-gain input[type="text"] {
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+}
+.sheet-rq35-power-gain button {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 22px;
+    height: 22px;
+}
+/* style for encumbrance grid */
+.sheet-rq35-encumbrance {
+    display: grid;
+    width: 860px;
+    background: #fff;
+    border: thick double #32a1ce;
+    grid-template-columns: repeat(5, 140px) 160px;
+    grid-template-rows: auto;
+}
+.sheet-rq35-encumbrance div.repcontainer {
+    grid-column-start: 1;
+    grid-column-end: span 6;
+}
+.sheet-rq35-encumbrance div.repcontainer div.repitem {
+    display: inline-grid;
+    width: 860px;
+    grid-template-columns: repeat(5, 140px) 160px;
+    grid-template-rows: auto;
+}
+.sheet-rq35-encumbrance input[type="number"] {
+    margin: 0 auto 10px auto;
+    width: 50px;
+}
+.sheet-rq35-encumbrance div.repcontainer button {
+    margin-left: auto;
+    margin-right: auto;
+    width: 16px;
+}
+.sheet-rq35-encumbrance label {
+    color: #5e5e5e;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 11px
+}
+.sheet-rq35-encumbrance input {
+    margin-left: auto;
+    margin-right: auto;
+}
+/* style for power gain template */
+.sheet-rolltemplate-powergain div.sheet-template-container {
+	border: 2px solid #000 !important;
+	border-radius: 3px 3px 3px 3px;
+}
+
+.sheet-rolltemplate-powergain .sheet-template-header {
+	background-color: rgba(112, 32, 130,1);
+	color: #000;
+	padding: 2px;
+	border-bottom: 1px solid black;
+	line-height: 1.6em;
+	font-size: 1.2em;
+}
+
+.sheet-rolltemplate-powergain div {
+	padding: 5px;
+	border-bottom: 1px solid black;
+}
+
+.sheet-rolltemplate-powergain div:nth-child(odd) {
+	background-color: rgba(217, 217, 214,1);
+}
+
+.sheet-rolltemplate-powergain div:nth-child(even) {
+	background-color: rgba(233, 233, 233,1);
+}
+.sheet-rolltemplate-powergain div.sheet-normal:nth-child(even)  {
+	background-color: #e5fd8e !important;
+}
+
+.sheet-rolltemplate-powergain div.sheet-special:nth-child(even)  {
+	background-color: #d0fd8e !important;
+}
+
+.sheet-rolltemplate-powergain div.sheet-critical:nth-child(even)  {
+	background-color: #a1fd8e !important;
+}
+
+.sheet-rolltemplate-powergain div.sheet-supercritical:nth-child(even)  {
+	background-color: #8efdd3 !important;
+}
+
+.sheet-rolltemplate-powergain div.sheet-hypercritical:nth-child(even)  {
+	background-color: #8ee8fd !important;
+}
+.sheet-rolltemplate-powergain div.sheet-normal:nth-child(odd)  {
+	background-color: #e5fd8e !important;
+}
+
+.sheet-rolltemplate-powergain div.sheet-special:nth-child(odd)  {
+	background-color: #d0fd8e !important;
+}
+
+.sheet-rolltemplate-powergain div.sheet-critical:nth-child(odd)  {
+	background-color: #a1fd8e !important;
+}
+
+.sheet-rolltemplate-powergain div.sheet-supercritical:nth-child(odd)  {
+	background-color: #8efdd3 !important;
+}
+
+.sheet-rolltemplate-powergain div.sheet-hypercritical:nth-child(odd)  {
+	background-color: #8ee8fd !important;
+}
+
+.sheet-rolltemplate-powergain div.sheet-fail:nth-child(odd)  {
+	background-color: #f28282 !important;
+}
+
+.sheet-rolltemplate-powergain div.sheet-fail:nth-child(even)  {
+	background-color: #f28282 !important;
+}
+
+.sheet-rolltemplate-powergain .inlinerollresult  {
+	display: inline-block;
+	min-width: 1.5em;
+	text-align: center;
+	border: 2px solid rgba(167, 168, 170,1);
+}
+
+.sheet-rolltemplate-powergain .inlinerollresult.fullcrit {
+	border: 2px solid #3FB315;
+}
+
+.sheet-rolltemplate-powergain .inlinerollresult.fullfail {
+	border: 2px solid #B31515;
+}
+
+.sheet-rolltemplate-powergain .inlinerollresult.importantroll {
+	border: 2px solid #4A57ED;
+}
+/* style for body layout */
+.body-description {
+    grid-column-start: 9;
+    grid-column-end: 12;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    padding-left: 5px;
+}
+p.sheet-center {
+    color: #5e5e5e;
+    text-align: center;
+    align-self: center;
+    margin-top: -4px;
+}
+input.sheet-armour-description {
+    width: 250px;
+    align-self: center;
+}
+/* style for dodge skill grid */
+.sheet-rq35-dodge {
+    display: grid;
+    width: 860px;
+    background: #fff;
+    border: thick double #32a1ce;
+    grid-template-columns: 70px repeat(4,90px) 70px 70px 90px 100px 100px;
+    grid-template-rows: auto;
+}
+
+.sheet-rq35-dodge  input[type="text"] {
+    margin-left: auto;
+    margin-right: auto;
+    width: 160px;
+}
+.sheet-rq35-dodge  input[type="number"] {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60px;
+}
+.sheet-rq35-dodge button {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 16px;
+    height: 22px;
+}
+.sheet-rq35-dodge label {
+    color: #5e5e5e;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 11px
+}
+.sheet-rq35-dodge input {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+}
+/* style for melee combat grid */
+.sheet-rq35-combat {
+    display: grid;
+    width: 860px;
+    background: #fff;
+    border: thick double #32a1ce;
+    grid-template-columns: 45px 119px repeat(5, 60px) 45px 55px 55px 55px 50px 45px 45px 45px;
+    grid-template-rows: auto;
+}
+.sheet-rq35-combat div.repcontainer {
+    grid-column-start: 1;
+    grid-column-end: 16;
+}
+.sheet-rq35-combat div.repcontainer div.repitem {
+    display: inline-grid;
+    width: 860px;
+    grid-template-columns: 45px 119px repeat(5, 60px) 45px 55px 55px 55px 50px 45px 45px 45px;
+    grid-template-rows: auto;
+}
+.sheet-rq35-combat div.repcontainer input[type="checkbox"] {
+    margin: 6px 0 0 5px;
+    width: 45px;
+}
+.sheet-rq35-combat div.repcontainer input[type="text"] {
+    margin-left: auto;
+    margin-right: auto;
+    width: 115px;
+}
+.sheet-rq35-combat div.repcontainer button {
+    margin-left: auto;
+    margin-right: auto;
+    width: 16px;
+}
+.sheet-rq35-combat label {
+    color: #5e5e5e;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 11px
+}
+.sheet-rq35-combat input {
+    margin-left: auto;
+    margin-right: auto;
+}
+.sheet-rq35-combat button {
+    margin-left: auto;
+    margin-right: auto;
+}
+/* combat multiline display */
+div.repcontrol {
+    grid-column-start: 1;
+    grid-column-end: span 15;
+    padding: 10px 20px 5px 20px;
+}
+div.sheet-navigation {
+    display: inline-grid;
+    grid-template-columns: 1px repeat(10, 87px) 1px;
+}
+
+/* style for melee attack template */
+.sheet-rolltemplate-test div.sheet-template-container {
+	border: 2px solid #000 !important;
+	border-radius: 3px 3px 3px 3px;
+}
+
+.sheet-rolltemplate-test .sheet-template-header {
+	background-color: rgba(112, 32, 130,1);
+	color: #000;
+	padding: 2px;
+	border-bottom: 1px solid black;
+	line-height: 1.6em;
+	font-size: 1.2em;
+}
+
+.sheet-rolltemplate-test div {
+	padding: 5px;
+	border-bottom: 1px solid black;
+}
+
+.sheet-rolltemplate-test div:nth-child(odd) {
+	background-color: rgba(217, 217, 214,1);
+}
+
+.sheet-rolltemplate-test div:nth-child(even) {
+	background-color: rgba(233, 233, 233,1);
+}
+.sheet-rolltemplate-test div.sheet-normal:nth-child(even)  {
+	background-color: #e5fd8e !important;
+}
+
+.sheet-rolltemplate-test div.sheet-special:nth-child(even)  {
+	background-color: #d0fd8e !important;
+}
+
+.sheet-rolltemplate-test div.sheet-critical:nth-child(even)  {
+	background-color: #a1fd8e !important;
+}
+
+.sheet-rolltemplate-test div.sheet-supercritical:nth-child(even)  {
+	background-color: #8efdd3 !important;
+}
+
+.sheet-rolltemplate-test div.sheet-hypercritical:nth-child(even)  {
+	background-color: #8ee8fd !important;
+}
+.sheet-rolltemplate-test div.sheet-normal:nth-child(odd)  {
+	background-color: #e5fd8e !important;
+}
+
+.sheet-rolltemplate-test div.sheet-special:nth-child(odd)  {
+	background-color: #d0fd8e !important;
+}
+
+.sheet-rolltemplate-test div.sheet-critical:nth-child(odd)  {
+	background-color: #a1fd8e !important;
+}
+
+.sheet-rolltemplate-test div.sheet-supercritical:nth-child(odd)  {
+	background-color: #8efdd3 !important;
+}
+
+.sheet-rolltemplate-test div.sheet-hypercritical:nth-child(odd)  {
+	background-color: #8ee8fd !important;
+}
+
+.sheet-rolltemplate-test div.sheet-fail:nth-child(even)  {
+	background-color: #fde18e !important;
+}
+
+.sheet-rolltemplate-test div.sheet-fumble:nth-child(even)  {
+	background-color: #f28282 !important;
+}
+
+.sheet-rolltemplate-test .inlinerollresult  {
+	display: inline-block;
+	min-width: 1.5em;
+	text-align: center;
+	border: 2px solid rgba(167, 168, 170,1);
+}
+
+.sheet-rolltemplate-test .inlinerollresult.fullcrit {
+	border: 2px solid #3FB315;
+}
+
+.sheet-rolltemplate-test .inlinerollresult.fullfail {
+	border: 2px solid #B31515;
+}
+
+.sheet-rolltemplate-test .inlinerollresult.importantroll {
+	border: 2px solid #4A57ED;
+}
+/* template layout for attack experience check */
+.sheet-rolltemplate-attackexp div.sheet-template-container {
+	border: 2px solid #000 !important;
+	border-radius: 3px 3px 3px 3px;
+}
+
+.sheet-rolltemplate-attackexp .sheet-template-header {
+	background-color: rgba(112, 32, 130,1);
+	color: #000;
+	padding: 2px;
+	border-bottom: 1px solid black;
+	line-height: 1.6em;
+	font-size: 1.2em;
+}
+
+.sheet-rolltemplate-attackexp div {
+	padding: 5px;
+	border-bottom: 1px solid black;
+}
+
+.sheet-rolltemplate-attackexp div:nth-child(odd) {
+	background-color: rgba(217, 217, 214,1);
+}
+
+.sheet-rolltemplate-attackexp div:nth-child(even) {
+	background-color: rgba(233, 233, 233,1);
+}
+.sheet-rolltemplate-attackexp div.sheet-normal:nth-child(even)  {
+	background-color: #e5fd8e !important;
+}
+.sheet-rolltemplate-attackexp div.sheet-fail:nth-child(even)  {
+	background-color: #f28282 !important;
+}
+/* template layout for parry experience check */
+.sheet-rolltemplate-meleedamage div.sheet-template-container {
+	border: 2px solid #000 !important;
+	border-radius: 3px 3px 3px 3px;
+}
+
+.sheet-rolltemplate-meleedamage .sheet-template-header {
+	background-color: rgba(112, 32, 130,1);
+	color: #000;
+	padding: 2px;
+	border-bottom: 1px solid black;
+	line-height: 1.6em;
+	font-size: 1.2em;
+}
+
+.sheet-rolltemplate-meleedamage div {
+	padding: 5px;
+	border-bottom: 1px solid black;
+}
+
+.sheet-rolltemplate-meleedamage div:nth-child(odd) {
+	background-color: rgba(217, 217, 214,1);
+}
+
+.sheet-rolltemplate-meleedamage div:nth-child(even) {
+	background-color: rgba(233, 233, 233,1);
+}
+.sheet-rolltemplate-meleedamage div.sheet-normal:nth-child(even)  {
+	background-color: #e5fd8e !important;
+}
+/* configure the tab buttons */
+.sheet-attributes,
+.sheet-combat,
+.sheet-rqskills,
+.sheet-rqequipment,
+.sheet-rqspirit,
+.sheet-rqdivine,
+.sheet-rqdragon,
+.sheet-rqsorcery,
+.sheet-rqdevices,
+.sheet-rqnotes {display: none;}
+
+/* show the selected tab */
+.sheet-tabstoggle[value="attributes"] ~ div.sheet-attributes,
+.sheet-tabstoggle[value="combat"] ~ div.sheet-combat,
+.sheet-tabstoggle[value="skills"] ~ div.sheet-rqskills,
+.sheet-tabstoggle[value="equipment"] ~ div.sheet-rqequipment,
+.sheet-tabstoggle[value="divine"] ~ div.sheet-rqdivine,
+.sheet-tabstoggle[value="dragon"] ~ div.sheet-rqdragon,
+.sheet-tabstoggle[value="spirit"] ~ div.sheet-rqspirit,
+.sheet-tabstoggle[value="sorcery"] ~ div.sheet-rqsorcery,
+.sheet-tabstoggle[value="devices"] ~ div.sheet-rqdevices,
+.sheet-tabstoggle[value="notes"] ~ div.sheet-rqnotes
+{
+    display: block;
+}
+
+/* tab buttons for armour and hit locations */
+.sheet-rq35-armour,
+.sheet-fourlegged-armour,
+.sheet-griffin-armour,
+.sheet-wyrm-armour {display: none;}
+
+/* show selected hit location tabs */
+input.sheet-location[value="human"] ~ div.sheet-rq35-armour,
+input.sheet-location[value="fourlegged"] ~ div.sheet-fourlegged-armour,
+input.sheet-location[value="griffin"] ~ div.sheet-griffin-armour,
+input.sheet-location[value="wyrm"] ~ div.sheet-wyrm-armour
+{
+    display: grid;
+}
+
+/* look and feel for buttons */
+div.sheet-navigation > button,
+div.sheet-armour-tabs > button {
+    width: 65px;
+    height: 2em;
+    margin-top: 5px;
+    color: #051248;
+    background-image: -webkit-linear-gradient(top, #8ee8fd, #32a1ce);
+    background-repeat: repeat-x;
+}
+div.sheet-armour-tabs > button {
+    color: #fff !important;
+    background-image: -webkit-linear-gradient(top, #fd8e8e, #ce3232) !important;
+    margin-top: 14px;
+    height: 20px;
+}/* style for melee damage grid */
+.sheet-rq35-melee-damage {
+    display: grid;
+    width: 860px;
+    background: #fff;
+    border: thick double #32a1ce;
+    grid-template-columns:  160px repeat(7, 100px);
+    grid-template-rows: auto;
+}
+.sheet-rq35-melee-damage div.repcontainer {
+    grid-column-start: 1;
+    grid-column-end: span 8;
+}
+.sheet-rq35-melee-damage div.repitem {
+    display: inline-grid;
+    width: 860px;
+    grid-template-columns: 160px repeat(7, 100px);
+    grid-template-rows: auto;
+}
+.charsheet .sheet-rq35-melee-damage label {
+    color: #5e5e5e;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 11px;
+}
+.charsheet .sheet-rq35-melee-damage input {
+    margin-left: auto;
+    margin-right: auto;
+}
+.sheet-rq35-melee-damage div.repcontainer input[type="text"] {
+    margin-left: auto;
+    margin-right: auto;
+    width: 130px;
+}
+.sheet-rq35-melee-damage div.repcontainer input.sheet-small-text {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80px;
+}
+.charsheet .sheet-rq35-melee-damage div.repcontainer button {
+    margin-left: auto;
+    margin-right: auto;
+    width: 16px;
+}
+/* modifier buttons */
+div.sheet-rq35-melee-damage div.repcontrol {
+    grid-column-start: 1;
+    grid-column-end: span 8;
+    padding: 10px 20px 5px 20px;
+}
+/* style for missile grid */
+.sheet-rq35-missile {
+    display: grid;
+    width: 860px;
+    background: #fff;
+    border: thick double #32a1ce;
+    grid-template-columns: 45px 130px 87px 100px 70px 80px 75px repeat(3, 90px);
+    grid-template-rows: auto;
+}
+.sheet-rq35-missile div.repcontainer {
+    grid-column-start: 1;
+    grid-column-end: span 10;
+}
+.sheet-rq35-missile div.repitem {
+    display: inline-grid;
+    width: 860px;
+    grid-template-columns: 45px 130px 87px 100px 70px 80px 75px repeat(3, 90px);
+    grid-template-rows: auto;
+}
+.charsheet .sheet-rq35-missile label {
+    color: #5e5e5e;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 11px;
+}
+.charsheet .sheet-rq35-missile input {
+    margin-left: auto;
+    margin-right: auto;
+}
+.sheet-rq35-missile div.repcontainer input[type="text"] {
+    margin-left: auto;
+    margin-right: auto;
+    width: 115px;
+}
+.sheet-rq35-missile div.repcontainer input.sheet-small-text {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80px;
+}
+.charsheet .sheet-rq35-missile div.repcontainer button {
+    margin-left: auto;
+    margin-right: auto;
+    width: 16px;
+}
+/* modifier buttons */
+div.sheet-rq35-missile div.repcontrol {
+    grid-column-start: 1;
+    grid-column-end: span 10;
+    padding: 10px 20px 5px 20px;
+}
+.sheet-rqskills-main {
+    display: grid;
+    width: 860px;
+    background: #fff;
+    grid-template-columns:  420px 20px 420px;
+    grid-template-rows: auto;
+}
+.sheet-rqskills-left {
+    display: inline-grid;
+    width: 420px;
+    grid-column-start: 1;
+}
+.sheet-rqskills-right {
+    display: inline-grid;
+    width: 420px;
+    grid-column-start: 3;
+}
+.sheet-rq35-skills {
+    display: grid;
+    width: 420px;
+    background: #fff;
+    border: thick double #32a1ce;
+    grid-template-columns: 40px 110px 60px 60px 60px 45px 45px;
+    grid-template-rows: auto;
+}
+.charsheet .sheet-rq35-skills label {
+    color: #5e5e5e;
+    text-align: center;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 11px;
+}
+.sheet-rq35-skills div.repcontainer {
+    grid-column-start: 1;
+    grid-column-end: span 5;
+}
+.sheet-rq35-skills div.repitem
+{
+    display: inline-grid;
+    width: 420px;
+    grid-template-columns: 40px 110px 60px 60px 60px 45px 45px;
+    grid-template-rows: auto;
+}
+.sheet-rq35-skills div.sheet-fixeditem
+{
+    display: inline-grid;
+    width: 420px;
+    grid-template-columns: 40px 110px 60px 60px 60px 45px 45px;
+    grid-template-rows: repeat(6, 34px);
+}
+.charsheet .sheet-rq35-skills label {
+    color: #5e5e5e;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 11px;
+}
+.charsheet .sheet-rq35-skills input {
+    margin-left: auto;
+    margin-right: auto;
+}
+.sheet-rq35-skills div.repcontainer input[type="text"],
+.sheet-rq35-skills div.sheet-fixeditem input[type="text"]
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 118px;
+}
+.sheet-rq35-skills div.sheet-fixeditem input {
+    margin-bottom: 6px;
+}
+.sheet-rq35-skills div.repcontainer input.sheet-small-text,
+.sheet-rq35-skills div.sheet-fixeditem input.sheet-small-text {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80px;
+}
+.charsheet .sheet-rq35-skills div.repcontainer button,
+.charsheet .sheet-rq35-skills div.sheet-fixeditem button {
+    margin-left: auto;
+    margin-right: auto;
+    width: 16px;
+}
+.charsheet .sheet-rq35-skills div.sheet-fixeditem button {
+    margin-bottom: 6px !important;
+}
+
+/* modifier buttons */
+div.sheet-rq35-skills div.repcontrol {
+    grid-column-start: 1;
+    grid-column-end: span 6;
+    padding: 10px 10px 5px 10px;
+}/* style for attribute template */
+.sheet-rolltemplate-attribute div.sheet-template-container {
+	border: 2px solid #000 !important;
+	border-radius: 3px 3px 3px 3px;
+}
+
+.sheet-rolltemplate-attribute .sheet-template-header {
+	background-color: rgba(112, 32, 130,1);
+	color: #000;
+	padding: 2px;
+	border-bottom: 1px solid black;
+	line-height: 1.6em;
+	font-size: 1.2em;
+}
+
+.sheet-rolltemplate-attribute div {
+	padding: 5px;
+	border-bottom: 1px solid black;
+}
+
+.sheet-rolltemplate-attribute div:nth-child(odd) {
+	background-color: rgba(217, 217, 214,1);
+}
+
+.sheet-rolltemplate-attribute div:nth-child(even) {
+	background-color: rgba(233, 233, 233,1);
+}
+.sheet-rolltemplate-attribute div.sheet-normal:nth-child(even)  {
+	background-color: #e5fd8e !important;
+}
+
+.sheet-rolltemplate-attribute div.sheet-special:nth-child(even)  {
+	background-color: #d0fd8e !important;
+}
+
+.sheet-rolltemplate-attribute div.sheet-critical:nth-child(even)  {
+	background-color: #a1fd8e !important;
+}
+
+.sheet-rolltemplate-attribute div.sheet-supercritical:nth-child(even)  {
+	background-color: #8efdd3 !important;
+}
+
+.sheet-rolltemplate-attribute div.sheet-hypercritical:nth-child(even)  {
+	background-color: #8ee8fd !important;
+}
+.sheet-rolltemplate-attribute div.sheet-normal:nth-child(odd)  {
+	background-color: #e5fd8e !important;
+}
+
+.sheet-rolltemplate-attribute div.sheet-special:nth-child(odd)  {
+	background-color: #d0fd8e !important;
+}
+
+.sheet-rolltemplate-attribute div.sheet-critical:nth-child(odd)  {
+	background-color: #a1fd8e !important;
+}
+
+.sheet-rolltemplate-attribute div.sheet-supercritical:nth-child(odd)  {
+	background-color: #8efdd3 !important;
+}
+
+.sheet-rolltemplate-attribute div.sheet-hypercritical:nth-child(odd)  {
+	background-color: #8ee8fd !important;
+}
+
+.sheet-rolltemplate-attribute div.sheet-fail:nth-child(odd)  {
+	background-color: #f28282 !important;
+}
+
+.sheet-rolltemplate-attribute div.sheet-fail:nth-child(even)  {
+	background-color: #f28282 !important;
+}
+
+.sheet-rolltemplate-attribute .inlinerollresult  {
+	display: inline-block;
+	min-width: 1.5em;
+	text-align: center;
+	border: 2px solid rgba(167, 168, 170,1);
+}
+
+.sheet-rolltemplate-attribute .inlinerollresult.fullcrit {
+	border: 2px solid #3FB315;
+}
+
+.sheet-rolltemplate-attribute .inlinerollresult.fullfail {
+	border: 2px solid #B31515;
+}
+
+.sheet-rolltemplate-attribute .inlinerollresult.importantroll {
+	border: 2px solid #4A57ED;
+}
+/* template layout for attack experience check */
+.sheet-rolltemplate-training div.sheet-template-container {
+	border: 2px solid #000 !important;
+	border-radius: 3px 3px 3px 3px;
+}
+
+.sheet-rolltemplate-training .sheet-template-header {
+	background-color: rgba(112, 32, 130,1);
+	color: #000;
+	padding: 2px;
+	border-bottom: 1px solid black;
+	line-height: 1.6em;
+	font-size: 1.2em;
+}
+
+.sheet-rolltemplate-training div {
+	padding: 5px;
+	border-bottom: 1px solid black;
+}
+
+.sheet-rolltemplate-training div:nth-child(odd) {
+	background-color: rgba(217, 217, 214,1);
+}
+
+.sheet-rolltemplate-training div:nth-child(even) {
+	background-color: rgba(233, 233, 233,1);
+}
+.sheet-rolltemplate-training div.sheet-normal:nth-child(even)  {
+	background-color: #e5fd8e !important;
+}
+.sheet-rolltemplate-training div.sheet-fail:nth-child(even)  {
+	background-color: #f28282 !important;
+}
+/* style for spirit skills grid */
+.sheet-rq35-spirit-skills {
+    display: grid;
+    width: 860px;
+    background: #fff;
+    border: thick double #32a1ce;
+    grid-template-columns: 210px 70px 70px 210px repeat(3, 100px);
+    grid-template-rows: auto;
+}
+.sheet-rq35-spirit-skills input[type="text"] {
+    margin-left: auto;
+    margin-right: auto;
+    width: 205px;
+}
+.sheet-rq35-spirit-skills button {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 16px;
+}
+.sheet-rq35-spirit-skills label {
+    color: #5e5e5e;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 11px
+}
+.sheet-rq35-spirit-skills input {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* style for spirit spells grid */
+.sheet-rq35-spirit-spells {
+    display: grid;
+    width: 860px;
+    background: #fff;
+    border: thick double #32a1ce;
+    grid-template-columns: repeat(4, 135px 80px);
+    grid-template-rows: auto;
+}
+.sheet-rq35-spirit-spells div.repcontainer {
+    grid-column-start: 1;
+    grid-column-end: span 8;
+}
+.sheet-rq35-spirit-spells div.repcontainer div.repitem {
+    display: inline-grid;
+    width: 860px;
+    grid-template-columns: repeat(4, 135px 80px);
+    grid-template-rows: auto;
+}
+.sheet-rq35-spirit-spells div.repcontainer input[type="text"] {
+    margin-left: auto;
+    margin-right: auto;
+    width: 120px;
+}
+.sheet-rq35-spirit-spells div.repcontainer button {
+    margin-left: auto;
+    margin-right: auto;
+    width: 16px;
+}
+.sheet-rq35-spirit-spells label {
+    color: #5e5e5e;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 11px
+}
+.sheet-rq35-spirit-spells input {
+    margin-left: auto;
+    margin-right: auto;
+}
+/* spirit-skills multiline display */
+.sheet-rq35-spirit-spells div.repcontrol {
+    grid-column-start: 1;
+    grid-column-end: span 8;
+    padding: 10px 20px 5px 20px;
+}
+/* style for spirit skills grid */
+.sheet-rq35-magic-points {
+    display: grid;
+    width: 860px;
+    background: #fff;
+    border: thick double #32a1ce;
+    grid-template-columns: 135px repeat(6 ,121px);
+    grid-template-rows: auto;
+}
+.sheet-rq35-magic-points input[type="text"] {
+    margin-left: auto;
+    margin-right: auto;
+    width: 205px;
+}
+.sheet-rq35-magic-points label {
+    color: #5e5e5e;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 11px
+}
+.sheet-rq35-magic-points input {
+    margin: 0 auto 5px auto;
+}
+.sheet-rq35-magic-points button {
+    width: 16px;
+    height: 21px;
+    margin: auto !important;
+}/* style for spirit spell template */
+.sheet-rolltemplate-spiritspell div.sheet-template-container {
+	border: 2px solid #000 !important;
+	border-radius: 3px 3px 3px 3px;
+}
+
+.sheet-rolltemplate-spiritspell .sheet-template-header {
+	background-color: rgba(112, 32, 130,1);
+	color: #000;
+	padding: 2px;
+	border-bottom: 1px solid black;
+	line-height: 1.6em;
+	font-size: 1.2em;
+}
+
+.sheet-rolltemplate-spiritspell div {
+	padding: 5px;
+	border-bottom: 1px solid black;
+}
+
+.sheet-rolltemplate-spiritspell div:nth-child(odd) {
+	background-color: rgba(217, 217, 214,1);
+}
+
+.sheet-rolltemplate-spiritspell div:nth-child(even) {
+	background-color: rgba(233, 233, 233,1);
+}
+.sheet-rolltemplate-spiritspell div.sheet-normal:nth-child(even)  {
+	background-color: #e5fd8e !important;
+}
+
+.sheet-rolltemplate-spiritspell div.sheet-special:nth-child(even)  {
+	background-color: #d0fd8e !important;
+}
+
+.sheet-rolltemplate-spiritspell div.sheet-critical:nth-child(even)  {
+	background-color: #a1fd8e !important;
+}
+
+.sheet-rolltemplate-spiritspell div.sheet-supercritical:nth-child(even)  {
+	background-color: #8efdd3 !important;
+}
+
+.sheet-rolltemplate-spiritspell div.sheet-hypercritical:nth-child(even)  {
+	background-color: #8ee8fd !important;
+}
+.sheet-rolltemplate-spiritspell div.sheet-normal:nth-child(odd)  {
+	background-color: #e5fd8e !important;
+}
+
+.sheet-rolltemplate-spiritspell div.sheet-special:nth-child(odd)  {
+	background-color: #d0fd8e !important;
+}
+
+.sheet-rolltemplate-spiritspell div.sheet-critical:nth-child(odd)  {
+	background-color: #a1fd8e !important;
+}
+
+.sheet-rolltemplate-spiritspell div.sheet-supercritical:nth-child(odd)  {
+	background-color: #8efdd3 !important;
+}
+
+.sheet-rolltemplate-spiritspell div.sheet-hypercritical:nth-child(odd)  {
+	background-color: #8ee8fd !important;
+}
+
+.sheet-rolltemplate-spiritspell div.sheet-fail:nth-child(odd)  {
+	background-color: #f28282 !important;
+}
+
+.sheet-rolltemplate-spiritspell div.sheet-fail:nth-child(even)  {
+	background-color: #f28282 !important;
+}
+
+.sheet-rolltemplate-spiritspell .inlinerollresult  {
+	display: inline-block;
+	min-width: 1.5em;
+	text-align: center;
+	border: 2px solid rgba(167, 168, 170,1);
+}
+
+.sheet-rolltemplate-spiritspell .inlinerollresult.fullcrit {
+	border: 2px solid #3FB315;
+}
+
+.sheet-rolltemplate-spiritspell .inlinerollresult.fullfail {
+	border: 2px solid #B31515;
+}
+
+.sheet-rolltemplate-spiritspell .inlinerollresult.importantroll {
+	border: 2px solid #4A57ED;
+}
+/* style for spirit skills grid */
+.sheet-rq35-divine-spells {
+    display: grid;
+    width: 860px;
+    background: #fff;
+    border: thick double #32a1ce;
+    grid-template-columns: repeat(2, 160px 100px) 140px 100px 100px;
+    grid-template-rows: auto;
+}
+.sheet-rq35-divine-spells div.repcontainer {
+    grid-column-start: 1;
+    grid-column-end: span 7;
+}
+.sheet-rq35-divine-spells div.repcontainer div.repitem {
+    display: inline-grid;
+    width: 860px;
+    grid-template-columns: repeat(2, 160px 100px) 140px 100px 100px;
+    grid-template-rows: auto;
+}
+.sheet-rq35-divine-spells div.repcontainer input[type="text"] {
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+}
+.sheet-rq35-divine-spells div.repcontainer button {
+    margin-left: auto;
+    margin-right: auto;
+}
+.sheet-rq35-divine-spells label {
+    color: #5e5e5e;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 11px
+}
+.sheet-rq35-divine-spells input {
+    margin-left: auto;
+    margin-right: auto;
+}
+/* divine-skills multiline display */
+.sheet-rq35-divine-spells div.repcontrol {
+    grid-column-start: 1;
+    grid-column-end: span 7;
+    padding: 10px 20px 5px 20px;
+}
+/* style for spirit skills grid */
+.sheet-rq35-primalcalc {
+    display: grid;
+    width: 860px;
+    background: #fff;
+    border: thick double #32a1ce;
+    grid-template-columns: repeat(5, 143px) 145px;
+    grid-template-rows: auto;
+}
+.sheet-rq35-primalcalc div.repcontainer {
+    grid-column-start: 1;
+    grid-column-end: span 5;
+}
+.sheet-rq35-primalcalc div.repcontainer div.repitem {
+    display: inline-grid;
+    width: 860px;
+    grid-template-columns: repeat(5, 143px) 145px;
+    grid-template-rows: auto;
+}
+.sheet-rq35-primalcalc div.repcontainer input[type="text"] {
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+}
+.sheet-rq35-primalcalc button {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 16px;
+    height: 20px;
+}
+.sheet-rq35-primalcalc label {
+    color: #5e5e5e;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 11px
+}
+.sheet-rq35-primalcalc input {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+}
+.sheet-rq35-primalcalc input[type="text"] {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60px;
+}
+/* style for magic items grid */
+.sheet-rq35-spell-notes {
+    display: grid;
+    width: 860px;
+    background: #fff;
+    border: thick double #32a1ce;
+    grid-template-columns: 860px;
+    grid-template-rows: auto;
+}
+.sheet-rq35-spell-notes div.repcontainer {
+    grid-column-start: 1;
+    grid-column-end: span 1;
+}
+.sheet-rq35-spell-notes div.repcontainer div.repitem {
+    display: inline-grid;
+    width: 860px;
+    grid-template-columns: 860px;
+    grid-template-rows: auto;
+}
+
+.sheet-rq35-spell-notes label {
+    color: #5e5e5e;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 11px
+}
+.sheet-rq35-spell-notes textarea {
+    width: 95%;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.sheet-rq35-spell-notes input {
+    margin-left: auto;
+    margin-right: auto;
+}
+/* spirit-skills multiline display */
+.sheet-rq35-spell-notes div.repcontrol {
+    grid-column-start: 1;
+    grid-column-end: span 1;
+    padding: 10px 20px 5px 20px;
+}
+/* style for dragon skills grid */
+.sheet-rq35-dragon-skills {
+    display: grid;
+    width: 860px;
+    background: #fff;
+    border: thick double #32a1ce;
+    grid-template-columns: 80px 180px 80px 80px 80px repeat(3, 120px);
+    grid-template-rows: auto;
+}
+.sheet-rq35-dragon-skills div.repcontainer {
+    grid-column-start: 1;
+    grid-column-end: span 7;
+}
+.sheet-rq35-dragon-skills div.repcontainer div.repitem {
+    display: inline-grid;
+    width: 860px;
+    grid-template-columns: 80px 180px 80px 80px 80px repeat(3, 120px);
+    grid-template-rows: auto;
+}
+.sheet-rq35-dragon-skills  input[type="text"] {
+    margin-left: auto;
+    margin-right: auto;
+    width: 170px;
+}
+.sheet-rq35-dragon-skills button {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 16px;
+    height: 22px;
+}
+.sheet-rq35-dragon-skills label {
+    color: #5e5e5e;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 11px
+}
+.sheet-rq35-dragon-skills input {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+}
+/* style for dragon spells grid */
+.sheet-rq35-dragon-spells {
+    display: grid;
+    width: 860px;
+    background: #fff;
+    border: thick double #32a1ce;
+    grid-template-columns: 130px 60px 100px repeat(2, 120px) 50px 70px 70px 70px 60px;
+    grid-template-rows: auto;
+}
+.sheet-rq35-dragon-spells div.repcontainer {
+    grid-column-start: 1;
+    grid-column-end: span 11;
+}
+.sheet-rq35-dragon-spells div.repcontainer div.repitem {
+    display: inline-grid;
+    width: 860px;
+    grid-template-columns: 130px 60px 100px repeat(2, 120px) 50px 70px 70px 70px 60px;
+    grid-template-rows: auto;
+}
+.sheet-rq35-dragon-spells div.repcontainer input[type="text"] {
+    margin-left: auto;
+    margin-right: auto;
+    width: 110px;
+}
+.sheet-rq35-dragon-spells div.repcontainer button {
+    margin-left: auto;
+    margin-right: auto;
+    width: 16px;
+}
+.sheet-rq35-dragon-spells label {
+    color: #5e5e5e;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 11px
+}
+.sheet-rq35-dragon-spells input {
+    margin-left: auto;
+    margin-right: auto;
+}
+/* dragon-spells multiline display */
+.sheet-rq35-dragon-spells div.repcontrol {
+    grid-column-start: 1;
+    grid-column-end: span 11;
+    padding: 10px 20px 5px 20px;
+}
+/* style for dragon spells grid */
+.sheet-rq35-dragonheld-spells {
+    display: grid;
+    width: 860px;
+    background: #fff;
+    border: thick double #32a1ce;
+    grid-template-columns: 180px 80px 80px 80px 20px 180px 80px 80px 80px;
+    grid-template-rows: auto;
+}
+.sheet-rq35-dragonheld-spells div.repcontainer {
+    grid-column-start: 1;
+    grid-column-end: span 9;
+}
+.sheet-rq35-dragonheld-spells div.repcontainer div.repitem {
+    display: inline-grid;
+    width: 860px;
+    grid-template-columns: 180px 80px 80px 80px 20px 180px 80px 80px 80px;
+    grid-template-rows: auto;
+}
+.sheet-rq35-dragonheld-spells  input[type="text"] {
+    margin-left: auto;
+    margin-right: auto;
+    width: 170px;
+}
+.sheet-rq35-dragonheld-spells button {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    height: 22px;
+}
+.sheet-rq35-dragonheld-spells label {
+    color: #5e5e5e;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 11px
+}
+.sheet-rq35-dragonheld-spells input {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+}
+/* dragon held spells multiline display */
+.sheet-rq35-dragonheld-spells div.repcontrol {
+    grid-column-start: 1;
+    grid-column-end: span 9;
+    padding: 10px 20px 5px 20px;
+}
+/* style for elementals grid */
+.sheet-rq35-equipment {
+    display: grid;
+    width: 860px;
+    background: #fff;
+    border: thick double #32a1ce;
+    grid-template-columns: 100px 280px 100px 100px 280px;
+    grid-template-rows: auto;
+}
+.sheet-rq35-equipment div.repcontainer {
+    grid-column-start: 1;
+    grid-column-end: span 5;
+}
+.sheet-rq35-equipment div.repcontainer div.repitem {
+    display: inline-grid;
+    width: 860px;
+    grid-template-columns: 100px 280px 100px 100px 280px;
+    grid-template-rows: auto;
+}
+.sheet-rq35-equipment div.repcontainer input[type="text"] {
+    margin-left: auto;
+    margin-right: auto;
+    width: 260px;
+}
+.sheet-rq35-equipment div.repcontainer input[type="text"].sheet-rq35-smalltext  {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60px;
+}
+.sheet-rq35-equipment div.repcontainer input[type="number"] {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60px;
+}
+.sheet-rq35-equipment div.repcontainer button {
+    margin-left: auto;
+    margin-right: auto;
+    width: 16px;
+}
+.sheet-rq35-equipment label {
+    color: #5e5e5e;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 11px
+}
+.sheet-rq35-equipment input {
+    margin-left: auto;
+    margin-right: auto;
+}
+/* sorcery-spells multiline display */
+.sheet-rq35-equipment div.repcontrol {
+    grid-column-start: 1;
+    grid-column-end: span 8;
+    padding: 10px 20px 5px 20px;
+}
+/* style for money grid */
+.sheet-rq35-money {
+    display: grid;
+    width: 860px;
+    background: #fff;
+    border: thick double #32a1ce;
+    grid-template-columns: 70px repeat(3, 115px) 20px 80px 115px 115px 115px;
+    grid-template-rows: auto;
+}
+.sheet-rq35-money div.repcontainer {
+    grid-column-start: 1;
+    grid-column-end: span 4;
+}
+.sheet-rq35-money div.repcontainer div.repitem {
+    display: inline-grid;
+    width: 860px;
+    grid-template-columns: 70px repeat(3, 115px) 20px 80px 115px 115px 115px;
+    grid-template-rows: auto;
+}
+.sheet-rq35-money input[type="text"] {
+    margin-left: auto;
+    margin-right: auto;
+    width: 105px;
+}
+.sheet-rq35-money input[type="number"] {
+    margin-left: auto;
+    margin-right: auto;
+    width: 65px;
+}
+.sheet-rq35-money button {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    height: 22px;
+}
+.sheet-rq35-money label {
+    color: #5e5e5e;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 11px
+}
+.sheet-rq35-money input {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+}
+/* dragon held spells multiline display */
+.sheet-rq35-money div.repcontrol {
+    grid-column-start: 1;
+    grid-column-end: span 4;
+    padding: 10px 20px 5px 20px;
+}
+/* style for gems / jewellery grid */
+.sheet-rq35-gems {
+    display: grid;
+    width: 860px;
+    background: #fff;
+    border: thick double #32a1ce;
+    grid-template-columns: 90px 165px 165px 20px 90px 165px 165px;
+    grid-template-rows: auto;
+}
+.sheet-rq35-gems div.repcontainer {
+    grid-column-start: 1;
+    grid-column-end: span 7;
+}
+.sheet-rq35-gems div.repcontainer div.repitem {
+    display: inline-grid;
+    width: 860px;
+    grid-template-columns: 90px 165px 165px 20px 90px 165px 165px;
+    grid-template-rows: auto;
+}
+.sheet-rq35-gems input[type="number"] {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80px;
+}
+.sheet-rq35-gems input[type="text"] {
+    margin-left: auto;
+    margin-right: auto;
+    width: 160px;
+}
+.sheet-rq35-gems button {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    height: 22px;
+}
+.sheet-rq35-gems label {
+    color: #5e5e5e;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 11px
+}
+.sheet-rq35-gems input {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+}
+/* dragon held spells multiline display */
+.sheet-rq35-gems div.repcontrol {
+    grid-column-start: 1;
+    grid-column-end: span 7;
+    padding: 10px 20px 5px 20px;
+}
+/* style for sorcery rituals grid */
+.sheet-rq35-sorcery-rituals {
+    display: grid;
+    width: 860px;
+    background: #fff;
+    border: thick double #32a1ce;
+    grid-template-columns: 180px 100px 100px 90px repeat(3, 130px);
+    grid-template-rows: auto;
+}
+.sheet-rq35-sorcery-rituals div.repcontainer {
+    grid-column-start: 1;
+    grid-column-end: span 6;
+}
+.sheet-rq35-sorcery-rituals  input[type="text"] {
+    margin-left: auto;
+    margin-right: auto;
+    width: 160px;
+}
+.sheet-rq35-sorcery-rituals  input[type="number"] {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60px;
+}
+.sheet-rq35-sorcery-rituals button {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 16px;
+    height: 22px;
+}
+.sheet-rq35-sorcery-rituals label {
+    color: #5e5e5e;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 11px
+}
+.sheet-rq35-sorcery-rituals input {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+}
+/* style for sorcery spells grid */
+.sheet-rq35-sorcery-spells {
+    display: grid;
+    width: 860px;
+    background: #fff;
+    border: thick double #32a1ce;
+    grid-template-columns: 75px 150px repeat(4,75px) 150px 60px 60px 60px;
+    grid-template-rows: auto;
+}
+.sheet-rq35-sorcery-spells div.repcontainer {
+    grid-column-start: 1;
+    grid-column-end: span 9;
+}
+.sheet-rq35-sorcery-spells div.repcontainer div.repitem {
+    display: inline-grid;
+    width: 860px;
+    grid-template-columns: 75px 150px repeat(4,75px) 150px 60px 60px 60px;
+    grid-template-rows: auto;
+}
+.sheet-rq35-sorcery-spells div.repcontainer input[type="text"] {
+    margin-left: auto;
+    margin-right: auto;
+    width: 145px;
+}
+.sheet-rq35-sorcery-spells div.repcontainer input[type="number"] {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50px;
+}
+.sheet-rq35-sorcery-spells div.repcontainer button {
+    margin-left: auto;
+    margin-right: auto;
+    width: 16px;
+}
+.sheet-rq35-sorcery-spells label {
+    color: #5e5e5e;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 11px
+}
+.sheet-rq35-sorcery-spells input {
+    margin-left: auto;
+    margin-right: auto;
+}
+/* sorcery-spells multiline display */
+.sheet-rq35-sorcery-spells div.repcontrol {
+    grid-column-start: 1;
+    grid-column-end: span 9;
+    padding: 10px 20px 5px 20px;
+}
+/* style for held spells grid */
+.sheet-rq35-held-spells {
+    display: grid;
+    width: 860px;
+    background: #fff;
+    border: thick double #32a1ce;
+    grid-template-columns: 60px 40px 140px 60px 60px 60px 20px 60px 40px 140px 60px 60px 60px;
+    grid-template-rows: auto;
+}
+.sheet-rq35-held-spells div.repcontainer {
+    grid-column-start: 1;
+    grid-column-end: span 11;
+}
+.sheet-rq35-held-spells div.repcontainer div.repitem {
+    display: inline-grid;
+    width: 860px;
+    grid-template-columns: 60px 40px 140px 60px 60px 60px 20px 60px 40px 140px 60px 60px 60px;
+    grid-template-rows: auto;
+}
+.sheet-rq35-held-spells div.repcontainer input[type="text"] {
+    margin-left: auto;
+    margin-right: auto;
+    width: 140px;
+}
+.sheet-rq35-held-spells div.repcontainer button {
+    margin-left: auto;
+    margin-right: auto;
+    width: 16px;
+}
+.sheet-rq35-held-spells label {
+    color: #5e5e5e;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 11px
+}
+.sheet-rq35-held-spells input {
+    margin-left: auto;
+    margin-right: auto;
+}
+/* sorcery-spells multiline display */
+.sheet-rq35-held-spells div.repcontrol {
+    grid-column-start: 1;
+    grid-column-end: span 11;
+    padding: 10px 20px 5px 20px;
+}
+input.sheet-range-meters {
+    width: 70px !important;
+    text-align: right;
+}/* style for held spells grid */
+.sheet-rq35-running-spells {
+    display: grid;
+    width: 860px;
+    background: #fff;
+    border: thick double #32a1ce;
+    grid-template-columns: 80px 190px repeat(4, 90px) 190px;
+    grid-template-rows: auto;
+}
+.sheet-rq35-running-spells div.repcontainer {
+    grid-column-start: 1;
+    grid-column-end: span 7;
+}
+.sheet-rq35-running-spells div.repcontainer div.repitem {
+    display: inline-grid;
+    width: 860px;
+    grid-template-columns: 80px 190px repeat(4, 90px) 190px;
+    grid-template-rows: auto;
+}
+.sheet-rq35-running-spells div.repcontainer input[type="text"] {
+    margin-left: auto;
+    margin-right: auto;
+    width: 180px;
+}
+.sheet-rq35-running-spells div.repcontainer button {
+    margin-left: auto;
+    margin-right: auto;
+    width: 16px;
+}
+.sheet-rq35-running-spells label {
+    color: #5e5e5e;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 11px
+}
+.sheet-rq35-running-spells input {
+    margin-left: auto;
+    margin-right: auto;
+}
+/* sorcery-spells multiline display */
+.sheet-rq35-running-spells div.repcontrol {
+    grid-column-start: 1;
+    grid-column-end: span 8;
+    padding: 10px 20px 5px 20px;
+}
+/* style for sorcery skills grid */
+.sheet-rq35-sorcery-skills {
+    display: grid;
+    width: 860px;
+    background: #fff;
+    border: thick double #32a1ce;
+    grid-template-columns: 180px 91px 91px repeat(3, 166px);
+    grid-template-rows: auto;
+}
+.sheet-rq35-sorcery-skills div.repcontainer {
+    grid-column-start: 1;
+    grid-column-end: span 6;
+}
+.sheet-rq35-sorcery-skills div.repcontainer div.repitem {
+    display: inline-grid;
+    width: 860px;
+    grid-template-columns: 180px 91px 91px repeat(3, 166px);
+    grid-template-rows: auto;
+}
+.sheet-rq35-sorcery-skills  input[type="text"] {
+    margin-left: auto;
+    margin-right: auto;
+    width: 160px;
+}
+.sheet-rq35-sorcery-skills  input[type="number"] {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60px;
+}
+.sheet-rq35-sorcery-skills button {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 16px;
+    height: 22px;
+}
+.sheet-rq35-sorcery-skills label {
+    color: #5e5e5e;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 11px
+}
+.sheet-rq35-sorcery-skills input {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+}
+/* style for held spells grid */
+.sheet-rq35-vows {
+    display: grid;
+    width: 860px;
+    background: #fff;
+    border: thick double #32a1ce;
+    grid-template-columns: 12px repeat(11,76px);
+    grid-template-rows: auto;
+}
+.sheet-rq35-vows div.repcontainer {
+    grid-column-start: 1;
+    grid-column-end: span 11;
+}
+.sheet-rq35-vows div.repcontainer div.repitem {
+    display: inline-grid;
+    width: 860px;
+    grid-template-columns: 12px repeat(11,76px);
+    grid-template-rows: auto;
+}
+.sheet-rq35-vows input[type="checkbox"] {
+    margin: -5px auto 15px auto;
+
+}
+.sheet-rq35-vows input[type="number"] {
+    margin: 5px auto 10px auto;
+    height: 35px;
+    width: 55px;
+}
+.sheet-rq35-vows input[type="text"] {
+    margin-left: auto;
+    margin-right: auto;
+    width: 180px;
+}
+.sheet-rq35-vows label {
+    color: #5e5e5e;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 11px
+}
+.sheet-rq35-vows input {
+    margin-left: auto;
+    margin-right: auto;
+}
+/* style for spirit spell template */
+.sheet-rolltemplate-heldspell div.sheet-template-container {
+	border: 2px solid #000 !important;
+	border-radius: 3px 3px 3px 3px;
+}
+
+.sheet-rolltemplate-heldspell .sheet-template-header {
+	background-color: rgba(112, 32, 130,1);
+	color: #000;
+	padding: 2px;
+	border-bottom: 1px solid black;
+	line-height: 1.6em;
+	font-size: 1.2em;
+}
+
+.sheet-rolltemplate-heldspell div {
+	padding: 5px;
+	border-bottom: 1px solid black;
+}
+
+.sheet-rolltemplate-heldspell div:nth-child(odd) {
+	background-color: rgba(217, 217, 214,1);
+}
+
+.sheet-rolltemplate-heldspell div:nth-child(even) {
+	background-color: rgba(233, 233, 233,1);
+}
+.sheet-rolltemplate-heldspell div.sheet-normal:nth-child(even)  {
+	background-color: #e5fd8e !important;
+}
+
+.sheet-rolltemplate-heldspell div.sheet-normal:nth-child(odd)  {
+	background-color: #e5fd8e !important;
+}
+
+.sheet-rolltemplate-heldspell div.sheet-special:nth-child(odd)  {
+	background-color: #d0fd8e !important;
+}
+
+.sheet-rolltemplate-heldspell .inlinerollresult  {
+	display: inline-block;
+	min-width: 1.5em;
+	text-align: center;
+	border: 2px solid rgba(167, 168, 170,1);
+}
+
+.sheet-rolltemplate-heldspell .inlinerollresult.fullcrit {
+	border: 2px solid #3FB315;
+}
+
+.sheet-rolltemplate-heldspell .inlinerollresult.fullfail {
+	border: 2px solid #B31515;
+}
+
+.sheet-rolltemplate-heldspell .inlinerollresult.importantroll {
+	border: 2px solid #4A57ED;
+}
+/* style for sorcery spell calculator grid */
+.sheet-rq35-spell-calculator {
+    display: grid;
+    width: 860px;
+    background: #fff;
+    border: thick double #32a1ce;
+    grid-template-columns: repeat(4, 105px 111px);
+}
+.sheet-rq35-spell-calculator label {
+    color: #5e5e5e;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 12px;
+    grid-column: span 2;
+    margin: 0 auto -6px;
+}
+.sheet-rq35-spell-calculator label.sheet-span1 {
+    grid-column: span 1;
+}
+.sheet-rq35-spell-calculator span {
+    color: #5e5e5e;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 10px;;
+}
+.sheet-rq35-spell-calculator input {
+    margin: 0 auto 10px;
+    text-align: center;
+    font-weight: normal;
+}
+.sheet-rq35-spell-calculator input.sheet-bold-green {
+    font-weight: bold;
+    background-color: #a1fd8e;
+}
+.sheet-rq35-spell-calculator input.sheet-bold-amber {
+    font-weight: bold;
+    background-color: #f3cd20;
+}
+
+.sheet-rq35-spell-calculator input[type=number] {
+    width: 75px !important;
+}
+.sheet-rq35-spell-calculator input[type=text] {
+    width: 90px;
+}
+.sheet-rq35-spell-calculator button[type=action] {
+    width: 53px;
+    height: 25px;
+    margin-bottom: 11px;
+    margin-left: 17px;
+    font-size: 13px;
+    background-image: -webkit-linear-gradient(top, #8ee8fd, #32a1ce);
+    background-repeat: repeat-x;
+}
+.sheet-rq35-spell-calculator button[type=action]:hover{
+    background-image: -webkit-linear-gradient(top, #32a1ce, #8ee8fd);
+    background-repeat: repeat-x;
+}
+.sheet-rq35-spell-calculator button[type=roll] {
+    grid-row: span 3;
+    width: 25px;
+    margin: 0 auto 10px auto !important;
+}
+.sheet-span2 {
+    grid-column: span 2 !important;
+}
+input.sheet-span2 {
+    width: 200px !important;
+}
+.sheet-row3 {
+    grid-row: span 3 !important;
+}
+div.sheet-spell-title {
+    grid-column-start: 1;
+    grid-column-end: span 8;
+    font-weight: bold;
+    color: #32a1ce;
+    font-size: 14px;
+    border-top: #32a1ce70 solid 1px;
+    border-bottom: #32a1ce70 solid 1px;
+    margin: 10px 0;
+    padding: 10px 0 2px;
+    display: grid;
+    grid-template-columns: 400px 20px 40px 400px;
+}
+
+div.sheet-spell-title > label {
+    color: #32a1ce;
+    border-bottom: none !important;
+}
+
+.sheet-right {
+    text-align: right !important;
+}
+.sheet-left {
+    text-align: left !important;
+}/* style for spell calculator template */
+.sheet-rolltemplate-spellcalculator div.sheet-template-container {
+	border: 2px solid #000 !important;
+	border-radius: 3px 3px 3px 3px;
+}
+
+.sheet-rolltemplate-spellcalculator .sheet-template-header {
+	background-color: rgba(112, 32, 130,1);
+	color: #000;
+	padding: 2px;
+	border-bottom: 1px solid black;
+	line-height: 1.6em;
+	font-size: 1.2em;
+}
+
+.sheet-rolltemplate-spellcalculator div {
+	padding: 5px;
+	border-bottom: 1px solid black;
+}
+
+.sheet-rolltemplate-spellcalculator div:nth-child(odd) {
+	background-color: rgba(217, 217, 214,1);
+}
+
+.sheet-rolltemplate-spellcalculator div:nth-child(even) {
+	background-color: rgba(233, 233, 233,1);
+}
+.sheet-rolltemplate-spellcalculator div.sheet-fail:nth-child(even)  {
+	background-color: #fde18e !important;
+}
+
+.sheet-rolltemplate-spellcalculator div.sheet-fail:nth-child(odd)  {
+	background-color: #fde18e !important;
+}
+.sheet-rolltemplate-spellcalculator div.sheet-normal:nth-child(even)  {
+	background-color: #e5fd8e !important;
+}
+
+.sheet-rolltemplate-spellcalculator div.sheet-normal:nth-child(odd)  {
+	background-color: #e5fd8e !important;
+}
+
+.sheet-rolltemplate-spellcalculator div.sheet-special:nth-child(odd)  {
+	background-color: #d0fd8e !important;
+}
+.sheet-rolltemplate-spellcalculator div.sheet-special:nth-child(even)  {
+	background-color: #d0fd8e !important;
+}
+.sheet-rolltemplate-spellcalculator div.sheet-critical:nth-child(odd)  {
+	background-color: #a1fd8e !important;
+}
+.sheet-rolltemplate-spellcalculator div.sheet-critical:nth-child(even)  {
+	background-color: #a1fd8e !important;
+}
+.sheet-rolltemplate-spellcalculator div.sheet-info:nth-child(odd)  {
+	background-color: #8ee8fd !important;
+}
+.sheet-rolltemplate-spellcalculator div.sheet-info:nth-child(even)  {
+	background-color: #8ee8fd !important;
+}
+
+.sheet-rolltemplate-spellcalculator .inlinerollresult  {
+	display: inline-block;
+	min-width: 1.5em;
+	text-align: center;
+	border: 2px solid rgba(167, 168, 170,1);
+}
+
+.sheet-rolltemplate-spellcalculator .inlinerollresult.fullcrit {
+	border: 2px solid #3FB315;
+}
+
+.sheet-rolltemplate-spellcalculator div.sheet-fumble:nth-child(even)  {
+	background-color: #f28282 !important;
+	border: 2px solid #B31515;
+}
+.sheet-rolltemplate-spellcalculator div.sheet-fumble:nth-child(odd)  {
+	background-color: #f28282 !important;
+	border: 2px solid #B31515;
+}
+
+.sheet-rolltemplate-spellcalculator .inlinerollresult.importantroll {
+	border: 2px solid #4A57ED;
+}
+/* style for magic items grid */
+.sheet-rq35-magic-items {
+    display: grid;
+    width: 860px;
+    background: #fff;
+    border: thick double #32a1ce;
+    grid-template-columns: repeat(2, 350px) 160px;
+    grid-template-rows: auto;
+}
+.sheet-rq35-magic-items div.repcontainer {
+    grid-column-start: 1;
+    grid-column-end: span 3;
+}
+.sheet-rq35-magic-items div.repcontainer div.repitem {
+    display: inline-grid;
+    width: 860px;
+    grid-template-columns: repeat(2, 350px) 150px;
+    grid-template-rows: auto;
+}
+.sheet-rq35-magic-items div.repcontainer input[type="text"] {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50px;
+}
+.sheet-rq35-magic-items div.repcontainer button {
+    margin-left: auto;
+    margin-right: auto;
+    width: 16px;
+}
+.sheet-rq35-magic-items label {
+    color: #5e5e5e;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 11px
+}
+.sheet-rq35-magic-items textarea {
+    width: 95%;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.sheet-rq35-magic-items input {
+    margin-left: auto;
+    margin-right: auto;
+}
+/* spirit-skills multiline display */
+.sheet-rq35-magic-items div.repcontrol {
+    grid-column-start: 1;
+    grid-column-end: span 3;
+    padding: 10px 20px 5px 20px;
+}
+/* style for spirits and ghosts grid */
+.sheet-rq35-bound-spirit {
+    display: grid;
+    width: 860px;
+    background: #fff;
+    border: thick double #32a1ce;
+    grid-template-columns: 120px repeat(2, 80px) 120px 460px;
+    grid-template-rows: auto;
+}
+.sheet-rq35-bound-spirit div.repcontainer {
+    grid-column-start: 1;
+    grid-column-end: span 5;
+}
+.sheet-rq35-bound-spirit div.repcontainer div.repitem {
+    display: inline-grid;
+    width: 860px;
+    grid-template-columns: 120px repeat(2, 80px) 120px 460px;
+    grid-template-rows: auto;
+}
+.sheet-rq35-bound-spirit div.repcontainer input[type="text"] {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    height: 28px;
+}
+.sheet-rq35-bound-spirit div.repcontainer input[type="number"] {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60px;
+}
+.sheet-rq35-bound-spirit div.repcontainer button {
+    margin-left: auto;
+    margin-right: auto;
+    width: 16px;
+}
+.sheet-rq35-bound-spirit label {
+    color: #5e5e5e;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 11px
+}
+.sheet-rq35-bound-spirit textarea {
+    width: 95%;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.sheet-rq35-bound-spirit input {
+    margin-left: auto;
+    margin-right: auto;
+    height: 28px;
+}
+/* spirit-skills multiline display */
+.sheet-rq35-bound-spirit div.repcontrol {
+    grid-column-start: 1;
+    grid-column-end: span 5;
+    padding: 10px 20px 5px 20px;
+}
+/* style for elementals grid */
+.sheet-rq35-elementals {
+    display: grid;
+    width: 860px;
+    background: #fff;
+    border: thick double #32a1ce;
+    grid-template-columns: 60px 150px 150px repeat(4, 70px) 150px 70px;
+    grid-template-rows: auto;
+}
+.sheet-rq35-elementals div.repcontainer {
+    grid-column-start: 1;
+    grid-column-end: span 9;
+}
+.sheet-rq35-elementals div.repcontainer div.repitem {
+    display: inline-grid;
+    width: 860px;
+    grid-template-columns: 60px 150px 150px repeat(4, 70px) 150px 70px;
+    grid-template-rows: auto;
+}
+.sheet-rq35-elementals div.repcontainer input[type="text"] {
+    margin-left: auto;
+    margin-right: auto;
+    width: 140px;
+}
+.sheet-rq35-elementals div.repcontainer input[type="number"] {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50px;
+}
+.sheet-rq35-elementals div.repcontainer button {
+    margin-left: auto;
+    margin-right: auto;
+    width: 16px;
+}
+.sheet-rq35-elementals label {
+    color: #5e5e5e;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 11px
+}
+.sheet-rq35-elementals input {
+    margin-left: auto;
+    margin-right: auto;
+}
+/* sorcery-spells multiline display */
+.sheet-rq35-elementals div.repcontrol {
+    grid-column-start: 1;
+    grid-column-end: span 9;
+    padding: 10px 20px 5px 20px;
+}
+.sheet-rq35-general-notes textarea {
+    width: 860px;
+    height: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid #32a1ce 2px;
+}/* style for spirit spell template */
+.sheet-rolltemplate-spellattack div.sheet-template-container {
+	border: 2px solid #000 !important;
+	border-radius: 3px 3px 3px 3px;
+}
+
+.sheet-rolltemplate-spellattack .sheet-template-header {
+	background-color: rgba(112, 32, 130,1);
+	color: #000;
+	padding: 2px;
+	border-bottom: 1px solid black;
+	line-height: 1.6em;
+	font-size: 1.2em;
+}
+
+.sheet-rolltemplate-spellattack div {
+	padding: 5px;
+	border-bottom: 1px solid black;
+}
+
+.sheet-rolltemplate-spellattack div:nth-child(odd) {
+	background-color: rgba(217, 217, 214,1);
+}
+
+.sheet-rolltemplate-spellattack div:nth-child(even) {
+	background-color: rgba(233, 233, 233,1);
+}
+.sheet-rolltemplate-spellattack div.sheet-normal:nth-child(even)  {
+	background-color: #e5fd8e !important;
+}
+
+.sheet-rolltemplate-spellattack div.sheet-special:nth-child(even)  {
+	background-color: #d0fd8e !important;
+}
+
+.sheet-rolltemplate-spellattack div.sheet-critical:nth-child(even)  {
+	background-color: #a1fd8e !important;
+}
+
+.sheet-rolltemplate-spellattack div.sheet-supercritical:nth-child(even)  {
+	background-color: #8efdd3 !important;
+}
+
+.sheet-rolltemplate-spellattack div.sheet-hypercritical:nth-child(even)  {
+	background-color: #8ee8fd !important;
+}
+.sheet-rolltemplate-spellattack div.sheet-normal:nth-child(odd)  {
+	background-color: #e5fd8e !important;
+}
+
+.sheet-rolltemplate-spellattack div.sheet-special:nth-child(odd)  {
+	background-color: #d0fd8e !important;
+}
+
+.sheet-rolltemplate-spellattack div.sheet-critical:nth-child(odd)  {
+	background-color: #a1fd8e !important;
+}
+
+.sheet-rolltemplate-spellattack div.sheet-supercritical:nth-child(odd)  {
+	background-color: #8efdd3 !important;
+}
+
+.sheet-rolltemplate-spellattack div.sheet-hypercritical:nth-child(odd)  {
+	background-color: #8ee8fd !important;
+}
+
+.sheet-rolltemplate-spellattack div.sheet-fail:nth-child(odd)  {
+	background-color: #fde18e !important;
+}
+
+.sheet-rolltemplate-spellattack div.sheet-fail:nth-child(even)  {
+	background-color: #fde18e !important;
+}
+
+.sheet-rolltemplate-spellattack .inlinerollresult  {
+	display: inline-block;
+	min-width: 1.5em;
+	text-align: center;
+	border: 2px solid rgba(167, 168, 170,1);
+}
+
+.sheet-rolltemplate-spellattack .inlinerollresult.fullcrit {
+	border: 2px solid #3FB315;
+}
+
+.sheet-rolltemplate-spellattack .inlinerollresult.fullfail {
+	border: 2px solid #B31515;
+}
+
+.sheet-rolltemplate-spellattack .inlinerollresult.importantroll {
+	border: 2px solid #4A57ED;
+}

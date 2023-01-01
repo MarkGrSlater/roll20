@@ -1,0 +1,43 @@
+/* style for magic items grid */
+.sheet-rq35-spell-notes {
+    display: grid;
+    width: 860px;
+    background: #fff;
+    border: thick double #32a1ce;
+    grid-template-columns: 860px;
+    grid-template-rows: auto;
+}
+.sheet-rq35-spell-notes div.repcontainer {
+    grid-column-start: 1;
+    grid-column-end: span 1;
+}
+.sheet-rq35-spell-notes div.repcontainer div.repitem {
+    display: inline-grid;
+    width: 860px;
+    grid-template-columns: 860px;
+    grid-template-rows: auto;
+}
+
+.sheet-rq35-spell-notes label {
+    color: #5e5e5e;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 11px
+}
+.sheet-rq35-spell-notes textarea {
+    width: 95%;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.sheet-rq35-spell-notes input {
+    margin-left: auto;
+    margin-right: auto;
+}
+/* spirit-skills multiline display */
+.sheet-rq35-spell-notes div.repcontrol {
+    grid-column-start: 1;
+    grid-column-end: span 1;
+    padding: 10px 20px 5px 20px;
+}

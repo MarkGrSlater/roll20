@@ -1,0 +1,52 @@
+/* style for money grid */
+.sheet-rq35-money {
+    display: grid;
+    width: 860px;
+    background: #fff;
+    border: thick double #32a1ce;
+    grid-template-columns: 70px repeat(3, 115px) 20px 80px 115px 115px 115px;
+    grid-template-rows: auto;
+}
+.sheet-rq35-money div.repcontainer {
+    grid-column-start: 1;
+    grid-column-end: span 4;
+}
+.sheet-rq35-money div.repcontainer div.repitem {
+    display: inline-grid;
+    width: 860px;
+    grid-template-columns: 70px repeat(3, 115px) 20px 80px 115px 115px 115px;
+    grid-template-rows: auto;
+}
+.sheet-rq35-money input[type="text"] {
+    margin-left: auto;
+    margin-right: auto;
+    width: 105px;
+}
+.sheet-rq35-money input[type="number"] {
+    margin-left: auto;
+    margin-right: auto;
+    width: 65px;
+}
+.sheet-rq35-money button {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    height: 22px;
+}
+.sheet-rq35-money label {
+    color: #5e5e5e;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 11px
+}
+.sheet-rq35-money input {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+}
+/* dragon held spells multiline display */
+.sheet-rq35-money div.repcontrol {
+    grid-column-start: 1;
+    grid-column-end: span 4;
+    padding: 10px 20px 5px 20px;
+}

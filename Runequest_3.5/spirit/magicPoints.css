@@ -1,0 +1,29 @@
+/* style for spirit skills grid */
+.sheet-rq35-magic-points {
+    display: grid;
+    width: 860px;
+    background: #fff;
+    border: thick double #32a1ce;
+    grid-template-columns: 135px repeat(6 ,121px);
+    grid-template-rows: auto;
+}
+.sheet-rq35-magic-points input[type="text"] {
+    margin-left: auto;
+    margin-right: auto;
+    width: 205px;
+}
+.sheet-rq35-magic-points label {
+    color: #5e5e5e;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 11px
+}
+.sheet-rq35-magic-points input {
+    margin: 0 auto 5px auto;
+}
+.sheet-rq35-magic-points button {
+    width: 16px;
+    height: 21px;
+    margin: auto !important;
+}

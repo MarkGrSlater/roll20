@@ -1,0 +1,26 @@
+/* style for attributes grid */
+.sheet-rq35-attributes {
+    display: grid;
+    width: 860px;
+    background: #fff;
+    border: thick double #32a1ce;
+    grid-template-columns: repeat(4, 135px 80px);
+    grid-template-rows: repeat(2, 3em);
+    padding: 5px 0;
+}
+.sheet-rq35-attributes input {
+    width: 90px;
+    align-self: center;
+    margin-left: 5px;
+}
+.sheet-rq35-attributes input[type="text"] {
+    width: 46px;
+    align-self: center;
+}
+.sheet-rq35-attributes label {
+    color: #5e5e5e;
+    text-align: right;
+    padding-top: 10px;
+    font-weight: bold;
+    font-size: 11px;
+}

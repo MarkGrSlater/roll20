@@ -1,0 +1,65 @@
+<!-- attributeTemplate -->
+<rolltemplate class="sheet-rolltemplate-attribute">
+    <div class="sheet-template-container">
+	    <div class="sheet-template-header">{{name}}: {{rollmade}}</div>
+        <!-- if roll over 95 automatic fail -->
+        {{#rollGreater() rollmade 95 }}
+            <div class="sheet-fail">
+                <span>Failed Roll:&nbsp;&nbsp;&nbsp;{{ rollmade }} &#10005;</span>
+            </div>
+        {{/rollGreater() rollmade 95 }}
+        {{#rollLess() rollmade 96}}
+            <!-- Not an automatic miss so check against their skill -->
+            {{#rollGreater() rollmade x5}}
+                <div class="sheet-normal">
+                    <span>Times 5:  {{ x5 }} &#10005;</span>
+                </div>
+            {{/rollGreater() rollmade x5}}
+            {{#rollLess() rollmade x5plus}}
+                <div class="sheet-normal">
+                    <span>Times 5:  {{ x5 }} &#10004;</span>
+                </div>
+            {{/rollLess() rollmade x5plus}}
+            {{#rollGreater() rollmade x4}}
+                <div class="sheet-special">
+                    <span>Times 4:  {{ x4 }} &#10005;</span>
+                </div>
+            {{/rollGreater() rollmade x4}}
+            {{#rollLess() rollmade x4plus}}
+                <div class="sheet-special">
+                    <span>Times 4:  {{ x4 }} &#10004;&#10004;</span>
+                </div>
+            {{/rollLess() rollmade x4plus}}
+            {{#rollGreater() rollmade x3}}
+                <div class="sheet-critical">
+                    <span>Times 3:  {{ x3 }} &#10005;</span>
+                </div>
+            {{/rollGreater() rollmade x3}}
+            {{#rollLess() rollmade x3plus}}
+                <div class="sheet-critical">
+                    <span>Times 3:  {{ x3 }} &#10004;&#10004;&#10004;</span>
+                </div>
+            {{/rollLess() rollmade x3plus}}
+            {{#rollGreater() rollmade x2}}
+                <div class="sheet-supercritical">
+                    <span>Times 2:  {{ x2 }} &#10005;</span>
+                </div>
+            {{/rollGreater() rollmade x2}}
+            {{#rollLess() rollmade x2plus}}
+                <div class="sheet-supercritical">
+                    <span>Times 2: {{ x2 }} &#10004;&#10004;&#10004;&#10004;</span>
+                </div>
+            {{/rollLess() rollmade x2plus}}
+            {{#rollGreater() rollmade x1}}
+                <div class="sheet-hypercritical">
+                    <span>Times 1: {{ x1 }} &#10005;</span>
+                </div>
+            {{/rollGreater() rollmade x1}}
+            {{#rollLess() rollmade x1plus}}
+                <div class="sheet-hypercritical">
+                    <span>Times 1: {{ x1 }} &#10004;&#10004;&#10004;&#10004;&#10004;</span>
+                </div>
+            {{/rollLess() rollmade x1plus}}
+        {{/rollLess() rollmade 96}}
+    </div>
+</rolltemplate>

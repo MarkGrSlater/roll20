@@ -1,0 +1,58 @@
+/* configure the tab buttons */
+.sheet-attributes,
+.sheet-combat,
+.sheet-rqskills,
+.sheet-rqequipment,
+.sheet-rqspirit,
+.sheet-rqdivine,
+.sheet-rqdragon,
+.sheet-rqsorcery,
+.sheet-rqdevices,
+.sheet-rqnotes {display: none;}
+
+/* show the selected tab */
+.sheet-tabstoggle[value="attributes"] ~ div.sheet-attributes,
+.sheet-tabstoggle[value="combat"] ~ div.sheet-combat,
+.sheet-tabstoggle[value="skills"] ~ div.sheet-rqskills,
+.sheet-tabstoggle[value="equipment"] ~ div.sheet-rqequipment,
+.sheet-tabstoggle[value="divine"] ~ div.sheet-rqdivine,
+.sheet-tabstoggle[value="dragon"] ~ div.sheet-rqdragon,
+.sheet-tabstoggle[value="spirit"] ~ div.sheet-rqspirit,
+.sheet-tabstoggle[value="sorcery"] ~ div.sheet-rqsorcery,
+.sheet-tabstoggle[value="devices"] ~ div.sheet-rqdevices,
+.sheet-tabstoggle[value="notes"] ~ div.sheet-rqnotes
+{
+    display: block;
+}
+
+/* tab buttons for armour and hit locations */
+.sheet-rq35-armour,
+.sheet-fourlegged-armour,
+.sheet-griffin-armour,
+.sheet-wyrm-armour {display: none;}
+
+/* show selected hit location tabs */
+input.sheet-location[value="human"] ~ div.sheet-rq35-armour,
+input.sheet-location[value="fourlegged"] ~ div.sheet-fourlegged-armour,
+input.sheet-location[value="griffin"] ~ div.sheet-griffin-armour,
+input.sheet-location[value="wyrm"] ~ div.sheet-wyrm-armour
+{
+    display: grid;
+}
+
+/* look and feel for buttons */
+div.sheet-navigation > button,
+div.sheet-armour-tabs > button {
+    width: 65px;
+    height: 2em;
+    margin-top: 5px;
+    color: #051248;
+    background-image: -webkit-linear-gradient(top, #8ee8fd, #32a1ce);
+    background-repeat: repeat-x;
+}
+div.sheet-armour-tabs > button {
+    color: #fff !important;
+    background-image: -webkit-linear-gradient(top, #fd8e8e, #ce3232) !important;
+    margin-top: 14px;
+    height: 20px;
+}

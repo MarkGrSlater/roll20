@@ -1,0 +1,30 @@
+        <!-- missile -->
+        <p><strong>Missile Weapon Skills</strong></p>
+        <div class="sheet-rq35-missile">
+            <label>Attack Tick</label>
+            <label>Weapon Name</label>
+            <label>Rate of Fire</label>
+            <label>Range<br>(Effective / Max)</label>
+            <label>Attack Base</label>
+            <label>Magic Bonus</label>
+            <label>Total Attack</label>
+            <label>Attack Effective Range</label>
+            <label>Attack Max Range</label>
+            <label>Experience Roll</label>
+            <fieldset class="repeating_missileattack">
+                <input type="checkbox" name="attr_missile_ticked1" value="1">
+                <input type="text" name="attr_missile_name1">
+                <input type="text" class="sheet-small-text" name="attr_missile_rof1">
+                <input type="text" class="sheet-small-text" name="attr_missile_range1">
+                <input type="number" name="attr_missile_attack1" value="0">
+                <input type="number" name="attr_missile_magic1" value="0">
+                <input type="number" name="attr_missile_tatt1" value="@{missile_magic1}+@{missile_attack1}+@{dex_primary}+@{str_secondary}+@{siz_negative}+@{agil_enchant}" disabled >
+                <input type="number" name="attr_missile_tattmax1" value="floor((@{missile_magic1}+@{missile_attack1}+@{dex_primary}+@{str_secondary}+@{siz_negative}+@{agil_enchant})/2)" disabled hidden>
+                <button type="roll" name="roll_weapon1"
+                        value="&{template:test} {{name=@{missile_name1} Attack}}  {{rollmade=[[1d100]]}} {{normal=[[@{missile_tatt1}]]}} {{normalplus=[[@{missile_tatt1}+1]]}} {{fumble=[[100-floor(((100 - @{missile_tatt1}) / 20) + 0.55)]]}} {{fumbleminus=[[100-floor(((100 - @{missile_tatt1}) / 20) + 0.55)-1]]}} {{special=[[round(@{missile_tatt1}/5)]]}} {{specialplus=[[round(@{missile_tatt1}/5)+1]]}} {{critical=[[round(@{missile_tatt1}/20)]]}} {{criticalplus=[[round(@{missile_tatt1}/20)+1]]}} {{supercritical=[[floor(@{missile_tatt1}/100)]]}} {{supercriticalplus=[[floor(@{missile_tatt1}/100)+1]]}} {{hypercritical=[[floor(@{missile_tatt1}/400)]]}} {{hypercriticalplus=[[floor(@{missile_tatt1}/400)+1]]}} {{specmin=[[1]]}} {{critmin=[[1]]}}"></button>
+                <button type="roll" name="roll_maxweapon1"
+                        value="&{template:test} {{name=@{missile_name1} Attack (max range)}}  {{rollmade=[[1d100]]}} {{normal=[[@{missile_tattmax1}]]}} {{normalplus=[[@{missile_tattmax1}+1]]}} {{fumble=[[100-floor(((100 - @{missile_tattmax1}) / 20) + 0.55)]]}} {{fumbleminus=[[100-floor(((100 - @{missile_tattmax1}) / 20) + 0.55)-1]]}} {{fail=[[95]]}} {{special=[[round(@{missile_tattmax1}/5)]]}} {{specialplus=[[round(@{missile_tattmax1}/5)+1]]}} {{critical=[[round(@{missile_tattmax1}/20)]]}} {{criticalplus=[[round(@{missile_tattmax1}/20)+1]]}} {{supercritical=[[floor(@{missile_tattmax1}/100)]]}} {{supercriticalplus=[[floor(@{missile_tattmax1}/100)+1]]}} {{hypercritical=[[floor(@{missile_tattmax1}/400)]]}} {{hypercriticalplus=[[floor(@{missile_tattmax1}/400)+1]]}} {{specmin=[[1]]}} {{critmin=[[1]]}}"></button>
+                <button type="roll" name="roll_attackexp1"
+                        value="&{template:attackexp} {{name=@{missile_name1} Attack}} {{rollmade=[[1d6]]}} {{exproll=[[1d100]]}} {{normal=[[@{missile_attack1}]]}} {{normalplus=[[@{missile_attack1}+1]]}} {{master=[[100-(@{dex_primary}+@{str_secondary}+@{siz_negative})]]}} {{masterplus=[[101-(@{dex_primary}+@{str_secondary}+@{siz_negative})]]}}"></button>
+            </fieldset>
+        </div>

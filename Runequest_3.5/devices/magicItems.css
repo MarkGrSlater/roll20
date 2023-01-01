@@ -1,0 +1,52 @@
+/* style for magic items grid */
+.sheet-rq35-magic-items {
+    display: grid;
+    width: 860px;
+    background: #fff;
+    border: thick double #32a1ce;
+    grid-template-columns: repeat(2, 350px) 160px;
+    grid-template-rows: auto;
+}
+.sheet-rq35-magic-items div.repcontainer {
+    grid-column-start: 1;
+    grid-column-end: span 3;
+}
+.sheet-rq35-magic-items div.repcontainer div.repitem {
+    display: inline-grid;
+    width: 860px;
+    grid-template-columns: repeat(2, 350px) 150px;
+    grid-template-rows: auto;
+}
+.sheet-rq35-magic-items div.repcontainer input[type="text"] {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50px;
+}
+.sheet-rq35-magic-items div.repcontainer button {
+    margin-left: auto;
+    margin-right: auto;
+    width: 16px;
+}
+.sheet-rq35-magic-items label {
+    color: #5e5e5e;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 11px
+}
+.sheet-rq35-magic-items textarea {
+    width: 95%;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.sheet-rq35-magic-items input {
+    margin-left: auto;
+    margin-right: auto;
+}
+/* spirit-skills multiline display */
+.sheet-rq35-magic-items div.repcontrol {
+    grid-column-start: 1;
+    grid-column-end: span 3;
+    padding: 10px 20px 5px 20px;
+}

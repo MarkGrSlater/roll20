@@ -1,0 +1,98 @@
+        <!-- sorceryCalculator -->
+        <p><strong>Sorcery Spell Calculator</strong></p>
+        <div class="sheet-rq35-spell-calculator">
+            <!-- line 1 -->
+            <label>Intensity</label>
+            <label>Multispell</label>
+            <label>Range</label>
+            <span>Range</span>
+            <span></span>
+            <!-- line 2 -->
+            <span>Value</span>
+            <span>% Limit if used</span>
+            <span>Value</span>
+            <span>% Limit if used</span>
+            <span>Value</span>
+            <span>% Limit if used</span>
+            <span>in Meters</span>
+            <span></span>
+            <!-- line 3 -->
+            <input type="number" name="attr_spell_intensity" value="1">
+            <input type="text" name="attr_max_intensity" readonly>
+            <input type="number" name="attr_spell_multispell" value="0">
+            <input type="text" name="attr_max_multispell" readonly>
+            <input type="number" name="attr_spell_range" value="0">
+            <input type="text" name="attr_max_range" readonly>
+            <input type="text" name="attr_range_meters" readonly class="sheet-bold-green">
+            <!-- line 4 -->
+            <label>Accuracy</label>
+            <label>Ease</label>
+            <label>Force</label>
+            <label>Hold</label>
+            <!-- line 5 -->
+            <span>Value</span>
+            <span>% Limit if used</span>
+            <span>Value</span>
+            <span>% Limit if used</span>
+            <span>Value</span>
+            <span>% Limit if used</span>
+            <span>Value</span>
+            <span>% Limit if used</span>
+            <!-- line 6 -->
+            <input type="number" name="attr_spell_accuracy" value="0">
+            <input type="text" name="attr_max_accuracy" readonly>
+            <input type="number" name="attr_spell_ease" value="0">
+            <input type="text" name="attr_max_ease" readonly>
+            <input type="number" name="attr_spell_force" value="0">
+            <input type="text" name="attr_max_force" readonly>
+            <input type="number" name="attr_spell_hold" value="0">
+            <input type="text" name="attr_max_hold" readonly>
+            <!-- line 7 -->
+            <label>Permanence</label>
+            <label>Reinforce</label>
+            <label>Speed</label>
+            <label class="sheet-span1">Magic Points</label>
+            <label class="sheet-span1">Strike Ranks</label>
+            <!-- line 8 -->
+            <span>Value</span>
+            <span>% Limit if used</span>
+            <span>Value</span>
+            <span>% Limit if used</span>
+            <span>Value</span>
+            <span>% Limit if used</span>
+            <span>Needed</span>
+            <span>to Cast</span>
+            <!-- line 9 -->
+            <input type="number" name="attr_spell_permanence" value="0">
+            <input type="text" name="attr_max_permanence" readonly>
+            <input type="number" name="attr_spell_reinforce" value="0">
+            <input type="text" name="attr_max_reinforce" readonly>
+            <input type="number" name="attr_spell_speed" value="0">
+            <input type="text" name="attr_max_speed" readonly>
+            <input type="text" name="attr_total_magicpoints" readonly class="sheet-bold-green">
+            <input type="text" name="attr_total_strikeranks" readonly class="sheet-bold-green">
+
+            <!-- line 10 -->
+            <div class="sheet-spell-title">
+                <label class="sheet-right">Spell Roller</label>
+                <button type="roll" name="roll_spellcast" class="sheet-spellroller-button"
+                    value="&{template:spellcalculator} {{shortfall=[[@{sorcery_shortfall}]]}} {{totalskill=[[@{total_skill}]]}} {{skillneeded=[[@{minimum_skill}]]}} {{multispell=[[@{spell_multispell}]]}} {{rangemeter=[[@{range_meters}]]}} {{accuracy=[[@{spell_accuracy}]]}} {{ease=[[@{spell_ease}]]}} {{force=[[@{spell_force}]]}} {{hold=[[@{spell_hold}]]}} {{permanence=[[@{spell_permanence}]]}} {{reinforce=[[@{spell_reinforce}]]}} {{speed=[[@{spell_speed}]]}} {{totalmp=[[@{total_magicpoints}]]}} {{totalsr=[[@{total_strikeranks}]]}} {{name=@{sorceryspell_name} @{spell_intensity}}} {{rollmade=[[1d100]]}} {{normal=[[@{maximum_skill}]]}} {{normalplus=[[@{maximum_skill}+1]]}} {{fumble=[[100-floor(((100-(@{maximum_skill}) /20)+0.55)]]}} {{fumbleminus=[[100-floor(((100-(@{maximum_skill})/20)+0.55)-1]]}} {{special=[[round((@{maximum_skill})/5)]]}} {{specialplus=[[round((@{maximum_skill})/5)+1]]}} {{critical=[[round((@{maximum_skill})/20)]]}} {{criticalplus=[[round((@{maximum_skill})/20)+1]]}} {{supercritical=[[0]]}} {{supercriticalplus=[[1]]}} {{hypercritical=[[0]]}} {{hypercriticalplus=[[1]]}} {{specmin=[[1]]}} {{critmin=[[1]]}}"></button>
+            </div>
+            <!-- line 11 -->
+            <label>Spell Name</label>
+            <label class="sheet-span1">Lowest Spell Skill</label>
+            <label class="sheet-span1">Ceremony Points</label>
+            <label class="sheet-span1">Ceremony Max</label>
+            <label class="sheet-span1">Total Skill</label>
+            <label class="sheet-span1">Skill Needed</label>
+            <label class="sheet-span1">Chance to Cast </label>
+            <!-- line 11 -->
+            <input type="text" name="attr_sorceryspell_name" class="sheet-span2" value="">
+            <input type="number" name="attr_sorceryspell_baseskill" value="">
+            <input type="number" name="attr_sorceryspell_ceremonypoints" value="0" >
+            <input type="text" name="attr_sorceryspell_ceremonymax" value="0" readonly>
+            <input type="text" name="attr_total_skill" value="0" readonly class="sheet-bold-green">
+            <input type="text" name="attr_minimum_skill" readonly class="sheet-bold-amber">
+            <input type="text" name="attr_maximum_skill" readonly class="sheet-bold-green">
+            <input type="number" name="attr_sorcery_shortfall" hidden>
+        </div>

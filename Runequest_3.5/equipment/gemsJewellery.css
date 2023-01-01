@@ -1,0 +1,52 @@
+/* style for gems / jewellery grid */
+.sheet-rq35-gems {
+    display: grid;
+    width: 860px;
+    background: #fff;
+    border: thick double #32a1ce;
+    grid-template-columns: 90px 165px 165px 20px 90px 165px 165px;
+    grid-template-rows: auto;
+}
+.sheet-rq35-gems div.repcontainer {
+    grid-column-start: 1;
+    grid-column-end: span 7;
+}
+.sheet-rq35-gems div.repcontainer div.repitem {
+    display: inline-grid;
+    width: 860px;
+    grid-template-columns: 90px 165px 165px 20px 90px 165px 165px;
+    grid-template-rows: auto;
+}
+.sheet-rq35-gems input[type="number"] {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80px;
+}
+.sheet-rq35-gems input[type="text"] {
+    margin-left: auto;
+    margin-right: auto;
+    width: 160px;
+}
+.sheet-rq35-gems button {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    height: 22px;
+}
+.sheet-rq35-gems label {
+    color: #5e5e5e;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 11px
+}
+.sheet-rq35-gems input {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+}
+/* dragon held spells multiline display */
+.sheet-rq35-gems div.repcontrol {
+    grid-column-start: 1;
+    grid-column-end: span 7;
+    padding: 10px 20px 5px 20px;
+}

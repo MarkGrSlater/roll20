@@ -1,0 +1,105 @@
+        <div class="sheet-fourlegged-armour">
+            <label>Melee</label>
+            <label>Missile</label>
+            <label class="red">4 Legged Locations</label>
+            <label>Armour Description</label>
+            <label>Armour Points</label>
+            <label>Magic Boost</label>
+            <label>Total Armour</label>
+            <label>Hits to location</label>
+            <label>Blood<br>Loss</label>
+            <label>Total Hits Remaining</label>
+            <em> </em>
+
+            <p class="center">17 - 20</p>
+            <p class="center">19 - 20</p>
+            <p class="center">Head</p>
+            <input name="attr_head_armour" type="text" class="armour-description">
+            <input name="attr_head_ap" value="0" type="number" class="sheet-stats">
+            <input name="attr_head_enchant" value="0" type="number" class="sheet-stats">
+            <input name="attr_head_total_ap" value="@{head_ap}+@{head_enchant}" type="number" class="sheet-stats" disabled>
+            <input name="attr_head_damage" value="0" type="number" class="sheet-stats">
+
+            <input name="attr_blood_loss" type="number" class="sheet-stats" value="0">
+            <input name="attr_remaining_hits" class="sheet-stats" value="ceil((@{con_total}+@{siz_total})/2)+@{strengthen_enchant}-(@{rleg_damage}+@{lleg_damage}+@{abdomen_damage}+@{head_damage}+@{chest_damage}+@{rarm_damage}+@{larm_damage}+@{blood_loss})" type="number" disabled>
+            <em> </em>
+
+            <p class="center">14 - 16</p>
+            <p class="center">17 - 18</p>
+            <p class="center">Left Front Leg</p>
+            <input name="attr_larm_armour" type="text" class="armour-description">
+            <input name="attr_larm_ap" value="0" type="number" class="sheet-stats">
+            <input name="attr_larm_enchant" value="0" type="number" class="sheet-stats">
+            <input name="attr_larm_total_ap" value="@{larm_ap}+@{larm_enchant}" type="number" class="sheet-stats" disabled>
+            <input name="attr_larm_damage" value="0" type="number" class="sheet-stats">
+
+            <label>Left Side</label>
+            <label>Body</label>
+            <label>Right Side</label>
+
+            <p class="center">11 - 13</p>
+            <p class="center">15 - 16</p>
+            <p class="center">Right Front Leg</p>
+            <input name="attr_rarm_armour" type="text" class="armour-description">
+            <input name="attr_rarm_ap" value="0" type="number" class="sheet-stats">
+            <input name="attr_rarm_enchant" value="0" type="number" class="sheet-stats">
+            <input name="attr_rarm_total_ap" value="@{rarm_ap}+@{rarm_enchant}" type="number" class="sheet-stats" disabled>
+            <input name="attr_rarm_damage" value="0" type="number" class="sheet-stats">
+
+            <em> </em>
+            <input name="attr_head_hp_total" type="number" value="@{3_location}-@{head_damage}" disabled class="sheet-stats">
+            <em> </em>
+
+            <p class="center">12</p>
+            <p class="center">11 - 15</p>
+            <p class="center">Fore Quarters</p>
+            <input name="attr_chest_armour" type="text" class="armour-description">
+            <input name="attr_chest_ap" value="0" type="number" class="sheet-stats">
+            <input name="attr_chest_enchant" value="0" type="number" class="sheet-stats">
+            <input name="attr_chest_ap_total" value="@{chest_ap}+@{chest_enchant}" type="number" class="sheet-stats" disabled>
+            <input name="attr_chest_damage" value="0" type="number" class="sheet-stats">
+
+            <input name="attr_larm_hp_total" type="number" value="@{25_location}-@{larm_damage}" disabled class="sheet-stats">
+            <em> </em>
+            <input name="attr_rarm_hp_total" type="number" value="@{25_location}-@{rarm_damage}" disabled class="sheet-stats">
+
+
+            <p class="center">09 - 11</p>
+            <p class="center">07 - 10</p>
+            <p class="center">Hind Quarters</p>
+            <input name="attr_abdomen_armour" type="text" class="armour-description">
+            <input name="attr_abdomen_ap" value="0" type="number" class="sheet-stats">
+            <input name="attr_abdomen_enchant" value="0" type="number" class="sheet-stats">
+            <input name="attr_abdomen_ap_total" value="@{abdomen_ap}+@{abdomen_enchant}" type="number" class="sheet-stats" disabled>
+            <input name="attr_abdomen_damage" value="0" type="number" class="sheet-stats">
+
+            <em> </em>
+            <input name="attr_chest_hp_total" type="number" value="@{4_location}-@{chest_damage}" disabled class="sheet-stats">
+            <em> </em>
+
+            <p class="center">05 - 08</p>
+            <p class="center">04 - 06</p>
+            <p class="center">Left Hind Leg</p>
+            <input name="attr_lleg_armour" type="text" class="armour-description">
+            <input name="attr_lleg_ap" value="0" type="number" class="sheet-stats">
+            <input name="attr_lleg_enchant" value="0" type="number" class="sheet-stats">
+            <input name="attr_lleg_ap_total" value="@{lleg_ap}+@{lleg_enchant}" type="number" class="sheet-stats" disabled>
+            <input name="attr_lleg_damage" value="0" type="number" class="sheet-stats">
+
+            <em> </em>
+            <input name="attr_abdomen_hp_total" type="number" value="@{4_location}-@{abdomen_damage}" disabled class="sheet-stats">
+            <em> </em>
+
+            <p class="center">01 - 04</p>
+            <p class="center">01 - 03</p>
+            <p class="center">Right Hind Leg</p>
+            <input name="attr_rleg_armour" type="text" class="armour-description">
+            <input name="attr_rleg_ap" value="0" type="number" class="sheet-stats">
+            <input name="attr_rleg_enchant" value="0" type="number" class="sheet-stats">
+            <input name="attr_rleg_ap_total" value="@{rleg_ap}+@{rleg_enchant}" type="number" class="sheet-stats" disabled>
+            <input name="attr_rleg_damage" value="0" type="number" class="sheet-stats">
+
+            <input name="attr_lleg_hp_total" type="number" value="@{25_location}-@{lleg_damage}" disabled class="sheet-stats">
+            <em> </em>
+            <input name="attr_rleg_hp_total" type="number" value="@{25_location}-@{rleg_damage}" disabled class="sheet-stats">
+        </div>

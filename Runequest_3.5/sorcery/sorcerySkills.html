@@ -1,0 +1,107 @@
+        <!-- Sorcery Skills -->
+        <p><strong>Sorcery Spell Skills</strong></p>
+        <!-- use same class as spirit skills because format is the same -->
+        <div class="sheet-rq35-sorcery-skills">
+            <label>Basic Arts Name</label>
+            <label>Base Skill</label>
+            <label>Total Skill</label>
+            <label>Number of Hours of Training</label>
+            <label>Being Trained Experience Roll</label>
+            <label>Self-training Experience Roll</label>
+            <input type="text" name="attr_sorceryskill_intensity" value="Intensity" readonly>
+            <input type="number" name="attr_sorceryskill_intensitybase" value="0">
+            <input type="number" name="attr_sorceryskill_intensitytotal" value="@{sorceryskill_intensitybase}+@{int_primary}+@{pow_primary}+@{dex_secondary}+@{magb_enchant}" disabled >
+            <input type="number" name="attr_sorceryskill_intensityhours" value="0">
+            <button type="roll" name="roll_training1"
+                    value="&{template:training} {{name=@{sorceryskill_intensity}}} {{subtags=Trained Roll}} {{expcheck=[[101]]}} {{rollmade=[[1d6-2]]}} {{baseskill=[[@{sorceryskill_intensitybase}]]}} {{baseskillplus=[[@{sorceryskill_intensitybase}+1]]}} {{minskill=[[1]]}} {{master=[[100-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}} {{masterplus=[[101-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}}"></button>
+            <button type="roll" name="roll_training1"
+                    value="&{template:training} {{name=@{sorceryskill_intensity}}} {{subtags=Self-Train Roll}} {{expcheck=[[1d100]]}} {{rollmade=[[1d6-2]]}} {{baseskill=[[@{sorceryskill_intensitybase}]]}} {{baseskillplus=[[@{sorceryskill_intensitybase}+1]]}} {{minskill=[[1]]}} {{master=[[100-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}} {{masterplus=[[101-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}}"></button>
+
+            <input type="text" name="attr_sorceryskill_range" value="Range" readonly>
+            <input type="number" name="attr_sorceryskill_rangebase" value="0">
+            <input type="number" name="attr_sorceryskill_rangetotal" value="@{sorceryskill_rangebase}+@{int_primary}+@{pow_primary}+@{dex_secondary}+@{magb_enchant}" disabled >
+            <input type="number" name="attr_sorceryskill_rangehours" value="0">
+            <button type="roll" name="roll_training1"
+                    value="&{template:training} {{name=@{sorceryskill_range}}} {{subtags=Trained Roll}} {{expcheck=[[101]]}} {{rollmade=[[1d6-2]]}} {{baseskill=[[@{sorceryskill_rangebase}]]}} {{baseskillplus=[[@{sorceryskill_rangebase}+1]]}} {{minskill=[[1]]}} {{master=[[100-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}} {{masterplus=[[101-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}}"></button>
+            <button type="roll" name="roll_training1"
+                    value="&{template:training} {{name=@{sorceryskill_range}}} {{subtags=Self-Train Roll}} {{expcheck=[[1d100]]}} {{rollmade=[[1d6-2]]}} {{baseskill=[[@{sorceryskill_rangebase}]]}} {{baseskillplus=[[@{sorceryskill_rangebase}+1]]}} {{minskill=[[1]]}} {{master=[[100-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}} {{masterplus=[[101-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}}"></button>
+
+            <input type="text" name="attr_sorceryskill_multispell" value="Multispell" readonly>
+            <input type="number" name="attr_sorceryskill_multispellbase" value="0">
+            <input type="number" name="attr_sorceryskill_multispelltotal" value="@{sorceryskill_multispellbase}+@{int_primary}+@{pow_primary}+@{dex_secondary}+@{magb_enchant}" disabled >
+            <input type="number" name="attr_sorceryskill_multispellhours" value="0">
+            <button type="roll" name="roll_training1"
+                    value="&{template:training} {{name=@{sorceryskill_multispell}}} {{subtags=Trained Roll}} {{expcheck=[[101]]}} {{rollmade=[[1d6-2]]}} {{baseskill=[[@{sorceryskill_multispellbase}]]}} {{baseskillplus=[[@{sorceryskill_multispellbase}+1]]}} {{minskill=[[1]]}} {{master=[[100-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}} {{masterplus=[[101-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}}"></button>
+            <button type="roll" name="roll_training1"
+                    value="&{template:training} {{name=@{sorceryskill_multispell}}} {{subtags=Self-Train Roll}} {{expcheck=[[1d100]]}} {{rollmade=[[1d6-2]]}} {{baseskill=[[@{sorceryskill_multispellbase}]]}} {{baseskillplus=[[@{sorceryskill_multispellbase}+1]]}} {{minskill=[[1]]}} {{master=[[100-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}} {{masterplus=[[101-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}}"></button>
+
+            <label>Secondary Arts Name</label>
+            <label>Base Skill</label>
+            <label>Total Skill</label>
+            <label>Number of Hours of Training</label>
+            <label>Being Trained Experience Roll</label>
+            <label>Self-training Experience Roll</label>
+
+            <input type="text" name="attr_sorceryskill_accuracy" value="Accuracy" readonly>
+            <input type="number" name="attr_sorceryskill_accuracybase" value="0">
+            <input type="number" name="attr_sorceryskill_accuracytotal" value="@{sorceryskill_accuracybase}+@{int_primary}+@{pow_primary}+@{dex_secondary}+@{magb_enchant}" disabled >
+            <input type="number" name="attr_sorceryskill_accuracyhours" value="0">
+            <button type="roll" name="roll_training1"
+                    value="&{template:training} {{name=@{sorceryskill_accuracy}}} {{subtags=Trained Roll}} {{expcheck=[[101]]}} {{rollmade=[[1d6-2]]}} {{baseskill=[[@{sorceryskill_accuracybase}]]}} {{baseskillplus=[[@{sorceryskill_accuracybase}+1]]}} {{minskill=[[1]]}} {{master=[[100-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}} {{masterplus=[[101-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}}"></button>
+            <button type="roll" name="roll_training1"
+                    value="&{template:training} {{name=@{sorceryskill_accuracy}}} {{subtags=Self-Train Roll}} {{expcheck=[[1d100]]}} {{rollmade=[[1d6-2]]}} {{baseskill=[[@{sorceryskill_accuracybase}]]}} {{baseskillplus=[[@{sorceryskill_accuracybase}+1]]}} {{minskill=[[1]]}} {{master=[[100-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}} {{masterplus=[[101-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}}"></button>
+
+            <input type="text" name="attr_sorceryskill_ease" value="Ease" readonly>
+            <input type="number" name="attr_sorceryskill_easebase" value="0">
+            <input type="number" name="attr_sorceryskill_easetotal" value="@{sorceryskill_easebase}+@{int_primary}+@{pow_primary}+@{dex_secondary}+@{magb_enchant}" disabled >
+            <input type="number" name="attr_sorceryskill_easehours" value="0">
+            <button type="roll" name="roll_training1"
+                    value="&{template:training} {{name=@{sorceryskill_ease}}} {{subtags=Trained Roll}} {{expcheck=[[101]]}} {{rollmade=[[1d6-2]]}} {{baseskill=[[@{sorceryskill_easebase}]]}} {{baseskillplus=[[@{sorceryskill_easebase}+1]]}} {{minskill=[[1]]}} {{master=[[100-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}} {{masterplus=[[101-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}}"></button>
+            <button type="roll" name="roll_training1"
+                    value="&{template:training} {{name=@{sorceryskill_ease}}} {{subtags=Self-Train Roll}} {{expcheck=[[1d100]]}} {{rollmade=[[1d6-2]]}} {{baseskill=[[@{sorceryskill_easebase}]]}} {{baseskillplus=[[@{sorceryskill_easebase}+1]]}} {{minskill=[[1]]}} {{master=[[100-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}} {{masterplus=[[101-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}}"></button>
+
+            <input type="text" name="attr_sorceryskill_force" value="Force" readonly>
+            <input type="number" name="attr_sorceryskill_forcebase" value="0">
+            <input type="number" name="attr_sorceryskill_forcetotal" value="@{sorceryskill_forcebase}+@{int_primary}+@{pow_primary}+@{dex_secondary}+@{magb_enchant}" disabled >
+            <input type="number" name="attr_sorceryskill_forcehours" value="0">
+            <button type="roll" name="roll_training1"
+                    value="&{template:training} {{name=@{sorceryskill_force}}} {{subtags=Trained Roll}} {{expcheck=[[101]]}} {{rollmade=[[1d6-2]]}} {{baseskill=[[@{sorceryskill_forcebase}]]}} {{baseskillplus=[[@{sorceryskill_forcebase}+1]]}} {{minskill=[[1]]}} {{master=[[100-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}} {{masterplus=[[101-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}}"></button>
+            <button type="roll" name="roll_training1"
+                    value="&{template:training} {{name=@{sorceryskill_force}}} {{subtags=Self-Train Roll}} {{expcheck=[[1d100]]}} {{rollmade=[[1d6-2]]}} {{baseskill=[[@{sorceryskill_forcebase}]]}} {{baseskillplus=[[@{sorceryskill_forcebase}+1]]}} {{minskill=[[1]]}} {{master=[[100-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}} {{masterplus=[[101-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}}"></button>
+
+            <input type="text" name="attr_sorceryskill_hold" value="Hold" readonly>
+            <input type="number" name="attr_sorceryskill_holdbase" value="0">
+            <input type="number" name="attr_sorceryskill_holdtotal" value="@{sorceryskill_holdbase}+@{int_primary}+@{pow_primary}+@{dex_secondary}+@{magb_enchant}" disabled >
+            <input type="number" name="attr_sorceryskill_holdhours" value="0">
+            <button type="roll" name="roll_training1"
+                    value="&{template:training} {{name=@{sorceryskill_hold}}} {{subtags=Trained Roll}} {{expcheck=[[101]]}} {{rollmade=[[1d6-2]]}} {{baseskill=[[@{sorceryskill_holdbase}]]}} {{baseskillplus=[[@{sorceryskill_holdbase}+1]]}} {{minskill=[[1]]}} {{master=[[100-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}} {{masterplus=[[101-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}}"></button>
+            <button type="roll" name="roll_training1"
+                    value="&{template:training} {{name=@{sorceryskill_hold}}} {{subtags=Self-Train Roll}} {{expcheck=[[1d100]]}} {{rollmade=[[1d6-2]]}} {{baseskill=[[@{sorceryskill_holdbase}]]}} {{baseskillplus=[[@{sorceryskill_holdbase}+1]]}} {{minskill=[[1]]}} {{master=[[100-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}} {{masterplus=[[101-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}}"></button>
+
+            <input type="text" name="attr_sorceryskill_permanence" value="Permanence" readonly>
+            <input type="number" name="attr_sorceryskill_permanencebase" value="0">
+            <input type="number" name="attr_sorceryskill_permanencetotal" value="@{sorceryskill_permanencebase}+@{int_primary}+@{pow_primary}+@{dex_secondary}+@{magb_enchant}" disabled >
+            <input type="number" name="attr_sorceryskill_permanencehours" value="0">
+            <button type="roll" name="roll_training1"
+                    value="&{template:training} {{name=@{sorceryskill_permanence}}} {{subtags=Trained Roll}} {{expcheck=[[101]]}} {{rollmade=[[1d6-2]]}} {{baseskill=[[@{sorceryskill_permanencebase}]]}} {{baseskillplus=[[@{sorceryskill_permanencebase}+1]]}} {{minskill=[[1]]}} {{master=[[100-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}} {{masterplus=[[101-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}}"></button>
+            <button type="roll" name="roll_training1"
+                    value="&{template:training} {{name=@{sorceryskill_permanence}}} {{subtags=Self-Train Roll}} {{expcheck=[[1d100]]}} {{rollmade=[[1d6-2]]}} {{baseskill=[[@{sorceryskill_permanencebase}]]}} {{baseskillplus=[[@{sorceryskill_permanencebase}+1]]}} {{minskill=[[1]]}} {{master=[[100-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}} {{masterplus=[[101-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}}"></button>
+
+            <input type="text" name="attr_sorceryskill_reinforce" value="Reinforce" readonly>
+            <input type="number" name="attr_sorceryskill_reinforcebase" value="0">
+            <input type="number" name="attr_sorceryskill_reinforcetotal" value="@{sorceryskill_reinforcebase}+@{int_primary}+@{pow_primary}+@{dex_secondary}+@{magb_enchant}" disabled >
+            <input type="number" name="attr_sorceryskill_reinforcehours" value="0">
+            <button type="roll" name="roll_training1"
+                    value="&{template:training} {{name=@{sorceryskill_reinforce}}} {{subtags=Trained Roll}} {{expcheck=[[101]]}} {{rollmade=[[1d6-2]]}} {{baseskill=[[@{sorceryskill_reinforcebase}]]}} {{baseskillplus=[[@{sorceryskill_reinforcebase}+1]]}} {{minskill=[[1]]}} {{master=[[100-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}} {{masterplus=[[101-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}}"></button>
+            <button type="roll" name="roll_training1"
+                    value="&{template:training} {{name=@{sorceryskill_reinforce}}} {{subtags=Self-Train Roll}} {{expcheck=[[1d100]]}} {{rollmade=[[1d6-2]]}} {{baseskill=[[@{sorceryskill_reinforcebase}]]}} {{baseskillplus=[[@{sorceryskill_reinforcebase}+1]]}} {{minskill=[[1]]}} {{master=[[100-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}} {{masterplus=[[101-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}}"></button>
+
+            <input type="text" name="attr_sorceryskill_speed" value="Speed" readonly>
+            <input type="number" name="attr_sorceryskill_speedbase" value="0">
+            <input type="number" name="attr_sorceryskill_speedtotal" value="@{sorceryskill_speedbase}+@{int_primary}+@{pow_primary}+@{dex_secondary}+@{magb_enchant}" disabled >
+            <input type="number" name="attr_sorceryskill_speedhours" value="0">
+            <button type="roll" name="roll_training1"
+                    value="&{template:training} {{name=@{sorceryskill_speed}}} {{subtags=Trained Roll}} {{expcheck=[[101]]}} {{rollmade=[[1d6-2]]}} {{baseskill=[[@{sorceryskill_speedbase}]]}} {{baseskillplus=[[@{sorceryskill_speedbase}+1]]}} {{minskill=[[1]]}} {{master=[[100-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}} {{masterplus=[[101-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}}"></button>
+            <button type="roll" name="roll_training1"
+                    value="&{template:training} {{name=@{sorceryskill_speed}}} {{subtags=Self-Train Roll}} {{expcheck=[[1d100]]}} {{rollmade=[[1d6-2]]}} {{baseskill=[[@{sorceryskill_speedbase}]]}} {{minskill=[[1]]}}"></button>
+        </div>

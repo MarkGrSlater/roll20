@@ -1,0 +1,30 @@
+        <!-- Sorcery Spells -->
+        <p><strong>Sorcery Spells</strong></p>
+        <div class="sheet-rq35-sorcery-spells">
+            <label>Cast Tick</label>
+            <label>Spell Name</label>
+            <label>Base Skill</label>
+            <label>Ceremony</label>
+            <label>Device Intensity</label>
+            <label>Total Skill</label>
+            <label>Where Stored</label>
+            <label>Hours Trained</label>
+            <label>Casting Roll</label>
+            <label>Experience Roll</label>
+
+            <fieldset class="repeating_sorceryspells">
+                <input type="checkbox" name="attr_sorceryspell_ticked1" value="1">
+                <input type="text" name="attr_sorceryspell_name1">
+                <input type="number" name="attr_sorceryspell_base1" value="0">
+                <input type="number" name="attr_sorceryspell_ceremony1" value="0">
+                <input type="number" name="attr_sorceryspell_device1" value="0">
+                <input type="number" name="attr_sorceryspell_devicemod1" value="@{sorceryspell_device1}*10" hidden disabled>
+                <input type="number" name="attr_sorceryspell_total1" value="@{sorceryspell_base1}+@{sorceryspell_ceremony1}+(@{sorceryspell_device1}*10)" disabled>
+                <input type="text" name="attr_sorceryspell_location1">
+                <input type="number" name="attr_sorceryspell_hours1" value="0">
+                <button type="roll" name="roll_weapon1" title="Click to cast spell"
+                    value="&{template:test} {{name=@{sorceryspell_name1}}} {{rollmade=[[1d100]]}} {{normal=[[@{sorceryspell_base1}+@{sorceryspell_ceremony1}+@{sorceryspell_devicemod1}]]}} {{normalplus=[[@{sorceryspell_base1}+@{sorceryspell_ceremony1}+@{sorceryspell_devicemod1}+1]]}} {{fumble=[[100-floor(((100-(@{sorceryspell_base1}+@{sorceryspell_ceremony1}+@{sorceryspell_devicemod1}) /20)+0.55)]]}} {{fumbleminus=[[100-floor(((100-(@{sorceryspell_base1}+@{sorceryspell_ceremony1}+@{sorceryspell_devicemod1})/20)+0.55)-1]]}} {{special=[[round((@{sorceryspell_base1}+@{sorceryspell_ceremony1}+@{sorceryspell_devicemod1})/5)]]}} {{specialplus=[[round((@{sorceryspell_base1}+@{sorceryspell_ceremony1}+@{sorceryspell_devicemod1})/5)+1]]}} {{critical=[[round((@{sorceryspell_base1}+@{sorceryspell_ceremony1}+@{sorceryspell_devicemod1})/20)]]}} {{criticalplus=[[round((@{sorceryspell_base1}+@{sorceryspell_ceremony1}+@{sorceryspell_devicemod1})/20)+1]]}} {{supercritical=[[0]]}} {{supercriticalplus=[[1]]}} {{hypercritical=[[0]]}} {{hypercriticalplus=[[1]]}} {{specmin=[[1]]}} {{critmin=[[1]]}}"></button>
+                <button type="roll" name="roll_attackexp1"
+                    value="&{template:attackexp} {{name=@{sorceryspell_name1}}} {{rollmade=[[1d6]]}} {{exproll=[[1d100]]}} {{normal=[[@{sorceryspell_base1}]]}} {{normalplus=[[@{sorceryspell_base1}+1]]}} {{master=[[100-(@{pow_primary}+@{int_primary}+@{dex_secondary})]]}} {{masterplus=[[101-(@{pow_primary}+@{int_primary}+@{dex_secondary})]]}}"></button>
+            </fieldset>
+        </div>

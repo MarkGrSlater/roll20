@@ -1,0 +1,18 @@
+        <!-- Encumbrance -->
+        <p><strong>Encumbrance & Fatigue</strong></p>
+        <div class="sheet-rq35-encumbrance">
+            <label>Armour Encumbrance</label>
+            <label>Weapons Encumbrance</label>
+            <label>Equipment Encumbrance</label>
+            <label>Total Encumbrance</label>
+            <label>Stamina</label>
+            <label>Stamina minus Encumbrance</label>
+
+            <input type="number" name="attr_encumbrance_armour" value="0">
+            <input type="number" name="attr_encumbrance_weapons" value="0">
+            <input type="number" name="attr_encumbrance_equipment" value="0">
+            <input type="number" name="attr_encumbrance_total" value="@{encumbrance_armour}+@{encumbrance_weapons}+@{encumbrance_equipment}" disabled>
+            <input type="number" name="attr_stamina" readonly>
+            <input type="number" name="attr_stamina_minusenc" value="@{stamina}-(@{encumbrance_armour}+@{encumbrance_weapons}+@{encumbrance_equipment})" disabled>
+
+        </div>

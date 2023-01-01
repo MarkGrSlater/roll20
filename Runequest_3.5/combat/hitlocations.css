@@ -1,0 +1,33 @@
+/* style for human armour grid */
+.sheet-rq35-armour {
+    display: grid;
+    background: #fff;
+    border: thick double #32a1ce;
+    width: 860px;
+    grid-template-columns: 60px 60px 60px 260px 60px 60px 60px 60px repeat(3, 60px);
+    grid-template-rows: repeat(8,3em);
+}
+.sheet-rq35-armour input.sheet-stats {
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.sheet-rq35-armour label {
+    color: #5e5e5e;
+    text-align: center;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 11px;
+}
+.sheet-rq35-armour p {
+    color: #5e5e5e;
+    text-align: left;
+    font-size: 10px;
+    margin-top: 11px;
+}
+
+/* armour navigation tabs */
+.sheet-armour-tabs {
+    display: inline-grid;
+    grid-template-columns: 1px 174px repeat(8, 87px) 1px;
+}

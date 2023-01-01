@@ -1,0 +1,18 @@
+/* style for body layout */
+.body-description {
+    grid-column-start: 9;
+    grid-column-end: 12;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    padding-left: 5px;
+}
+p.sheet-center {
+    color: #5e5e5e;
+    text-align: center;
+    align-self: center;
+    margin-top: -4px;
+}
+input.sheet-armour-description {
+    width: 250px;
+    align-self: center;
+}

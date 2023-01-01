@@ -1,0 +1,46 @@
+/* style for dragon spells grid */
+.sheet-rq35-dragon-spells {
+    display: grid;
+    width: 860px;
+    background: #fff;
+    border: thick double #32a1ce;
+    grid-template-columns: 130px 60px 100px repeat(2, 120px) 50px 70px 70px 70px 60px;
+    grid-template-rows: auto;
+}
+.sheet-rq35-dragon-spells div.repcontainer {
+    grid-column-start: 1;
+    grid-column-end: span 11;
+}
+.sheet-rq35-dragon-spells div.repcontainer div.repitem {
+    display: inline-grid;
+    width: 860px;
+    grid-template-columns: 130px 60px 100px repeat(2, 120px) 50px 70px 70px 70px 60px;
+    grid-template-rows: auto;
+}
+.sheet-rq35-dragon-spells div.repcontainer input[type="text"] {
+    margin-left: auto;
+    margin-right: auto;
+    width: 110px;
+}
+.sheet-rq35-dragon-spells div.repcontainer button {
+    margin-left: auto;
+    margin-right: auto;
+    width: 16px;
+}
+.sheet-rq35-dragon-spells label {
+    color: #5e5e5e;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 11px
+}
+.sheet-rq35-dragon-spells input {
+    margin-left: auto;
+    margin-right: auto;
+}
+/* dragon-spells multiline display */
+.sheet-rq35-dragon-spells div.repcontrol {
+    grid-column-start: 1;
+    grid-column-end: span 11;
+    padding: 10px 20px 5px 20px;
+}

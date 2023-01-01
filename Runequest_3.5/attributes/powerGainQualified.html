@@ -1,0 +1,15 @@
+<p><strong>Date Qualified for Power Gain Roll</strong></p>
+        <div class="sheet-rq35-power-gain">
+            <label>Due Check</label>
+            <label>Date Qualified</label>
+            <label>Current Power</label>
+            <label>Chance of Gain</label>
+            <label>Roll for Gain</label>
+
+            <input type="checkbox" name="attr_powergain_check" value="1">
+            <input type="text" name="attr_powergain_date">
+            <input type="number" name="attr_powergain_current" value="@{pow}" disabled>
+            <input type="number" name="attr_powergain_chance" value="(21-@{pow})*5" disabled>
+            <button type="roll" name="roll_powergain"
+                        value="&{template:powergain} {{name=Power Gain Check}} {{rollmade=[[1d100]]}} {{normal=[[(21-@{pow})*5]]}} {{normalplus=[[((21-@{pow})*5) + 1]]}} {{gain=[[1d100]]}} {{maxgain=[[21-@{pow}]]}}"></button>
+        </div>

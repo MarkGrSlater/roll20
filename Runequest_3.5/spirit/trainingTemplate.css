@@ -1,0 +1,33 @@
+/* template layout for attack experience check */
+.sheet-rolltemplate-training div.sheet-template-container {
+	border: 2px solid #000 !important;
+	border-radius: 3px 3px 3px 3px;
+}
+
+.sheet-rolltemplate-training .sheet-template-header {
+	background-color: rgba(112, 32, 130,1);
+	color: #000;
+	padding: 2px;
+	border-bottom: 1px solid black;
+	line-height: 1.6em;
+	font-size: 1.2em;
+}
+
+.sheet-rolltemplate-training div {
+	padding: 5px;
+	border-bottom: 1px solid black;
+}
+
+.sheet-rolltemplate-training div:nth-child(odd) {
+	background-color: rgba(217, 217, 214,1);
+}
+
+.sheet-rolltemplate-training div:nth-child(even) {
+	background-color: rgba(233, 233, 233,1);
+}
+.sheet-rolltemplate-training div.sheet-normal:nth-child(even)  {
+	background-color: #e5fd8e !important;
+}
+.sheet-rolltemplate-training div.sheet-fail:nth-child(even)  {
+	background-color: #f28282 !important;
+}

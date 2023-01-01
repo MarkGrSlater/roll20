@@ -1,0 +1,21 @@
+    <p><strong>Perception Skills</strong></p>
+    <div class="sheet-rq35-skills">
+        <label>Skill Tick</label>
+        <label>Name</label>
+        <label>Hours Trained</label>
+        <label>Base Skill %</label>
+        <label>Total Skill %</label>
+        <label>Skill Roll</label>
+        <label>Skill Exp.</label>
+        <fieldset class="repeating_perceptionskills">
+            <input type="checkbox" name="attr_perceptionskill_ticked1" value="1">
+            <input type="text" name="attr_perceptionskill_name1">
+            <input type="number" name="attr_perceptionskill_hours1" value="0">
+            <input type="number" name="attr_perceptionskill_base1" value="0">
+            <input type="number" name="attr_perceptionskill_total1" value="@{perceptionskill_base1}+@{int_primary}+@{pow_secondary}+@{con_secondary}+@{perc_enchant}" disabled>
+            <button type="roll" name="roll_weapon1"
+                    value="&{template:test} {{name=@{perceptionskill_name1}}}  {{rollmade=[[1d100]]}} {{normal=[[@{perceptionskill_total1}]]}} {{normalplus=[[@{perceptionskill_total1}+1]]}} {{fumble=[[100-floor(((100 - @{perceptionskill_total1}) / 20) + 0.55)]]}} {{fumbleminus=[[100-floor(((100 - @{perceptionskill_total1}) / 20) + 0.55)-1]]}} {{special=[[round(@{perceptionskill_total1}/5)]]}} {{specialplus=[[round(@{perceptionskill_total1}/5)+1]]}} {{critical=[[round(@{perceptionskill_total1}/20)]]}} {{criticalplus=[[round(@{perceptionskill_total1}/20)+1]]}} {{supercritical=[[0]]}} {{supercriticalplus=[[1]]}} {{hypercritical=[[0]]}} {{hypercriticalplus=[[1]]}} {{specmin=[[1]]}} {{critmin=[[1]]}}"></button>
+            <button type="roll" name="roll_attackexp1"
+                    value="&{template:attackexp} {{name=@{perceptionskill_name1}}} {{rollmade=[[1d6]]}} {{exproll=[[1d100]]}} {{normal=[[@{perceptionskill_base1}]]}} {{normalplus=[[@{perceptionskill_base1}+1]]}} {{master=[[100-(@{dex_primary}+@{str_secondary}+@{siz_negative})]]}} {{masterplus=[[101-(@{dex_primary}+@{str_secondary}+@{siz_negative})]]}}"></button>
+        </fieldset>
+    </div>

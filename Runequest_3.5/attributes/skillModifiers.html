@@ -1,0 +1,38 @@
+        <p><strong>Skill Modifiers</strong></p>
+        <div class="sheet-rq35-stats">
+            <label> </label>
+            <label class="sheet-title">Agility</label>
+            <label class="sheet-title">Communication</label>
+            <label class="sheet-title">Knowledge</label>
+            <label class="sheet-title">Manipulation</label>
+            <label class="sheet-title">Perception</label>
+            <label class="sheet-title">Stealth</label>
+            <label class="sheet-title">Magic Bonus</label>
+
+            <label>Total</label>
+            <input name="attr_agil_total" value="@{dex_primary}+@{str_secondary}+@{siz_negative}+@{agil_enchant}" type="number" class="sheet-stats" disabled>
+            <input name="attr_comm_total" value="@{int_primary}+@{pow_secondary}+@{app_secondary}+@{comm_enchant}" type="number" class="sheet-stats" disabled>
+            <input name="attr_know_total" value="@{int_primary}+@{know_enchant}" type="number" class="sheet-stats" disabled>
+            <input name="attr_mani_total" value="@{int_primary}+@{dex_primary}+@{str_secondary}+@{mani_enchant}" type="number" class="sheet-stats" disabled>
+            <input name="attr_perc_total" value="@{int_primary}+@{pow_secondary}+@{con_secondary}+@{perc_enchant}" type="number" class="sheet-stats" disabled>
+            <input name="attr_stea_total" value="@{dex_primary}+@{pow_negative}+@{siz_negative}+@{stea_enchant}" type="number" class="sheet-stats" disabled>
+            <input name="attr_magb_total" value="@{int_primary}+@{pow_primary}+@{dex_secondary}+@{magb_enchant}" type="number" class="sheet-stats" disabled>
+
+            <label>Enhanced:</label>
+            <input name="attr_agil_enchant" value="0" type="number" class="sheet-stats" />
+            <input name="attr_comm_enchant" value="0" type="number" class="sheet-stats" />
+            <input name="attr_know_enchant" value="0" type="number" class="sheet-stats" />
+            <input name="attr_mani_enchant" value="0" type="number" class="sheet-stats" />
+            <input name="attr_perc_enchant" value="0" type="number" class="sheet-stats" />
+            <input name="attr_stea_enchant" value="0" type="number" class="sheet-stats" />
+            <input name="attr_magb_enchant" value="0" type="number" class="sheet-stats" />
+
+            <label>Current:</label>
+            <input name="attr_agil" value="@{dex_primary}+@{str_secondary}+@{siz_negative}" type="number" class="sheet-stats" disabled />
+            <input name="attr_comm" value="@{int_primary}+@{pow_secondary}+@{app_secondary}" type="number" class="sheet-stats" disabled />
+            <input name="attr_know" value="@{int_primary}" type="number" class="sheet-stats" disabled />
+            <input name="attr_mani" value="@{int_primary}+@{dex_primary}+@{str_secondary}" type="number" class="sheet-stats" disabled />
+            <input name="attr_perc" value="@{int_primary}+@{pow_secondary}+@{con_secondary}" type="number" class="sheet-stats" disabled />
+            <input name="attr_stea" value="@{dex_primary}+@{pow_negative}+@{siz_negative}" type="number" class="sheet-stats" disabled />
+            <input name="attr_magb" value="@{int_primary}+@{pow_primary}+@{dex_secondary}" type="number" class="sheet-stats" disabled />
+        </div>

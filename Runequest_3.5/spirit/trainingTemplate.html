@@ -1,0 +1,102 @@
+<!-- spiritSkillTemplate -->
+<rolltemplate class="sheet-rolltemplate-training">
+    <div class="sheet-rolltemplate-training">
+        <div class="sheet-template-container">
+
+            <!-- self training section -->
+      <!-- self training section -->
+            {{#rollLess() expcheck 101}}
+                <div class="sheet-template-header">{{ name }} {{ subtags }}: {{ expcheck }}</div>
+
+                <!-- is base skill 100 or more -->
+                {{#rollGreater() baseskill 99}}
+                <!-- yes it is - need to roll over master value to qualify -->
+                    {{#rollGreater() expcheck master}}
+                    <!-- made it now check gain on 1d6-2 -->
+                        <div class="sheet-normal">
+                            <span><strong>Experience check Made!</strong><br>Rolled {{ expcheck }}. Needed over {{ master }}.</span><br>
+                        {{#rollLess() rollmade 1}}
+                            <span>
+                                Unfortunately you got<br> {{ rollmade }} on 1d6 - 2.<br>
+                                {{#rollGreater() rollmade -1}}
+                                    <strong>You do not get to increase your skill this time.</strong>
+                                {{/rollGreater() rollmade -1}}
+                                {{#rollLess() rollmade 0}}
+                                    <strong>Please reduce your {{ name }} skill by {{ rollmade }}</strong>
+                                {{/rollLess() rollmade 0}}
+                            </span>
+                        {{/rollLess() rollmade 1}}
+                        {{#rollGreater() rollmade 0}}
+                            <span>
+                                You got {{ rollmade }} on 1d6 - 2<br>
+                                <strong>Please increase your {{ name }} by {{ rollmade }}</strong>
+                            </span>
+                        {{/rollGreater() rollmade 0}}
+                        </div>
+                    {{/rollGreater() expcheck master}}
+                    <!-- failed experience roll on master skill (i.e. over 100) -->
+                    {{#rollLess() expcheck masterplus}}
+                        <div class="sheet-fail">
+                            <span><strong>Experience check failed!</strong><br>Rolled {{ expcheck }}. Needed over {{ master }}.</span>
+                        </div>
+                    {{/rollLess() expcheck masterplus}}
+                {{/rollGreater() baseskill 99}}
+                {{#rollLess() baseskill 100}}
+                    <!-- base skill less than 100 so we just need to beat that -->
+                    {{#rollGreater() expcheck baseskill}}
+                        <!-- made it now check how many points on 1d6 - 2 -->
+                        <div class="sheet-normal">
+                            <span><strong>Experience check Made!</strong><br>Rolled {{ expcheck }}. Needed over {{ baseskill }}.</span><br>
+                            {{#rollLess() rollmade 1}}
+                                <span>
+                                    Unfortunately you got<br> {{ rollmade }} on 1d6 - 2.<br>
+                                    {{#rollGreater() rollmade -1}}
+                                        <strong>You do not get to increase your skill this time.</strong>
+                                    {{/rollGreater() rollmade -1}}
+                                    {{#rollLess() rollmade 0}}
+                                        <strong>Please reduce your {{ name }} skill by {{ rollmade }}</strong>
+                                    {{/rollLess() rollmade 0}}
+                                </span>
+                            {{/rollLess() rollmade 1}}
+                            {{#rollGreater() rollmade 0}}
+                                <span>
+                                    You got {{ rollmade }} on 1d6 - 2<br>
+                                    <strong>Please increase your {{ name }} by {{ rollmade }}</strong>
+                                </span>
+                            {{/rollGreater() rollmade 0}}
+                        </div>
+                    {{/rollGreater() expcheck baseskill}}
+                    {{#rollLess() expcheck baseskillplus}}
+                        <div class="sheet-fail">
+                            <span><strong>Experience check failed!</strong><br>Rolled {{ expcheck }}. Needed over {{ baseskill }}.</span>
+                        </div>
+                    {{/rollLess() expcheck baseskillplus}}
+                {{/rollLess() baseskill 100}}
+            {{/rollLess() expcheck 101}}
+            <!-- section for just training roll without experience check -->
+            {{#rollGreater() expcheck 100}}
+                <div class="sheet-template-header">{{ name }} {{ subtags }}</div>
+
+                {{#rollLess() rollmade 1}}
+                    <div class="sheet-fail">
+                        <span>
+                            Unfortunately you got<br> {{ rollmade }} on 1d6 - 2.<br>
+                            {{#rollGreater() rollmade -1}}
+                                <strong>You do not get to increase your skill this time.</strong>
+                            {{/rollGreater() rollmade -1}}
+                            {{#rollLess() rollmade 0}}
+                                <strong>Please reduce your {{ name }} skill by {{ rollmade }}</strong>
+                            {{/rollLess() rollmade 0}}
+                        </span>
+                    </div>
+                {{/rollLess() rollmade 1}}
+                {{#rollGreater() rollmade 0}}
+                    <div class="sheet-normal">
+                        <span>You got {{ rollmade }} on 1d6 - 2<br>
+                            <strong>Please increase your {{ name }} by {{ rollmade }}</strong></span>
+                    </div>
+                {{/rollGreater() rollmade 0}}
+            {{/rollGreater() expcheck 100}}
+        </div>
+    </div>
+</rolltemplate>

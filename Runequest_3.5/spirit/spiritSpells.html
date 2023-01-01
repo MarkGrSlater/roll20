@@ -1,0 +1,28 @@
+        <!-- Spirit Spells -->
+        <p><strong>Spirit Spells</strong></p>
+        <div class="sheet-rq35-spirit-spells">
+            <label>Spell Name</label>
+            <label>Magic Points</label>
+            <label>Located On</label>
+            <label>Roll to Cast</label>
+            <label>Spell Name</label>
+            <label>Magic Points</label>
+            <label>Located On</label>
+            <label>Roll to Cast</label>
+
+            <fieldset class="repeating_spiritspells">
+                <input type="text" name="attr_spiritspell_name1">
+                <input type="number" name="attr_spiritspell_magicpoints1" value="0">
+                <input type="text" name="attr_spiritspell_location1">
+                <input type="number" name="attr_spiritspell_modified1" value="((@{pow} + @{pow_enchant}) * 5) + @{dodge_encumbrance}" hidden disabled>
+
+                <button type="roll" name="roll_spiritspell"
+                        value="&{template:spiritspell} {{name=@{spiritspell_name1} @{spiritspell_magicpoints1}}} {{rollmade=[[1d100]]}} {{x5=[[@{spiritspell_modified1}]]}} {{x5plus=[[@{spiritspell_modified1}+1]]}}"></button>
+                <input type="text" name="attr_spiritspell_nameb1">
+                <input type="number" name="attr_spiritspell_magicpointsb1" value="0">
+                <input type="text" name="attr_spiritspell_locationb1">
+                <input type="number" name="attr_spiritspell_modifiedb1" value="((@{pow} + @{pow_enchant}) * 5) + @{dodge_encumbrance}" hidden disabled>
+                <button type="roll" name="roll_spiritspell"
+                        value="&{template:spiritspell} {{name=@{spiritspell_nameb1} @{spiritspell_magicpointsb1}}} {{rollmade=[[1d100]]}} {{x5=[[@{spiritspell_modifiedb1}]]}} {{x5plus=[[@{spiritspell_modifiedb1}+1]]}}"></button>
+            </fieldset>
+        </div>

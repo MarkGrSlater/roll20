@@ -1,0 +1,25 @@
+<!-- spiritSpellTemplate -->
+<rolltemplate class="sheet-rolltemplate-spiritspell">
+    <div class="sheet-template-container">
+	    <div class="sheet-template-header">Casting {{name}}: {{rollmade}}</div>
+        <!-- if roll over 95 automatic fail -->
+        {{#rollGreater() rollmade 95 }}
+            <div class="sheet-fail">
+                <span>Failed to cast:&nbsp;&nbsp;&nbsp;{{ rollmade }} &#10005; <br>Automatic fail</span>
+            </div>
+        {{/rollGreater() rollmade 95 }}
+        {{#rollLess() rollmade 96}}
+            <!-- Not an automatic miss so check against their skill -->
+            {{#rollGreater() rollmade x5}}
+                <div class="sheet-fail">
+                    <span>{{name}} Failed to cast<br>Needed: {{ x5 }} or less </span>
+                </div>
+            {{/rollGreater() rollmade x5}}
+            {{#rollLess() rollmade x5plus}}
+                <div class="sheet-normal">
+                    <span><strong>{{name}}</strong> cast successfully:<br>Needed:  {{ x5 }} &#10004;</span>
+                </div>
+            {{/rollLess() rollmade x5plus}}
+        {{/rollLess() rollmade 96}}
+    </div>
+</rolltemplate>

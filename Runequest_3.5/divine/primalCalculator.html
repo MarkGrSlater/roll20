@@ -1,0 +1,32 @@
+        <!-- Primal Flux Calculator -->
+        <p><strong>Primal Flux Calculator</strong></p>
+        <div class="sheet-rq35-primalcalc">
+            <label>Primal Base</label>
+            <label>Number of<br>Worshippers</label>
+            <label>Number of<br>Captured Souls</label>
+            <label>Number of<br>Active Shrines</label>
+            <label>Number of<br>Major Temples</label>
+            <label>Number of<br>Greater Temples</label>
+
+            <input type="number" name="attr_primal_base" value="@{pow}+@{pow_enchant}" disabled>
+            <input type="number" name="attr_number_worshippers" value="0">
+            <input type="number" name="attr_number_souls" value="0">
+            <input type="number" name="attr_number_shrines" value="0">
+            <input type="number" name="attr_number_temples" value="0">
+            <input type="number" name="attr_number_greater" value="0">
+
+            <label>Total Base of Captured Deities</label>
+            <label>Number of Mini Plains</label>
+            <label>Number of Plains</label>
+            <label>Total Daily Flux</label>
+            <label>Flux Used Today</label>
+            <label>Flux Remaining</label>
+
+            <input type="number" name="attr_deities_base" value="0">
+            <input type="number" name="attr_number_miniplanes" value="0">
+            <input type="number" name="attr_number_planes" value="0">
+            <input type="text" name="attr_total_flux" readonly>
+            <input type="number" name="attr_flux_used" value="0">
+            <input type="number" name="attr_flux_remaining" value="@{total_flux}-@{flux_used}" disabled>
+
+        </div>

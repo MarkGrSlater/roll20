@@ -1,0 +1,27 @@
+        <!-- Dragon Held Spells -->
+        <p><strong>Dragon Held Spells</strong></p>
+        <div class="sheet-rq35-dragonheld-spells">
+            <label>Spell Name</label>
+            <label>Magnitude</label>
+            <label>Number Held</label>
+            <label>Cast Spell</label>
+            <label> </label>
+            <label>Spell Name</label>
+            <label>Magnitude</label>
+            <label>Number Held</label>
+            <label>Cast Spell</label>
+
+            <fieldset class="repeating_dragonheld">
+                <input type="text" name="attr_dragonheld_name1">
+                <input type="number" name="attr_dragonheld_magnitude1">
+                <input type="number" name="attr_dragonheld_number1">
+                <button type="roll" name="roll_weapon1"
+                    value="&{template:test} {{name=@{dragonheld_name1}}} {{rollmade=[[1d100]]}} {{normal=[[@{pow_primary}+@{int_primary}+@{dex_secondary}+@{illumination_base}]]}} {{normalplus=[[@{pow_primary}+@{int_primary}+@{dex_secondary}+@{illumination_base}+1]]}} {{fumble=[[100-floor(((100 - (@{pow_primary}+@{int_primary}+@{dex_secondary}+@{illumination_base})) / 20) + 0.55)]]}} {{fumbleminus=[[100-floor(((100 - (@{pow_primary}+@{int_primary}+@{dex_secondary}+@{illumination_base})) / 20) + 0.55)-1]]}} {{special=[[round((@{pow_primary}+@{int_primary}+@{dex_secondary}+@{illumination_base})/5)]]}} {{specialplus=[[round((@{pow_primary}+@{int_primary}+@{dex_secondary}+@{illumination_base})/5)+1]]}} {{critical=[[round((@{pow_primary}+@{int_primary}+@{dex_secondary}+@{illumination_base})/20)]]}} {{criticalplus=[[round((@{pow_primary}+@{int_primary}+@{dex_secondary}+@{illumination_base})/20)+1]]}} {{supercritical=[[0]]}} {{supercriticalplus=[[1]]}} {{hypercritical=[[0]]}} {{hypercriticalplus=[[1]]}} {{specmin=[[1]]}} {{critmin=[[1]]}}"></button>
+                <span> </span>
+                <input type="text" name="attr_dragonheld_nameb1">
+                <input type="number" name="attr_dragonheld_magnitudeb1">
+                <input type="number" name="attr_dragonheld_numberb1">
+                <button type="roll" name="roll_weapon1"
+                    value="&{template:test} {{name=@{dragonheld_nameb1}}} {{rollmade=[[1d100]]}} {{normal=[[@{pow_primary}+@{int_primary}+@{dex_secondary}+@{illumination_base}]]}} {{normalplus=[[@{pow_primary}+@{int_primary}+@{dex_secondary}+@{illumination_base}+1]]}} {{fumble=[[100-floor(((100 - (@{pow_primary}+@{int_primary}+@{dex_secondary}+@{illumination_base})) / 20) + 0.55)]]}} {{fumbleminus=[[100-floor(((100 - (@{pow_primary}+@{int_primary}+@{dex_secondary}+@{illumination_base})) / 20) + 0.55)-1]]}} {{special=[[round((@{pow_primary}+@{int_primary}+@{dex_secondary}+@{illumination_base})/5)]]}} {{specialplus=[[round((@{pow_primary}+@{int_primary}+@{dex_secondary}+@{illumination_base})/5)+1]]}} {{critical=[[round((@{pow_primary}+@{int_primary}+@{dex_secondary}+@{illumination_base})/20)]]}} {{criticalplus=[[round((@{pow_primary}+@{int_primary}+@{dex_secondary}+@{illumination_base})/20)+1]]}} {{supercritical=[[0]]}} {{supercriticalplus=[[1]]}} {{hypercritical=[[0]]}} {{hypercriticalplus=[[1]]}} {{specmin=[[1]]}} {{critmin=[[1]]}}"></button>
+            </fieldset>
+        </div>

@@ -1,0 +1,45 @@
+/* style for spirit skills grid */
+.sheet-rq35-divine-spells {
+    display: grid;
+    width: 860px;
+    background: #fff;
+    border: thick double #32a1ce;
+    grid-template-columns: repeat(2, 160px 100px) 140px 100px 100px;
+    grid-template-rows: auto;
+}
+.sheet-rq35-divine-spells div.repcontainer {
+    grid-column-start: 1;
+    grid-column-end: span 7;
+}
+.sheet-rq35-divine-spells div.repcontainer div.repitem {
+    display: inline-grid;
+    width: 860px;
+    grid-template-columns: repeat(2, 160px 100px) 140px 100px 100px;
+    grid-template-rows: auto;
+}
+.sheet-rq35-divine-spells div.repcontainer input[type="text"] {
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+}
+.sheet-rq35-divine-spells div.repcontainer button {
+    margin-left: auto;
+    margin-right: auto;
+}
+.sheet-rq35-divine-spells label {
+    color: #5e5e5e;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 11px
+}
+.sheet-rq35-divine-spells input {
+    margin-left: auto;
+    margin-right: auto;
+}
+/* divine-skills multiline display */
+.sheet-rq35-divine-spells div.repcontrol {
+    grid-column-start: 1;
+    grid-column-end: span 7;
+    padding: 10px 20px 5px 20px;
+}

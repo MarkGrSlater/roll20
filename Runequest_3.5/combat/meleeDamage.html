@@ -1,0 +1,25 @@
+        <!-- meleeDamage -->
+        <p><strong>Weapon Damage</strong></p>
+        <div class="sheet-rq35-melee-damage">
+            <label>Weapon Name</label>
+            <label>Base Damage</label>
+            <label>Magic Modifier</label>
+            <label>Strength Bonus</label>
+            <label>Roll Normal</label>
+            <label>Special Damage</label>
+            <label>Roll Special</label>
+            <label>Roll Critical</label>
+            <fieldset class="repeating_meleedamage">
+                <input type="text" name="attr_meleedamage_name1">
+                <input type="text" class="sheet-small-text" name="attr_meleedamage_base1">
+                <input type="number" name="attr_meleedamage_magic1" value="0">
+                <input type="text" class="sheet-small-text" name="attr_meleedamage_mod1" >
+                <button type="roll" name="roll_weapon1"
+                        value="&{template:meleedamage} {{name=@{meleedamage_name1}}} {{subtags=Normal hit}} {{location=[[1d20]]}} {{damage=[[@{meleedamage_base1}+@{meleedamage_magic1}+@{meleedamage_mod1}]]}}"></button>
+                <input type="text" class="sheet-small-text" name="attr_specialdamage1">
+                <button type="roll" name="roll_weapon1"
+                        value="&{template:meleedamage} {{name=@{meleedamage_name1}}} {{subtags=Special hit}} {{location=[[1d20]]}} {{damage=[[@{specialdamage1}+@{meleedamage_magic1}+@{meleedamage_mod1}]]}}"></button>
+                <button type="roll" name="roll_weapon1"
+                        value="&{template:meleedamage} {{name=@{meleedamage_name1}}} {{subtags=Critical hit}} {{location=[[1d20]]}} {{damage=[[@{meleedamage_base1}+@{meleedamage_base1}+@{meleedamage_magic1}+@{meleedamage_magic1}+@{meleedamage_mod1}+@{meleedamage_mod1}]] }}"></button>
+            </fieldset>
+        </div>

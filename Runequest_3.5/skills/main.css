@@ -1,0 +1,93 @@
+.sheet-rqskills-main {
+    display: grid;
+    width: 860px;
+    background: #fff;
+    grid-template-columns:  420px 20px 420px;
+    grid-template-rows: auto;
+}
+.sheet-rqskills-left {
+    display: inline-grid;
+    width: 420px;
+    grid-column-start: 1;
+}
+.sheet-rqskills-right {
+    display: inline-grid;
+    width: 420px;
+    grid-column-start: 3;
+}
+.sheet-rq35-skills {
+    display: grid;
+    width: 420px;
+    background: #fff;
+    border: thick double #32a1ce;
+    grid-template-columns: 40px 110px 60px 60px 60px 45px 45px;
+    grid-template-rows: auto;
+}
+.charsheet .sheet-rq35-skills label {
+    color: #5e5e5e;
+    text-align: center;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 11px;
+}
+.sheet-rq35-skills div.repcontainer {
+    grid-column-start: 1;
+    grid-column-end: span 5;
+}
+.sheet-rq35-skills div.repitem
+{
+    display: inline-grid;
+    width: 420px;
+    grid-template-columns: 40px 110px 60px 60px 60px 45px 45px;
+    grid-template-rows: auto;
+}
+.sheet-rq35-skills div.sheet-fixeditem
+{
+    display: inline-grid;
+    width: 420px;
+    grid-template-columns: 40px 110px 60px 60px 60px 45px 45px;
+    grid-template-rows: repeat(6, 34px);
+}
+.charsheet .sheet-rq35-skills label {
+    color: #5e5e5e;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 11px;
+}
+.charsheet .sheet-rq35-skills input {
+    margin-left: auto;
+    margin-right: auto;
+}
+.sheet-rq35-skills div.repcontainer input[type="text"],
+.sheet-rq35-skills div.sheet-fixeditem input[type="text"]
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 118px;
+}
+.sheet-rq35-skills div.sheet-fixeditem input {
+    margin-bottom: 6px;
+}
+.sheet-rq35-skills div.repcontainer input.sheet-small-text,
+.sheet-rq35-skills div.sheet-fixeditem input.sheet-small-text {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80px;
+}
+.charsheet .sheet-rq35-skills div.repcontainer button,
+.charsheet .sheet-rq35-skills div.sheet-fixeditem button {
+    margin-left: auto;
+    margin-right: auto;
+    width: 16px;
+}
+.charsheet .sheet-rq35-skills div.sheet-fixeditem button {
+    margin-bottom: 6px !important;
+}
+
+/* modifier buttons */
+div.sheet-rq35-skills div.repcontrol {
+    grid-column-start: 1;
+    grid-column-end: span 6;
+    padding: 10px 10px 5px 10px;
+}

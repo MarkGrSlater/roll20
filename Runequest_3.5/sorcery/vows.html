@@ -1,0 +1,87 @@
+        <!-- Sorcery Vows -->
+        <p><strong>Vows</strong></p>
+        <div class="sheet-rq35-vows">
+            <label> </label>
+            <label>Abjure Armour</label>
+            <label>Abjure Weapons</label>
+            <label>Abjure Intensity</label>
+            <label>Abjure Multispell</label>
+            <label>Abjure<br/>Range</label>
+            <label>Abjure Accuracy</label>
+            <label>Abjure<br/>Erase</label>
+            <label>Abjure<br/>Force</label>
+            <label>Abjure<br/>Hold</label>
+            <label>Abjure Permanence</label>
+            <label>Abjure Reinforce</label>
+
+            <em> </em>
+            <input type="checkbox" name="attr_abjure_armour" value="2">
+            <input type="checkbox" name="attr_abjure_weapons" value="3">
+            <input type="checkbox" name="attr_abjure_intensity" value="5">
+            <input type="checkbox" name="attr_abjure_multispell" value="5">
+            <input type="checkbox" name="attr_abjure_range" value="5">
+            <input type="checkbox" name="attr_abjure_accuracy" value="3">
+            <input type="checkbox" name="attr_abjure_ease" value="3">
+            <input type="checkbox" name="attr_abjure_force" value="3">
+            <input type="checkbox" name="attr_abjure_hold" value="3">
+            <input type="checkbox" name="attr_abjure_permanence" value="3">
+            <input type="checkbox" name="attr_abjure_reinforce" value="3">
+            <input name="attr_subtot_vows1" type="number" value="@{abjure_armour}+@{abjure_weapons}+@{abjure_intensity}+@{abjure_multispell}+@{abjure_range}+@{abjure_accuracy}+@{abjure_ease}+@{abjure_force}+@{abjure_hold}+@{abjure_permanence}+@{abjure_reinforce}" hidden disabled>
+
+            <label> </label>
+            <label>Abjure<br/>Speed</label>
+            <label>Abjure<br/>Divine</label>
+            <label>Abjure<br/>Spirit</label>
+            <label>Abjure Worship</label>
+            <label>Sacrifice Hand</label>
+            <label>Sacrifice<br/>2nd Hand</label>
+            <label>Sacrifice<br/>Leg</label>
+            <label>Sacrifice<br/>2nd Leg</label>
+            <label>Self Abnegation</label>
+            <label>Shun Tap Power</label>
+            <label>Self<br/>Exaltation</label>
+
+            <em> </em>
+            <input type="checkbox" name="attr_abjure_speed" value="3">
+            <input type="checkbox" name="attr_abjure_divine" value="2">
+            <input type="checkbox" name="attr_abjure_spirit" value="2">
+            <input type="checkbox" name="attr_abjure_worship" value="8">
+            <input type="checkbox" name="attr_sacrifice_hand" value="3">
+            <input type="checkbox" name="attr_sacrifice_hand2" value="9">
+            <input type="checkbox" name="attr_sacrifice_leg" value="3">
+            <input type="checkbox" name="attr_sacrifice_leg2" value="9">
+            <input type="checkbox" name="attr_self_abnegation" value="4">
+            <input type="checkbox" name="attr_shun_tap" value="2">
+            <input type="checkbox" name="attr_self_exaltation" value="6">
+            <input name="attr_subtot_vows2" type="number" value="@{abjure_speed}+@{abjure_divine}+@{abjure_spirit}+@{abjure_worship}+@{sacrifice_hand}+@{sacrifice_hand2}+@{sacrifice_leg}+@{sacrifice_leg2}+@{self_abnegation}+@{shun_tap}+@{self_exaltation}" hidden disabled>
+
+            <label> </label>
+            <label>Shun<br/>Cold</label>
+            <label>Shun<br/>Wind</label>
+            <label>Shun<br/>Fire</label>
+            <label>Shun<br/>Water</label>
+            <label>Shun<br/>Light</label>
+            <label>Shun<br/>Earth</label>
+            <label>Shun Immortality</label>
+            <label>Shun Darkness</label>
+            <label>Never Kill Human</label>
+            <label>Tend<br/>Familiar</label>
+            <label>Vegetarianism</label>
+
+            <em> </em>
+            <input type="checkbox" name="attr_shun_cold" value="2">
+            <input type="checkbox" name="attr_shun_wind" value="2">
+            <input type="checkbox" name="attr_shun_fire" value="2">
+            <input type="checkbox" name="attr_shun_water" value="2">
+            <input type="checkbox" name="attr_shun_light" value="2">
+            <input type="checkbox" name="attr_shun_earth" value="2">
+            <input type="checkbox" name="attr_shun_immortality" value="1">
+            <input type="checkbox" name="attr_shun_darkness" value="2">
+            <input type="checkbox" name="attr_never_kill" value=3">
+            <input type="checkbox" name="attr_tend_familiar" value="1">
+            <input type="checkbox" name="attr_vegetarianism" value="2">
+            <input name="attr_subtot_vows3" value="@{shun_cold}+@{shun_wind}+@{shun_fire}+@{shun_water}+@{shun_light}+@{shun_earth}+@{shun_immortality}+@{shun_darkness}+@{never_kill}+@{tend_familiar}+@{vegetarianism}" hidden disabled>
+            <em> </em>
+            <label>Presence from vows</label>
+            <input name="attr_total_vows" type="number" value="@{subtot_vows1}+@{subtot_vows2}+@{subtot_vows3}" disabled>
+        </div>

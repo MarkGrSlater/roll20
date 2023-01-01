@@ -1,0 +1,29 @@
+        <!-- Dragon Spells -->
+        <p><strong>Dragon Spells</strong></p>
+        <div class="sheet-rq35-dragon-spells">
+            <label>Spell Name</label>
+            <label>Magnitude</label>
+            <label>Casting Time</label>
+            <label>Area of Effect</label>
+            <label>Duration</label>
+            <label>Ranged</label>
+            <label>Progressive</label>
+            <label>Resistable</label>
+            <label>Triggerable</label>
+            <label>Cast Spell</label>
+
+            <fieldset class="repeating_dragonspells">
+                <input type="text" name="attr_dragonspell_name1">
+                <input type="number" name="attr_dragonspell_magnitude1" value="1">
+                <input type="number" name="attr_dragonspell_castingtime1">
+                <input type="text" name="attr_dragonspell_area1">
+                <input type="text" name="attr_dragonspell_duration1">
+                <input type="checkbox" name="attr_dragonspell_ranged1">
+                <input type="checkbox" name="attr_dragonspell_progressive1" value="1">
+                <input type="checkbox" name="attr_dragonspell_resist1" value="1">
+                <input type="checkbox" name="attr_dragonspell_triggerable1" value="1">
+                <button type="roll" name="roll_weapon1"
+                    value="&{template:test} {{name=@{dragonspell_name1}}} {{rollmade=[[1d100]]}} {{normal=[[@{pow_primary}+@{int_primary}+@{dex_secondary}+@{illumination_base}]]}} {{normalplus=[[@{pow_primary}+@{int_primary}+@{dex_secondary}+@{illumination_base}+1]]}} {{fumble=[[100-floor(((100 - (@{pow_primary}+@{int_primary}+@{dex_secondary}+@{illumination_base})) / 20) + 0.55)]]}} {{fumbleminus=[[100-floor(((100 - (@{pow_primary}+@{int_primary}+@{dex_secondary}+@{illumination_base})) / 20) + 0.55)-1]]}} {{special=[[round((@{pow_primary}+@{int_primary}+@{dex_secondary}+@{illumination_base})/5)]]}} {{specialplus=[[round((@{pow_primary}+@{int_primary}+@{dex_secondary}+@{illumination_base})/5)+1]]}} {{critical=[[round((@{pow_primary}+@{int_primary}+@{dex_secondary}+@{illumination_base})/20)]]}} {{criticalplus=[[round((@{pow_primary}+@{int_primary}+@{dex_secondary}+@{illumination_base})/20)+1]]}} {{supercritical=[[0]]}} {{supercriticalplus=[[1]]}} {{hypercritical=[[0]]}} {{hypercriticalplus=[[1]]}} {{specmin=[[1]]}} {{critmin=[[1]]}}"></button>
+
+            </fieldset>
+        </div>

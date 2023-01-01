@@ -1,0 +1,35 @@
+        <!-- Held Spells -->
+        <p><strong>Held Spells</strong></p>
+        <div class="sheet-rq35-held-spells">
+            <label>Released</label>
+            <label>Show</label>
+            <label>Spell Name(s)</label>
+            <label>Intensity</label>
+            <label>Range (m)</label>
+            <label>Multispell</label>
+            <label> </label>
+            <label>Released</label>
+            <label>Show</label>
+            <label>Spell Name(s)</label>
+            <label>Intensity</label>
+            <label>Range (m)</label>
+            <label>Multispell</label>
+
+            <fieldset class="repeating_heldspells">
+                <input type="checkbox" name="attr_heldspell_ticked1" value="1">
+                <button type="roll" name="roll_heldspell1"
+                        value="&{template:heldspell} {{name=@{heldspell_name1}}} {{spellint=[[@{heldspell_intensity1}]]}} {{checked=[[@{heldspell_ticked1}]]}} {{intensity=@{heldspell_intensity1}}} {{range=@{heldspell_range1}}} {{multispell=@{heldspell_multispell1}}}"></button>
+                <input type="text" name="attr_heldspell_name1">
+                <input type="number" name="attr_heldspell_intensity1" value="0">
+                <input type="number" name="attr_heldspell_range1" class="sheet-range-meters" value="0">
+                <input type="number" name="attr_heldspell_multispell1" value="0">
+                <em> </em>
+                <input type="checkbox" name="attr_heldspell_tickedb1" value="1">
+                <button type="roll" name="roll_heldspellb1"
+                        value="&{template:heldspell} {{name=@{heldspell_nameb1}}}  {{spellint=[[@{heldspell_intensityb1}]]}}  {{checked=[[@{heldspell_tickedb1}]]}} {{intensity=@{heldspell_intensityb1}}} {{range=@{heldspell_rangeb1}}} {{multispell=@{heldspell_multispellb1}}}"></button>
+                <input type="text" name="attr_heldspell_nameb1">
+                <input type="number" name="attr_heldspell_intensityb1" value="0">
+                <input type="number" name="attr_heldspell_rangeb1" class="sheet-range-meters" value="0">
+                <input type="number" name="attr_heldspell_multispellb1" value="0">
+            </fieldset>
+        </div>

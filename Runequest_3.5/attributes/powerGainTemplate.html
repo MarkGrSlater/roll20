@@ -1,0 +1,55 @@
+<!-- PowerGainRoll Template -->
+<rolltemplate class="sheet-rolltemplate-powergain">
+    <div class="sheet-template-container">
+	    <div class="sheet-template-header">{{name}}: {{rollmade}}</div>
+        <!-- if roll over 95 automatic fail -->
+        {{#rollGreater() rollmade normal}}
+            <div class="sheet-fail">
+                <span><strong>{{name}} Failed!</strong><br>Needed: {{ normal }} or less </span>
+            </div>
+        {{/rollGreater() rollmade normal}}
+        {{#rollLess() rollmade normalplus}}
+            <div class="sheet-normal">
+                <span><strong>{{name}}</strong> was successful!:<br>Needed:  {{ normal }} &#10004;</span>
+            </div>
+            {{#rollGreater() gain 40}}
+                <div class="sheet-normal">
+                    <span>Power gain % roll was {{gain}}<br>Increase your Power by <strong>1</strong></span>
+                </div>
+            {{/rollGreater() gain 40}}
+            {{#rollLess() gain 41}}
+                {{#rollGreater() gain 10}}
+                    {{#rollLess() maxgain 2}}
+                        <div class="sheet-normal">
+                            <span>Power gain % roll was {{gain}}<br>Increase your Power by maximum allowed <strong>{{ maxgain }}</strong></span>
+                        </div>
+                    {{/rollLess() maxgain 2}}
+                    {{#rollGreater() maxgain 1}}
+                        <div class="sheet-special">
+                            <span>Power gain % roll was {{gain}}<br>Increase your Power by <strong>2</strong></span>
+                        </div>
+                    {{/rollGreater() maxgain 1}}
+                {{/rollGreater() gain 10}}
+                {{#rollLess() gain 11}}
+                    {{#rollLess() maxgain 3}}
+                        {{#rollLess() maxgain 2}}
+                            <div class="sheet-normal">
+                                <span>Power gain % roll was {{gain}}<br>Increase your Power by maximum allowed <strong>{{ maxgain }}</strong></span>
+                            </div>
+                        {{/rollLess() maxgain 2}}
+                        {{#rollGreater() maxgain 1}}
+                            <div class="sheet-special">
+                                <span>Power gain % roll was {{gain}}<br>Increase your Power by maximum allowed <strong>2</strong></span>
+                            </div>
+                        {{/rollGreater() maxgain 1}}
+                    {{/rollLess() maxgain 3}}
+                    {{#rollGreater() maxgain 2}}
+                        <div class="sheet-critical">
+                            <span>Power gain % roll was {{gain}}<br>Increase your Power by <strong>3</strong></span>
+                        </div>
+                    {{/rollGreater() maxgain 2}}
+                {{/rollLess() gain 11}}
+            {{/rollLess() gain 41}}
+        {{/rollLess() rollmade normalplus}}
+    </div>
+</rolltemplate>

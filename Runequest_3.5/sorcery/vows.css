@@ -1,0 +1,44 @@
+/* style for held spells grid */
+.sheet-rq35-vows {
+    display: grid;
+    width: 860px;
+    background: #fff;
+    border: thick double #32a1ce;
+    grid-template-columns: 12px repeat(11,76px);
+    grid-template-rows: auto;
+}
+.sheet-rq35-vows div.repcontainer {
+    grid-column-start: 1;
+    grid-column-end: span 11;
+}
+.sheet-rq35-vows div.repcontainer div.repitem {
+    display: inline-grid;
+    width: 860px;
+    grid-template-columns: 12px repeat(11,76px);
+    grid-template-rows: auto;
+}
+.sheet-rq35-vows input[type="checkbox"] {
+    margin: -5px auto 15px auto;
+
+}
+.sheet-rq35-vows input[type="number"] {
+    margin: 5px auto 10px auto;
+    height: 35px;
+    width: 55px;
+}
+.sheet-rq35-vows input[type="text"] {
+    margin-left: auto;
+    margin-right: auto;
+    width: 180px;
+}
+.sheet-rq35-vows label {
+    color: #5e5e5e;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 11px
+}
+.sheet-rq35-vows input {
+    margin-left: auto;
+    margin-right: auto;
+}

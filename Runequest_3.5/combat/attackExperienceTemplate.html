@@ -1,0 +1,34 @@
+<!-- ExperienceTemplate -->
+<rolltemplate class="sheet-rolltemplate-attackexp">
+    <div class="sheet-template-container">
+	    <div class="sheet-template-header">{{name}} Experience Roll</div>
+        {{#rollLess() normal 100}}
+            {{#rollGreater() exproll normal}}
+                <div class="sheet-normal">
+                    <span><strong>Experience Check Made!: &#10004;</strong><br>Rolled {{ exproll }} vs base skill of {{ normal  }}<br>
+                    Increase your {{ name }} base by {{rollmade}}</span>
+                </div>
+            {{/rollGreater() exproll normal}}
+            {{#rollLess() exproll normalplus}}
+                <div class="sheet-fail">
+                    <span><strong>Experience Roll Missed: &#10005;</strong><br>Rolled {{ exproll }} vs base skill of {{ normal  }}</span>
+                </div>
+            {{/rollLess() exproll normalplus}}
+        {{/rollLess() normal 100}}
+        {{#rollGreater() normal 99}}
+            {{#rollGreater() exproll master}}
+                 <div class="sheet-normal">
+                     <span><strong>Experience Check Made!: &#10004;</strong><br>
+                         Rolled {{ exproll }} vs base skill of {{ normal }} need to roll over {{ master }}<br>
+                         Increase your {{ name }} base by {{rollmade}}</span>
+                     </span>
+                </div>
+            {{/rollGreater() exproll master}}
+            {{#rollLess() exproll masterplus}}
+                <div class="sheet-fail">
+                    <span><strong>Experience Roll Missed: &#10005;</strong><br>Rolled {{ exproll }} vs base skill of {{ normal }} need to roll over {{ master }}</span>
+                </div>
+            {{/rollLess() exproll masterplus}}
+        {{/rollGreater() normal 99}}
+    </div>
+</rolltemplate>

@@ -1,0 +1,22 @@
+<!-- HeldSpellTemplate -->
+<rolltemplate class="sheet-rolltemplate-heldspell">
+    <div class="sheet-template-container">
+	    <div class="sheet-template-header">Released Spell</div>
+        <div class="sheet-normal">
+            {{#rollGreater() spellint 0}}
+                {{#rollGreater() checked 0}}
+                    <span>The held spell <strong>{{name}}</strong> has already been released - try another</span>
+                {{/rollGreater() checked 0}}
+                {{#rollLess() checked 1}}
+                    <span>Name:<strong> {{name}}</strong><br>Intensity: <strong>{{intensity}}</strong><br>
+                        Range: <strong>{{range}}m</strong></span><br>Multispell: <strong>{{multispell}}</strong><br>
+                        <em>Tick <strong>Released</strong> for this spell.</em>
+                    </span>
+                {{/rollLess() checked 1}}
+            {{/rollGreater() spellint 0}}
+            {{#rollLess() spellint 1}}
+                <span>No intensity for held spell {{name}} - please update and try again.</span>
+            {{/rollLess() spellint 1}}
+        </div>
+    </div>
+</rolltemplate>

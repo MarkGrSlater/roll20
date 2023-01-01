@@ -1,0 +1,47 @@
+/* style for spirit skills grid */
+.sheet-rq35-primalcalc {
+    display: grid;
+    width: 860px;
+    background: #fff;
+    border: thick double #32a1ce;
+    grid-template-columns: repeat(5, 143px) 145px;
+    grid-template-rows: auto;
+}
+.sheet-rq35-primalcalc div.repcontainer {
+    grid-column-start: 1;
+    grid-column-end: span 5;
+}
+.sheet-rq35-primalcalc div.repcontainer div.repitem {
+    display: inline-grid;
+    width: 860px;
+    grid-template-columns: repeat(5, 143px) 145px;
+    grid-template-rows: auto;
+}
+.sheet-rq35-primalcalc div.repcontainer input[type="text"] {
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+}
+.sheet-rq35-primalcalc button {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 16px;
+    height: 20px;
+}
+.sheet-rq35-primalcalc label {
+    color: #5e5e5e;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 11px
+}
+.sheet-rq35-primalcalc input {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+}
+.sheet-rq35-primalcalc input[type="text"] {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60px;
+}

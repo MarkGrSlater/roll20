@@ -1,0 +1,42 @@
+.charsheet .sheet-rq35 {
+  background: white;
+  color: black;
+  font-size: 13px;
+  line-height: 13px;
+  margin: 0;
+  overflow: visible;
+  padding: 0;
+}
+.charsheet p {
+    margin: 20px 0 0 10px;
+    color: #32a1ce;
+}
+.sheet-rq35-title {
+    display: grid;
+    width: 860px;
+    background: #fff;
+    border: thick double #32a1ce;
+    grid-template-columns:
+            [label-a] 8% [value-a] 15% [label-b] 8% [value-b] 15%
+            [label-c] 10% [value-c] 15% [label-d] 10% [value-d] 15%;
+    grid-template-rows: 3fr;
+    padding: 5px 0;
+}
+.sheet-rq35-title label {
+    color: #5e5e5e;
+    padding-top: 5px;
+    text-align: right;
+    font-size: 11px;
+    font-weight: bold;
+    width: 90px;
+}
+.sheet-rq35-title input {
+    align-self: center;
+    width: 129px;
+}
+.center {
+    text-align: center!important;
+}
+.red {
+    color: #ce3232 !important;
+}

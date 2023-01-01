@@ -1,0 +1,39 @@
+.sheet-rq35-stats {
+    display: grid;
+    background: #fff;
+    border: thick double #32a1ce;
+    width: 860px;
+    grid-template-columns: 100px 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    padding: 5px 0;
+}
+.sheet-rq35-stats input {
+    width: 90px;
+    alignment: center;
+}
+.sheet-rq35-stats label {
+    color: #5e5e5e;
+    text-align: right;
+    padding-top: 5px;
+    font-weight: bold;
+    font-size: 11px;
+}
+p.sheet-header {
+    grid-row-start: 1;
+    grid-row-end: -1;
+}
+.sheet-rq35-stats label.sheet-title {
+    font-size: 14px;
+    text-align: center;
+}
+.sheet-rq35-stats input.sheet-stats {
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.sheet-rq35-stats button {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 22px;
+    height: 22px;
+}

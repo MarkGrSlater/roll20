@@ -1,0 +1,39 @@
+/* style for encumbrance grid */
+.sheet-rq35-encumbrance {
+    display: grid;
+    width: 860px;
+    background: #fff;
+    border: thick double #32a1ce;
+    grid-template-columns: repeat(5, 140px) 160px;
+    grid-template-rows: auto;
+}
+.sheet-rq35-encumbrance div.repcontainer {
+    grid-column-start: 1;
+    grid-column-end: span 6;
+}
+.sheet-rq35-encumbrance div.repcontainer div.repitem {
+    display: inline-grid;
+    width: 860px;
+    grid-template-columns: repeat(5, 140px) 160px;
+    grid-template-rows: auto;
+}
+.sheet-rq35-encumbrance input[type="number"] {
+    margin: 0 auto 10px auto;
+    width: 50px;
+}
+.sheet-rq35-encumbrance div.repcontainer button {
+    margin-left: auto;
+    margin-right: auto;
+    width: 16px;
+}
+.sheet-rq35-encumbrance label {
+    color: #5e5e5e;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 11px
+}
+.sheet-rq35-encumbrance input {
+    margin-left: auto;
+    margin-right: auto;
+}
