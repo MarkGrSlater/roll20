@@ -1,7 +1,8 @@
 /* style for held spells grid */
 .sheet-rq35-running-spells {
     display: grid;
-    width: 860px;
+    min-width: 860px;
+    width: 100%;
     background: #fff;
     border: thick double #32a1ce;
     grid-template-columns: 80px 190px repeat(4, 90px) 190px;
@@ -13,14 +14,10 @@
 }
 .sheet-rq35-running-spells div.repcontainer div.repitem {
     display: inline-grid;
-    width: 860px;
+    min-width: 860px;
+    width: 100%;
     grid-template-columns: 80px 190px repeat(4, 90px) 190px;
     grid-template-rows: auto;
-}
-.sheet-rq35-running-spells div.repcontainer input[type="text"] {
-    margin-left: auto;
-    margin-right: auto;
-    width: 180px;
 }
 .sheet-rq35-running-spells div.repcontainer button {
     margin-left: auto;
@@ -33,10 +30,6 @@
     padding: 5px 0;
     font-weight: bold;
     font-size: 11px
-}
-.sheet-rq35-running-spells input {
-    margin-left: auto;
-    margin-right: auto;
 }
 /* sorcery-spells multiline display */
 .sheet-rq35-running-spells div.repcontrol {

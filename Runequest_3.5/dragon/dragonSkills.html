@@ -11,10 +11,10 @@
             <label>Research Exp. Roll</label>
 
             <input type="checkbox" name="attr_illumination_checked" value="1">
-            <input type="text" name="attr_illumination_name" value="Draconic Illumination" readonly>
-            <input type="number" name="attr_illumination_base">
-            <input type="number" name="attr_illumination_total" value="@{illumination_base}+@{pow_primary}+@{int_primary}+@{dex_secondary}" disabled >
-            <input type="number" name="attr_illumination_hours">
+            <input type="text" class="flex" name="attr_illumination_name" value="Draconic Illumination" readonly>
+            <input type="number" class="flex" name="attr_illumination_base">
+            <input type="number" class="flex" name="attr_illumination_total" value="@{illumination_base}+@{pow_primary}+@{int_primary}+@{dex_secondary}" disabled >
+            <input type="number" class="flex" name="attr_illumination_hours">
             <button type="roll" name="roll_attackexp1"
                     value="&{template:attackexp} {{name=@{illumination_name}}} {{rollmade=[[1d6]]}} {{exproll=[[1d100]]}} {{normal=[[@{illumination_base}]]}} {{normalplus=[[@{illumination_base}+1]]}} {{master=[[100-(@{pow_primary}+@{int_primary}+@{dex_secondary})]]}} {{masterplus=[[101-(@{pow_primary}+@{int_primary}+@{dex_secondary})]]}}"></button>
             <button type="roll" name="roll_training1"
@@ -23,10 +23,10 @@
                     value="&{template:training} {{name=@{illumination_name}}} {{subtags=Research Roll}} {{expcheck=[[1d100]]}} {{rollmade=[[1d6-2]]}} {{baseskill=[[@{illumination_base}]]}} {{baseskillplus=[[@{illumination_base}+1]]}} {{minskill=[[1]]}} {{master=[[100-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}} {{masterplus=[[101-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}}"></button>
 
             <input type="checkbox" name="attr_dance_checked" value="1">
-            <input type="text" name="attr_dance_name" value="Dragon Dance" readonly>
-            <input type="number" name="attr_dance_base">
-            <input type="number" name="attr_dance_total" value="@{dance_base}+@{pow_primary}+@{int_primary}+@{dex_secondary}" disabled >
-            <input type="number" name="attr_dance_hours">
+            <input type="text" class="flex" name="attr_dance_name" value="Dragon Dance" readonly>
+            <input type="number" class="flex" name="attr_dance_base">
+            <input type="number" class="flex" name="attr_dance_total" value="@{dance_base}+@{pow_primary}+@{int_primary}+@{dex_secondary}" disabled >
+            <input type="number" class="flex" name="attr_dance_hours">
             <button type="roll" name="roll_attackexp1"
                     value="&{template:attackexp} {{name=@{dance_name}}} {{rollmade=[[1d6]]}} {{exproll=[[1d100]]}} {{normal=[[@{dance_base}]]}} {{normalplus=[[@{dance_base}+1]]}} {{master=[[100-(@{pow_primary}+@{int_primary}+@{dex_secondary})]]}} {{masterplus=[[101-(@{pow_primary}+@{int_primary}+@{dex_secondary})]]}}"></button>
             <button type="roll" name="roll_training1"
@@ -35,10 +35,10 @@
                     value="&{template:training} {{name=@{dance_name}}} {{subtags=Research Roll}} {{expcheck=[[1d100]]}} {{rollmade=[[1d6-2]]}} {{baseskill=[[@{dance_base}]]}} {{baseskillplus=[[@{dance_base}+1]]}} {{minskill=[[1]]}} {{master=[[100-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}} {{masterplus=[[101-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}}"></button>
 
             <span> </span>
-            <input type="text" name="attr_trigger_name" value="Trigger" readonly>
-            <input type="number" name="attr_trigger_base">
-            <input type="number" name="attr_trigger_total" value="@{trigger_base}+@{pow_primary}+@{int_primary}+@{dex_secondary}" disabled >
-            <input type="number" name="attr_trigger_hours">
+            <input type="text" class="flex" name="attr_trigger_name" value="Trigger" readonly>
+            <input type="number" class="flex" name="attr_trigger_base">
+            <input type="number" class="flex" name="attr_trigger_total" value="@{trigger_base}+@{pow_primary}+@{int_primary}+@{dex_secondary}" disabled >
+            <input type="number" class="flex" name="attr_trigger_hours">
             <span> </span>
             <button type="roll" name="roll_training1"
                     value="&{template:training} {{name=@{trigger_name}}} {{subtags=Trained Roll}} {{expcheck=[[101]]}} {{rollmade=[[1d6-2]]}} {{baseskill=[[@{trigger_base}]]}} {{baseskillplus=[[@{trigger_base}+1]]}} {{minskill=[[1]]}} {{master=[[100-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}} {{masterplus=[[101-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}}"></button>

@@ -1,31 +1,31 @@
-/* style for sorcery rituals grid */
-.sheet-rq35-sorcery-rituals {
+/* style for divine rituals grid */
+.sheet-rq35-divine-rituals {
     display: grid;
-    min-width: 860px;
     width: 100%;
+    min-width: 860px;
     background: #fff;
     border: thick double #32a1ce;
-    grid-template-columns: minmax(200px, 34%) minmax(124px, 22%) minmax(124px, 22%) 96px minmax(124px, 22%) 96px 96px;
+    grid-template-columns: 45px minmax(199px, 34%) minmax(122px, 22%) minmax(122px, 22%) 70px minmax(122px, 22%) repeat(2, 90px);
     grid-template-rows: auto;
 }
-.sheet-rq35-sorcery-rituals div.repcontainer {
+.sheet-rq35-divine-rituals div.repcontainer {
     grid-column-start: 1;
     grid-column-end: span 6;
 }
-.sheet-rq35-sorcery-rituals button {
+.sheet-rq35-divine-rituals button {
     margin-left: auto !important;
     margin-right: auto !important;
     width: 16px;
     height: 22px;
 }
-.sheet-rq35-sorcery-rituals label {
+.sheet-rq35-divine-rituals label {
     color: #5e5e5e;
     text-align: center;
     padding: 5px 0;
     font-weight: bold;
     font-size: 11px
 }
-.sheet-rq35-sorcery-rituals input {
+.sheet-rq35-divine-rituals input {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 5px;

@@ -1,10 +1,11 @@
 /* style for dragon skills grid */
 .sheet-rq35-dragon-skills {
     display: grid;
-    width: 860px;
+    min-width: 860px;
+    width: 100%;
     background: #fff;
     border: thick double #32a1ce;
-    grid-template-columns: 80px 180px 80px 80px 80px repeat(3, 120px);
+    grid-template-columns: 80px minmax(210px, 46%) repeat(3, minmax(80px, 18%)) 110px 110px 110px;
     grid-template-rows: auto;
 }
 .sheet-rq35-dragon-skills div.repcontainer {
@@ -13,14 +14,10 @@
 }
 .sheet-rq35-dragon-skills div.repcontainer div.repitem {
     display: inline-grid;
-    width: 860px;
-    grid-template-columns: 80px 180px 80px 80px 80px repeat(3, 120px);
+    min-width: 860px;
+    width: 100%;
+    grid-template-columns: 80px minmax(210px, 46%) repeat(3, minmax(80px, 18%)) 110px 110px 110px;
     grid-template-rows: auto;
-}
-.sheet-rq35-dragon-skills  input[type="text"] {
-    margin-left: auto;
-    margin-right: auto;
-    width: 170px;
 }
 .sheet-rq35-dragon-skills button {
     margin-left: auto !important;

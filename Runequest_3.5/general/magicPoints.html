@@ -10,19 +10,19 @@
             <label>Magic Attack Roll:</label>
 
             <label>Maximum Points</label>
-            <input name="attr_maxpersonal_mp" type="number" value="@{pow}+@{pow_enchant}" disabled>
-            <input name="attr_maxtapped_mp" type="number" value="@{pow}+@{pow_enchant}" disabled>
-            <input name="attr_maxpower_spirits" type="number" value="0">
-            <input name="attr_maxstorage_devices" type="number" value="0">
-            <input name="attr_maxtotal_mp" type="number" value="@{maxpersonal_mp}+@{maxtapped_mp}+@{maxpower_spirits}+@{maxstorage_devices}" disabled>
-            <input name="attr_attack_power" type="number" value="@{current_mp}+@{tapped_mp}" disabled>
+            <input name="attr_maxpersonal_mp" class="flex" type="number" value="@{pow}+@{pow_enchant}" disabled>
+            <input name="attr_maxtapped_mp" class="flex" type="number" value="@{pow}+@{pow_enchant}" disabled>
+            <input name="attr_maxpower_spirits" class="flex" type="number" value="0">
+            <input name="attr_maxstorage_devices" class="flex" type="number" value="0">
+            <input name="attr_maxtotal_mp" class="flex" type="number" value="@{maxpersonal_mp}+@{maxtapped_mp}+@{maxpower_spirits}+@{maxstorage_devices}" disabled>
+            <input name="attr_attack_power" class="flex" type="number" value="@{current_mp}+@{tapped_mp}" disabled>
 
             <label>Current Points</label>
-            <input name="attr_current_mp" type="number" value="0">
-            <input name="attr_tapped_mp" type="number" value="0">
-            <input name="attr_power_spirits" type="number" value="0">
-            <input name="attr_storage_devices" type="number" value="0">
-            <input name="attr_total_mp" type="number" value="@{current_mp}+@{tapped_mp}+@{power_spirits}+@{storage_devices}" disabled>
+            <input name="attr_current_mp" class="flex" type="number" value="0">
+            <input name="attr_tapped_mp" class="flex" type="number" value="0">
+            <input name="attr_power_spirits" class="flex" type="number" value="0">
+            <input name="attr_storage_devices" class="flex" type="number" value="0">
+            <input name="attr_total_mp" class="flex" type="number" value="@{current_mp}+@{tapped_mp}+@{power_spirits}+@{storage_devices}" disabled>
             <button type="roll" name="roll_spellattack"
                         value="&{template:spellattack} {{rollmade=[[1d100]]}} {{attackpower=[[@{current_mp}+@{tapped_mp}]]}} {{roll100=[[@{current_mp}+@{tapped_mp}-10]]}} {{roll95=[[@{current_mp}+@{tapped_mp}-9]]}} {{roll90=[[@{current_mp}+@{tapped_mp}-8]]}} {{roll85=[[@{current_mp}+@{tapped_mp}-7]]}} {{roll80=[[@{current_mp}+@{tapped_mp}-6]]}} {{roll75=[[@{current_mp}+@{tapped_mp}-5]]}} {{roll70=[[@{current_mp}+@{tapped_mp}-4]]}} {{roll65=[[@{current_mp}+@{tapped_mp}-3]]}} {{roll60=[[@{current_mp}+@{tapped_mp}-2]]}} {{roll55=[[@{current_mp}+@{tapped_mp}-1]]}} {{roll50=[[@{current_mp}+@{tapped_mp}]]}} {{roll45=[[@{current_mp}+@{tapped_mp}+1]]}} {{roll40=[[@{current_mp}+@{tapped_mp}+2]]}} {{roll35=[[@{current_mp}+@{tapped_mp}+3]]}} {{roll30=[[@{current_mp}+@{tapped_mp}+4]]}} {{roll25=[[@{current_mp}+@{tapped_mp}+5]]}} {{roll20=[[@{current_mp}+@{tapped_mp}+6]]}} {{roll15=[[@{current_mp}+@{tapped_mp}+7]]}} {{roll10=[[@{current_mp}+@{tapped_mp}+8]]}} {{roll5=[[@{current_mp}+@{tapped_mp}+9]]}}"></button>
         </div>

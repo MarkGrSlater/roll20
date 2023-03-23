@@ -1,17 +1,14 @@
 /* style for spirit skills grid */
 .sheet-rq35-spirit-skills {
     display: grid;
-    width: 860px;
+    width: 100%;
+    min-width: 860px;
     background: #fff;
     border: thick double #32a1ce;
-    grid-template-columns: 210px 70px 70px 210px repeat(3, 100px);
+    grid-template-columns: minmax(180px, 32%) minmax(100px, 18%) minmax(100px, 18%) minmax(180px, 32%) repeat(3, 100px);
     grid-template-rows: auto;
 }
-.sheet-rq35-spirit-skills input[type="text"] {
-    margin-left: auto;
-    margin-right: auto;
-    width: 205px;
-}
+
 .sheet-rq35-spirit-skills button {
     margin-left: auto !important;
     margin-right: auto !important;
@@ -27,5 +24,6 @@
 .sheet-rq35-spirit-skills input {
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 5px;
 }
 

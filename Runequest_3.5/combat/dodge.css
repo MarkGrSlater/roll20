@@ -12,14 +12,10 @@
 .sheet-rq35-dodge  input[type="text"] {
     margin-left: auto;
     margin-right: auto;
-    min-width: 160px;
-    width: 80% !important;
 }
 .sheet-rq35-dodge  input[type="number"] {
     margin-left: auto;
     margin-right: auto;
-    min-width: 60px;
-    width: 80% !important;
 }
 .sheet-rq35-dodge button {
     margin-left: auto !important;

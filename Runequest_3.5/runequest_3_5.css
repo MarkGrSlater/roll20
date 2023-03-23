@@ -43,13 +43,41 @@
     color: #ce3232 !important;
 }
 .green {
-    color: chartreuse !important;
+    color: limegreen !important;
 }
 input[type="text"].flex {
-    width: 95% !important
+    width: 95% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
 input[type="number"].flex {
-    width: 95% !important
+    width: 95% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+input[type="text"].flex-left {
+    width: 95% !important;
+    margin-left: 0;
+    margin-right: auto;
+}
+input[type="number"].flex-left {
+    width: 95% !important;
+    margin-left: 0;
+    margin-right: auto;
+}
+input[type="text"].flex-right {
+    width: 95% !important;
+    margin-left: auto;
+    margin-right: 0;
+}
+input[type="number"].flex-right {
+    width: 95% !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+div.repcontainer input[type="checkbox"] {
+    margin: 5px 0 10px 0 !important;
+    width: 45px !important;
 }.sheet-rq35-stats {
     display: grid;
     background: #fff;
@@ -479,14 +507,10 @@ input.sheet-armour-description {
 .sheet-rq35-dodge  input[type="text"] {
     margin-left: auto;
     margin-right: auto;
-    min-width: 160px;
-    width: 80% !important;
 }
 .sheet-rq35-dodge  input[type="number"] {
     margin-left: auto;
     margin-right: auto;
-    min-width: 60px;
-    width: 80% !important;
 }
 .sheet-rq35-dodge button {
     margin-left: auto !important;
@@ -536,7 +560,7 @@ input.sheet-armour-description {
     margin-right: auto;
     width: 100% !important;
 }
-.sheet-rq35-combat div.repcontainer button {
+.charsheet .sheet-rq35-combat div.repcontainer button {
     margin-left: auto;
     margin-right: auto;
     width: 16px;
@@ -1086,17 +1110,14 @@ div.sheet-rq35-skills div.repcontrol {
 /* style for spirit skills grid */
 .sheet-rq35-spirit-skills {
     display: grid;
-    width: 860px;
+    width: 100%;
+    min-width: 860px;
     background: #fff;
     border: thick double #32a1ce;
-    grid-template-columns: 210px 70px 70px 210px repeat(3, 100px);
+    grid-template-columns: minmax(180px, 32%) minmax(100px, 18%) minmax(100px, 18%) minmax(180px, 32%) repeat(3, 100px);
     grid-template-rows: auto;
 }
-.sheet-rq35-spirit-skills input[type="text"] {
-    margin-left: auto;
-    margin-right: auto;
-    width: 205px;
-}
+
 .sheet-rq35-spirit-skills button {
     margin-left: auto !important;
     margin-right: auto !important;
@@ -1112,36 +1133,29 @@ div.sheet-rq35-skills div.repcontrol {
 .sheet-rq35-spirit-skills input {
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 5px;
 }
 
 /* style for spirit spells grid */
 .sheet-rq35-spirit-spells {
     display: grid;
-    width: 860px;
+    width: 100%;
+    min-width: 860px;
     background: #fff;
     border: thick double #32a1ce;
-    grid-template-columns: repeat(4, 135px 80px);
+    grid-template-columns: minmax(120px, 18%) minmax(100px, 14%) minmax(120px, 18%) 80px 20px minmax(120px, 18%) minmax(100px, 14%) minmax(120px, 18%) 80px;
     grid-template-rows: auto;
 }
 .sheet-rq35-spirit-spells div.repcontainer {
     grid-column-start: 1;
-    grid-column-end: span 8;
+    grid-column-end: span 9;
 }
 .sheet-rq35-spirit-spells div.repcontainer div.repitem {
     display: inline-grid;
-    width: 860px;
-    grid-template-columns: repeat(4, 135px 80px);
+    width: 100%;
+    min-width: 860px;
+    grid-template-columns: minmax(120px, 18%) minmax(100px, 14%) minmax(120px, 18%) 80px 20px minmax(120px, 18%) minmax(100px, 14%) minmax(120px, 18%) 80px;
     grid-template-rows: auto;
-}
-.sheet-rq35-spirit-spells div.repcontainer input[type="text"] {
-    margin-left: auto;
-    margin-right: auto;
-    width: 120px;
-}
-.sheet-rq35-spirit-spells div.repcontainer button {
-    margin-left: auto;
-    margin-right: auto;
-    width: 16px;
 }
 .sheet-rq35-spirit-spells label {
     color: #5e5e5e;
@@ -1151,8 +1165,7 @@ div.sheet-rq35-skills div.repcontrol {
     font-size: 11px
 }
 .sheet-rq35-spirit-spells input {
-    margin-left: auto;
-    margin-right: auto;
+    margin-bottom: 5px;
 }
 /* spirit-skills multiline display */
 .sheet-rq35-spirit-spells div.repcontrol {
@@ -1160,19 +1173,19 @@ div.sheet-rq35-skills div.repcontrol {
     grid-column-end: span 8;
     padding: 10px 20px 5px 20px;
 }
-/* style for spirit skills grid */
-.sheet-rq35-magic-points {
-    display: grid;
-    width: 860px;
-    background: #fff;
-    border: thick double #32a1ce;
-    grid-template-columns: 135px repeat(6 ,121px);
-    grid-template-rows: auto;
-}
-.sheet-rq35-magic-points input[type="text"] {
+.charsheet .sheet-rq35-spirit-spells div.repcontainer button {
     margin-left: auto;
     margin-right: auto;
-    width: 205px;
+    width: 16px;
+}/* style for spirit skills grid */
+.sheet-rq35-magic-points {
+    display: grid;
+    min-width: 860px;
+    width: 100%;
+    background: #fff;
+    border: thick double #32a1ce;
+    grid-template-columns: minmax(134px, 16%) repeat(6 ,minmax(121px,14%));
+    grid-template-rows: auto;
 }
 .sheet-rq35-magic-points label {
     color: #5e5e5e;
@@ -1280,13 +1293,46 @@ div.sheet-rq35-skills div.repcontrol {
 .sheet-rolltemplate-spiritspell .inlinerollresult.importantroll {
 	border: 2px solid #4A57ED;
 }
-/* style for spirit skills grid */
-.sheet-rq35-divine-spells {
+/* style for divine rituals grid */
+.sheet-rq35-divine-rituals {
     display: grid;
-    width: 860px;
+    width: 100%;
+    min-width: 860px;
     background: #fff;
     border: thick double #32a1ce;
-    grid-template-columns: repeat(2, 160px 100px) 140px 100px 100px;
+    grid-template-columns: 45px minmax(199px, 34%) minmax(122px, 22%) minmax(122px, 22%) 70px minmax(122px, 22%) repeat(2, 90px);
+    grid-template-rows: auto;
+}
+.sheet-rq35-divine-rituals div.repcontainer {
+    grid-column-start: 1;
+    grid-column-end: span 6;
+}
+.sheet-rq35-divine-rituals button {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 16px;
+    height: 22px;
+}
+.sheet-rq35-divine-rituals label {
+    color: #5e5e5e;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 11px
+}
+.sheet-rq35-divine-rituals input {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+}
+/* style for divine skills grid */
+.sheet-rq35-divine-spells {
+    display: grid;
+    min-width: 860px;
+    width: 100%;
+    background: #fff;
+    border: thick double #32a1ce;
+    grid-template-columns: minmax(90px, 10%) repeat(2, minmax(160px, 20%) minmax(90px, 10%)) minmax(200px, 22%) minmax(70px, 8%);
     grid-template-rows: auto;
 }
 .sheet-rq35-divine-spells div.repcontainer {
@@ -1295,18 +1341,10 @@ div.sheet-rq35-skills div.repcontrol {
 }
 .sheet-rq35-divine-spells div.repcontainer div.repitem {
     display: inline-grid;
-    width: 860px;
-    grid-template-columns: repeat(2, 160px 100px) 140px 100px 100px;
+    min-width: 860px;
+    width: 100%;
+    grid-template-columns: minmax(90px, 10%) repeat(2, minmax(160px, 20%) minmax(90px, 10%)) minmax(200px, 22%) minmax(70px, 8%);
     grid-template-rows: auto;
-}
-.sheet-rq35-divine-spells div.repcontainer input[type="text"] {
-    margin-left: auto;
-    margin-right: auto;
-    width: 150px;
-}
-.sheet-rq35-divine-spells div.repcontainer button {
-    margin-left: auto;
-    margin-right: auto;
 }
 .sheet-rq35-divine-spells label {
     color: #5e5e5e;
@@ -1315,23 +1353,24 @@ div.sheet-rq35-skills div.repcontrol {
     font-weight: bold;
     font-size: 11px
 }
-.sheet-rq35-divine-spells input {
-    margin-left: auto;
-    margin-right: auto;
-}
 /* divine-skills multiline display */
 .sheet-rq35-divine-spells div.repcontrol {
     grid-column-start: 1;
     grid-column-end: span 7;
     padding: 10px 20px 5px 20px;
 }
-/* style for spirit skills grid */
+.charsheet .sheet-rq35-divine-spells div.repcontainer button {
+    margin-left: auto;
+    margin-right: auto;
+    width: 16px;
+}/* style for spirit skills grid */
 .sheet-rq35-primalcalc {
     display: grid;
-    width: 860px;
+    min-width: 860px;
+    width: 100%;
     background: #fff;
     border: thick double #32a1ce;
-    grid-template-columns: repeat(5, 143px) 145px;
+    grid-template-columns: repeat(5, minmax(143px, 17%)) minmax(145px, 17%);
     grid-template-rows: auto;
 }
 .sheet-rq35-primalcalc div.repcontainer {
@@ -1340,14 +1379,10 @@ div.sheet-rq35-skills div.repcontrol {
 }
 .sheet-rq35-primalcalc div.repcontainer div.repitem {
     display: inline-grid;
-    width: 860px;
-    grid-template-columns: repeat(5, 143px) 145px;
+    min-width: 860px;
+    width: 100%;
+    grid-template-columns: repeat(5, minmax(143px, 17%)) minmax(145px, 17%);
     grid-template-rows: auto;
-}
-.sheet-rq35-primalcalc div.repcontainer input[type="text"] {
-    margin-left: auto;
-    margin-right: auto;
-    width: 150px;
 }
 .sheet-rq35-primalcalc button {
     margin-left: auto !important;
@@ -1367,18 +1402,14 @@ div.sheet-rq35-skills div.repcontrol {
     margin-right: auto;
     margin-bottom: 15px;
 }
-.sheet-rq35-primalcalc input[type="text"] {
-    margin-left: auto;
-    margin-right: auto;
-    width: 60px;
-}
 /* style for magic items grid */
 .sheet-rq35-spell-notes {
     display: grid;
-    width: 860px;
+    width: 100%;
+    min-width: 860px;
     background: #fff;
     border: thick double #32a1ce;
-    grid-template-columns: 860px;
+    grid-template-columns: 100%;
     grid-template-rows: auto;
 }
 .sheet-rq35-spell-notes div.repcontainer {
@@ -1387,8 +1418,9 @@ div.sheet-rq35-skills div.repcontrol {
 }
 .sheet-rq35-spell-notes div.repcontainer div.repitem {
     display: inline-grid;
-    width: 860px;
-    grid-template-columns: 860px;
+    width: 100%;
+    min-width: 860px;
+    grid-template-columns: 100%;
     grid-template-rows: auto;
 }
 
@@ -1418,10 +1450,11 @@ div.sheet-rq35-skills div.repcontrol {
 /* style for dragon skills grid */
 .sheet-rq35-dragon-skills {
     display: grid;
-    width: 860px;
+    min-width: 860px;
+    width: 100%;
     background: #fff;
     border: thick double #32a1ce;
-    grid-template-columns: 80px 180px 80px 80px 80px repeat(3, 120px);
+    grid-template-columns: 80px minmax(210px, 46%) repeat(3, minmax(80px, 18%)) 110px 110px 110px;
     grid-template-rows: auto;
 }
 .sheet-rq35-dragon-skills div.repcontainer {
@@ -1430,14 +1463,10 @@ div.sheet-rq35-skills div.repcontrol {
 }
 .sheet-rq35-dragon-skills div.repcontainer div.repitem {
     display: inline-grid;
-    width: 860px;
-    grid-template-columns: 80px 180px 80px 80px 80px repeat(3, 120px);
+    min-width: 860px;
+    width: 100%;
+    grid-template-columns: 80px minmax(210px, 46%) repeat(3, minmax(80px, 18%)) 110px 110px 110px;
     grid-template-rows: auto;
-}
-.sheet-rq35-dragon-skills  input[type="text"] {
-    margin-left: auto;
-    margin-right: auto;
-    width: 170px;
 }
 .sheet-rq35-dragon-skills button {
     margin-left: auto !important;
@@ -1460,10 +1489,11 @@ div.sheet-rq35-skills div.repcontrol {
 /* style for dragon spells grid */
 .sheet-rq35-dragon-spells {
     display: grid;
-    width: 860px;
+    min-width: 860px;
+    width: 100%;
     background: #fff;
     border: thick double #32a1ce;
-    grid-template-columns: 130px 60px 100px repeat(2, 120px) 50px 70px 70px 70px 60px;
+    grid-template-columns: minmax(120px, 24%) repeat(4, minmax(100px, 19%)) 70px 70px 70px 70px 60px;
     grid-template-rows: auto;
 }
 .sheet-rq35-dragon-spells div.repcontainer {
@@ -1472,14 +1502,10 @@ div.sheet-rq35-skills div.repcontrol {
 }
 .sheet-rq35-dragon-spells div.repcontainer div.repitem {
     display: inline-grid;
-    width: 860px;
-    grid-template-columns: 130px 60px 100px repeat(2, 120px) 50px 70px 70px 70px 60px;
+    min-width: 860px;
+    width: 100%;
+    grid-template-columns: minmax(120px, 24%) repeat(4, minmax(100px, 19%)) 70px 70px 70px 70px 60px;
     grid-template-rows: auto;
-}
-.sheet-rq35-dragon-spells div.repcontainer input[type="text"] {
-    margin-left: auto;
-    margin-right: auto;
-    width: 110px;
 }
 .sheet-rq35-dragon-spells div.repcontainer button {
     margin-left: auto;
@@ -1494,8 +1520,7 @@ div.sheet-rq35-skills div.repcontrol {
     font-size: 11px
 }
 .sheet-rq35-dragon-spells input {
-    margin-left: auto;
-    margin-right: auto;
+    margin-bottom: 5px;
 }
 /* dragon-spells multiline display */
 .sheet-rq35-dragon-spells div.repcontrol {
@@ -1503,13 +1528,22 @@ div.sheet-rq35-skills div.repcontrol {
     grid-column-end: span 11;
     padding: 10px 20px 5px 20px;
 }
-/* style for dragon spells grid */
+.charsheet .sheet-rq35-dragon-spells div.repcontainer button {
+    margin-left: auto;
+    margin-right: auto;
+    width: 16px;
+}
+.charsheet .sheet-rq35-dragon-spells div.repcontainer input[type="checkbox"] {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}/* style for dragon spells grid */
 .sheet-rq35-dragonheld-spells {
     display: grid;
-    width: 860px;
+    width: 100%;
+    min-width: 860px;
     background: #fff;
     border: thick double #32a1ce;
-    grid-template-columns: 180px 80px 80px 80px 20px 180px 80px 80px 80px;
+    grid-template-columns: minmax(200px, 28%) minmax(80px, 11%) minmax(80px, 11%) 60px 20px minmax(200px, 28%) minmax(80px, 11%) minmax(80px, 11%) 60px;
     grid-template-rows: auto;
 }
 .sheet-rq35-dragonheld-spells div.repcontainer {
@@ -1518,14 +1552,10 @@ div.sheet-rq35-skills div.repcontrol {
 }
 .sheet-rq35-dragonheld-spells div.repcontainer div.repitem {
     display: inline-grid;
-    width: 860px;
-    grid-template-columns: 180px 80px 80px 80px 20px 180px 80px 80px 80px;
+    width: 100%;
+    min-width: 860px;
+    grid-template-columns: minmax(200px, 28%) minmax(80px, 11%) minmax(80px, 11%) 60px 20px minmax(200px, 28%) minmax(80px, 11%) minmax(80px, 11%) 60px;
     grid-template-rows: auto;
-}
-.sheet-rq35-dragonheld-spells  input[type="text"] {
-    margin-left: auto;
-    margin-right: auto;
-    width: 170px;
 }
 .sheet-rq35-dragonheld-spells button {
     margin-left: auto !important;
@@ -1550,13 +1580,17 @@ div.sheet-rq35-skills div.repcontrol {
     grid-column-end: span 9;
     padding: 10px 20px 5px 20px;
 }
-/* style for elementals grid */
+.charsheet .sheet-rq35-dragon-spells div.repcontainer input[type="checkbox"] {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}/* style for elementals grid */
 .sheet-rq35-equipment {
     display: grid;
-    width: 860px;
+    min-width: 860px;
+    width: 100%;
     background: #fff;
     border: thick double #32a1ce;
-    grid-template-columns: 100px 280px 100px 100px 280px;
+    grid-template-columns: minmax(100px, 12%) minmax(280px, 32%) minmax(100px, 12%) minmax(100px, 12%) minmax(280px, 32%);
     grid-template-rows: auto;
 }
 .sheet-rq35-equipment div.repcontainer {
@@ -1565,29 +1599,10 @@ div.sheet-rq35-skills div.repcontrol {
 }
 .sheet-rq35-equipment div.repcontainer div.repitem {
     display: inline-grid;
-    width: 860px;
-    grid-template-columns: 100px 280px 100px 100px 280px;
+    min-width: 860px;
+    width: 100%;
+    grid-template-columns: minmax(100px, 12%) minmax(280px, 32%) minmax(100px, 12%) minmax(100px, 12%) minmax(280px, 32%);
     grid-template-rows: auto;
-}
-.sheet-rq35-equipment div.repcontainer input[type="text"] {
-    margin-left: auto;
-    margin-right: auto;
-    width: 260px;
-}
-.sheet-rq35-equipment div.repcontainer input[type="text"].sheet-rq35-smalltext  {
-    margin-left: auto;
-    margin-right: auto;
-    width: 60px;
-}
-.sheet-rq35-equipment div.repcontainer input[type="number"] {
-    margin-left: auto;
-    margin-right: auto;
-    width: 60px;
-}
-.sheet-rq35-equipment div.repcontainer button {
-    margin-left: auto;
-    margin-right: auto;
-    width: 16px;
 }
 .sheet-rq35-equipment label {
     color: #5e5e5e;
@@ -1606,34 +1621,30 @@ div.sheet-rq35-skills div.repcontrol {
     grid-column-end: span 8;
     padding: 10px 20px 5px 20px;
 }
-/* style for money grid */
+.charsheet .sheet-rq35-equipment div.repcontainer button {
+    margin-left: auto;
+    margin-right: auto;
+    width: 16px;
+}/* style for money grid */
 .sheet-rq35-money {
     display: grid;
-    width: 860px;
+    min-width: 860px;
+    width: 100%;
     background: #fff;
     border: thick double #32a1ce;
-    grid-template-columns: 70px repeat(3, 115px) 20px 80px 115px 115px 115px;
+    grid-template-columns: minmax(75px, 11%) repeat(3, minmax(115px, 13%)) 20px minmax(75px, 11%) minmax(115px, 13%) minmax(115px, 13%) minmax(115px, 13%);
     grid-template-rows: auto;
 }
 .sheet-rq35-money div.repcontainer {
     grid-column-start: 1;
-    grid-column-end: span 4;
+    grid-column-end: span 9;
 }
 .sheet-rq35-money div.repcontainer div.repitem {
     display: inline-grid;
-    width: 860px;
-    grid-template-columns: 70px repeat(3, 115px) 20px 80px 115px 115px 115px;
+    min-width: 860px;
+    width: 100%;
+    grid-template-columns: minmax(75px, 11%) repeat(3, minmax(115px, 13%)) 20px minmax(75px, 11%) minmax(115px, 13%) minmax(115px, 13%) minmax(115px, 13%);
     grid-template-rows: auto;
-}
-.sheet-rq35-money input[type="text"] {
-    margin-left: auto;
-    margin-right: auto;
-    width: 105px;
-}
-.sheet-rq35-money input[type="number"] {
-    margin-left: auto;
-    margin-right: auto;
-    width: 65px;
 }
 .sheet-rq35-money button {
     margin-left: auto !important;
@@ -1648,23 +1659,22 @@ div.sheet-rq35-skills div.repcontrol {
     font-size: 11px
 }
 .sheet-rq35-money input {
-    margin-left: auto;
-    margin-right: auto;
     margin-bottom: 5px;
 }
 /* dragon held spells multiline display */
 .sheet-rq35-money div.repcontrol {
     grid-column-start: 1;
-    grid-column-end: span 4;
+    grid-column-end: span 9;
     padding: 10px 20px 5px 20px;
 }
 /* style for gems / jewellery grid */
 .sheet-rq35-gems {
     display: grid;
-    width: 860px;
+    min-width: 860px;
+    width: 100%;
     background: #fff;
     border: thick double #32a1ce;
-    grid-template-columns: 90px 165px 165px 20px 90px 165px 165px;
+    grid-template-columns: minmax(90px, 10%) minmax(165px, 20%) minmax(165px, 20%) 20px minmax(90px, 10%) minmax(165px, 20%) minmax(165px, 20%);
     grid-template-rows: auto;
 }
 .sheet-rq35-gems div.repcontainer {
@@ -1673,24 +1683,10 @@ div.sheet-rq35-skills div.repcontrol {
 }
 .sheet-rq35-gems div.repcontainer div.repitem {
     display: inline-grid;
-    width: 860px;
-    grid-template-columns: 90px 165px 165px 20px 90px 165px 165px;
+    min-width: 860px;
+    width: 100%;
+    grid-template-columns: minmax(90px, 10%) minmax(165px, 20%) minmax(165px, 20%) 20px minmax(90px, 10%) minmax(165px, 20%) minmax(165px, 20%);
     grid-template-rows: auto;
-}
-.sheet-rq35-gems input[type="number"] {
-    margin-left: auto;
-    margin-right: auto;
-    width: 80px;
-}
-.sheet-rq35-gems input[type="text"] {
-    margin-left: auto;
-    margin-right: auto;
-    width: 160px;
-}
-.sheet-rq35-gems button {
-    margin-left: auto !important;
-    margin-right: auto !important;
-    height: 22px;
 }
 .sheet-rq35-gems label {
     color: #5e5e5e;
@@ -1700,8 +1696,6 @@ div.sheet-rq35-skills div.repcontrol {
     font-size: 11px
 }
 .sheet-rq35-gems input {
-    margin-left: auto;
-    margin-right: auto;
     margin-bottom: 5px;
 }
 /* dragon held spells multiline display */
@@ -1710,28 +1704,23 @@ div.sheet-rq35-skills div.repcontrol {
     grid-column-end: span 7;
     padding: 10px 20px 5px 20px;
 }
-/* style for sorcery rituals grid */
+.charsheet .sheet-rq35-gems div.repcontainer button {
+    margin-left: auto;
+    margin-right: auto;
+    width: 16px;
+}/* style for sorcery rituals grid */
 .sheet-rq35-sorcery-rituals {
     display: grid;
-    width: 860px;
+    min-width: 860px;
+    width: 100%;
     background: #fff;
     border: thick double #32a1ce;
-    grid-template-columns: 180px 100px 100px 90px repeat(3, 130px);
+    grid-template-columns: minmax(200px, 34%) minmax(124px, 22%) minmax(124px, 22%) 96px minmax(124px, 22%) 96px 96px;
     grid-template-rows: auto;
 }
 .sheet-rq35-sorcery-rituals div.repcontainer {
     grid-column-start: 1;
     grid-column-end: span 6;
-}
-.sheet-rq35-sorcery-rituals  input[type="text"] {
-    margin-left: auto;
-    margin-right: auto;
-    width: 160px;
-}
-.sheet-rq35-sorcery-rituals  input[type="number"] {
-    margin-left: auto;
-    margin-right: auto;
-    width: 60px;
 }
 .sheet-rq35-sorcery-rituals button {
     margin-left: auto !important;
@@ -1854,7 +1843,8 @@ input.sheet-range-meters {
 }/* style for held spells grid */
 .sheet-rq35-running-spells {
     display: grid;
-    width: 860px;
+    min-width: 860px;
+    width: 100%;
     background: #fff;
     border: thick double #32a1ce;
     grid-template-columns: 80px 190px repeat(4, 90px) 190px;
@@ -1866,14 +1856,10 @@ input.sheet-range-meters {
 }
 .sheet-rq35-running-spells div.repcontainer div.repitem {
     display: inline-grid;
-    width: 860px;
+    min-width: 860px;
+    width: 100%;
     grid-template-columns: 80px 190px repeat(4, 90px) 190px;
     grid-template-rows: auto;
-}
-.sheet-rq35-running-spells div.repcontainer input[type="text"] {
-    margin-left: auto;
-    margin-right: auto;
-    width: 180px;
 }
 .sheet-rq35-running-spells div.repcontainer button {
     margin-left: auto;
@@ -1886,10 +1872,6 @@ input.sheet-range-meters {
     padding: 5px 0;
     font-weight: bold;
     font-size: 11px
-}
-.sheet-rq35-running-spells input {
-    margin-left: auto;
-    margin-right: auto;
 }
 /* sorcery-spells multiline display */
 .sheet-rq35-running-spells div.repcontrol {
@@ -2230,10 +2212,11 @@ div.sheet-spell-title > label {
 /* style for magic items grid */
 .sheet-rq35-magic-items {
     display: grid;
-    width: 860px;
+    min-width: 860px;
+    width: 100%;
     background: #fff;
     border: thick double #32a1ce;
-    grid-template-columns: repeat(2, 350px) 160px;
+    grid-template-columns: repeat(2, minmax(350px, 40%)) minmax(160px, 20%);
     grid-template-rows: auto;
 }
 .sheet-rq35-magic-items div.repcontainer {
@@ -2242,8 +2225,9 @@ div.sheet-spell-title > label {
 }
 .sheet-rq35-magic-items div.repcontainer div.repitem {
     display: inline-grid;
-    width: 860px;
-    grid-template-columns: repeat(2, 350px) 150px;
+    min-width: 860px;
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(350px, 40%)) minmax(160px, 20%);
     grid-template-rows: auto;
 }
 .sheet-rq35-magic-items div.repcontainer input[type="text"] {
@@ -2282,10 +2266,11 @@ div.sheet-spell-title > label {
 /* style for spirits and ghosts grid */
 .sheet-rq35-bound-spirit {
     display: grid;
-    width: 860px;
+    min-width: 860px;
+    width: 100%;
     background: #fff;
     border: thick double #32a1ce;
-    grid-template-columns: 120px repeat(2, 80px) 120px 460px;
+    grid-template-columns: minmax(120px, 14%) repeat(2, minmax(80px, 9%)) minmax(120px, 14%) minmax(460px, 54%);
     grid-template-rows: auto;
 }
 .sheet-rq35-bound-spirit div.repcontainer {
@@ -2294,20 +2279,20 @@ div.sheet-spell-title > label {
 }
 .sheet-rq35-bound-spirit div.repcontainer div.repitem {
     display: inline-grid;
-    width: 860px;
-    grid-template-columns: 120px repeat(2, 80px) 120px 460px;
+    min-width: 860px;
+    width: 100%;
+    grid-template-columns: minmax(120px, 14%) repeat(2, minmax(80px, 9%)) minmax(120px, 14%) minmax(460px, 54%);
     grid-template-rows: auto;
 }
 .sheet-rq35-bound-spirit div.repcontainer input[type="text"] {
     margin-left: auto;
     margin-right: auto;
-    width: 100px;
     height: 28px;
 }
 .sheet-rq35-bound-spirit div.repcontainer input[type="number"] {
     margin-left: auto;
     margin-right: auto;
-    width: 60px;
+    height: 28px;
 }
 .sheet-rq35-bound-spirit div.repcontainer button {
     margin-left: auto;
@@ -2341,10 +2326,11 @@ div.sheet-spell-title > label {
 /* style for elementals grid */
 .sheet-rq35-elementals {
     display: grid;
-    width: 860px;
+    min-width: 860px;
+    width: 100%;
     background: #fff;
     border: thick double #32a1ce;
-    grid-template-columns: 60px 150px 150px repeat(4, 70px) 150px 70px;
+    grid-template-columns: 60px minmax(150px, 21%) minmax(150px, 21%) repeat(4, minmax(83px, 11%)) minmax(98px, 13%) 70px;
     grid-template-rows: auto;
 }
 .sheet-rq35-elementals div.repcontainer {
@@ -2353,19 +2339,10 @@ div.sheet-spell-title > label {
 }
 .sheet-rq35-elementals div.repcontainer div.repitem {
     display: inline-grid;
-    width: 860px;
-    grid-template-columns: 60px 150px 150px repeat(4, 70px) 150px 70px;
+    min-width: 860px;
+    width: 100%;
+    grid-template-columns: 60px minmax(150px, 21%) minmax(150px, 21%) repeat(4, minmax(83px, 11%)) minmax(98px, 13%) 70px;
     grid-template-rows: auto;
-}
-.sheet-rq35-elementals div.repcontainer input[type="text"] {
-    margin-left: auto;
-    margin-right: auto;
-    width: 140px;
-}
-.sheet-rq35-elementals div.repcontainer input[type="number"] {
-    margin-left: auto;
-    margin-right: auto;
-    width: 50px;
 }
 .sheet-rq35-elementals div.repcontainer button {
     margin-left: auto;
@@ -2378,10 +2355,6 @@ div.sheet-spell-title > label {
     padding: 5px 0;
     font-weight: bold;
     font-size: 11px
-}
-.sheet-rq35-elementals input {
-    margin-left: auto;
-    margin-right: auto;
 }
 /* sorcery-spells multiline display */
 .sheet-rq35-elementals div.repcontrol {

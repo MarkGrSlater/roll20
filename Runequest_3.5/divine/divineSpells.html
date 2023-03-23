@@ -1,21 +1,21 @@
         <!-- Divine Spells -->
         <p><strong>Divine Spells</strong></p>
         <div class="sheet-rq35-divine-spells">
+            <label>Number Stored</label>
             <label>Spell Name</label>
             <label>Power Points</label>
             <label>Where Stored</label>
             <label>Extensions</label>
             <label>God</label>
             <label>Roll to Cast</label>
-            <label>Released Tick</label>
             <fieldset class="repeating_divinespells">
-                <input type="text" name="attr_divinespell_name1">
-                <input type="number" name="attr_divinespell_power1" value="1">
-                <input type="text" name="attr_divinespell_location1">
-                <input type="number" name="attr_divinespell_extensions1" value="0">
-                <input type="text" name="attr_divinespell_god1">
+                <input type="number" class="flex" name="attr_divinespell_number1" value="0">
+                <input type="text" class="flex" name="attr_divinespell_name1">
+                <input type="number" class="flex" name="attr_divinespell_power1" value="1">
+                <input type="text" class="flex" name="attr_divinespell_location1">
+                <input type="number" class="flex" name="attr_divinespell_extensions1" value="0">
+                <input type="text" class="flex" name="attr_divinespell_god1">
                 <button type="roll" name="roll_spiritspell"
                         value="&{template:spiritspell} {{name=@{divinespell_name1} }} {{rollmade=[[1d100]]}} {{x5=[[100+@{dodge_encumbrance}]]}} {{x5plus=[[100+@{dodge_encumbrance}+1]]}}"></button>
-                <input type="checkbox" name="attr_divinespell_released1" value="1">
             </fieldset>
         </div>

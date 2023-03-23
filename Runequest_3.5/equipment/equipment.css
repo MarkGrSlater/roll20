@@ -1,10 +1,11 @@
 /* style for elementals grid */
 .sheet-rq35-equipment {
     display: grid;
-    width: 860px;
+    min-width: 860px;
+    width: 100%;
     background: #fff;
     border: thick double #32a1ce;
-    grid-template-columns: 100px 280px 100px 100px 280px;
+    grid-template-columns: minmax(100px, 12%) minmax(280px, 32%) minmax(100px, 12%) minmax(100px, 12%) minmax(280px, 32%);
     grid-template-rows: auto;
 }
 .sheet-rq35-equipment div.repcontainer {
@@ -13,29 +14,10 @@
 }
 .sheet-rq35-equipment div.repcontainer div.repitem {
     display: inline-grid;
-    width: 860px;
-    grid-template-columns: 100px 280px 100px 100px 280px;
+    min-width: 860px;
+    width: 100%;
+    grid-template-columns: minmax(100px, 12%) minmax(280px, 32%) minmax(100px, 12%) minmax(100px, 12%) minmax(280px, 32%);
     grid-template-rows: auto;
-}
-.sheet-rq35-equipment div.repcontainer input[type="text"] {
-    margin-left: auto;
-    margin-right: auto;
-    width: 260px;
-}
-.sheet-rq35-equipment div.repcontainer input[type="text"].sheet-rq35-smalltext  {
-    margin-left: auto;
-    margin-right: auto;
-    width: 60px;
-}
-.sheet-rq35-equipment div.repcontainer input[type="number"] {
-    margin-left: auto;
-    margin-right: auto;
-    width: 60px;
-}
-.sheet-rq35-equipment div.repcontainer button {
-    margin-left: auto;
-    margin-right: auto;
-    width: 16px;
 }
 .sheet-rq35-equipment label {
     color: #5e5e5e;
@@ -53,4 +35,9 @@
     grid-column-start: 1;
     grid-column-end: span 8;
     padding: 10px 20px 5px 20px;
+}
+.charsheet .sheet-rq35-equipment div.repcontainer button {
+    margin-left: auto;
+    margin-right: auto;
+    width: 16px;
 }

@@ -43,11 +43,39 @@
     color: #ce3232 !important;
 }
 .green {
-    color: chartreuse !important;
+    color: limegreen !important;
 }
 input[type="text"].flex {
-    width: 95% !important
+    width: 95% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
 input[type="number"].flex {
-    width: 95% !important
+    width: 95% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+input[type="text"].flex-left {
+    width: 95% !important;
+    margin-left: 0;
+    margin-right: auto;
+}
+input[type="number"].flex-left {
+    width: 95% !important;
+    margin-left: 0;
+    margin-right: auto;
+}
+input[type="text"].flex-right {
+    width: 95% !important;
+    margin-left: auto;
+    margin-right: 0;
+}
+input[type="number"].flex-right {
+    width: 95% !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+div.repcontainer input[type="checkbox"] {
+    margin: 5px 0 10px 0 !important;
+    width: 45px !important;
 }

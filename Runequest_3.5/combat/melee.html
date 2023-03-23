@@ -24,12 +24,12 @@
                 <input type="number" name="attr_weapon_attack1" value="0" class="flex">
                 <input type="number" name="attr_weapon_magic1" value="0" class="flex">
                 <input type="number" name="attr_weapon_tatt1" class="flex" value="@{weapon_magic1}+@{weapon_attack1}+@{int_primary}+@{dex_primary}+@{str_secondary}+@{mani_enchant}" disabled >
-                <button type="roll" name="roll_weapon1"
+                <button type="roll" name="roll_weapon1" class="red"
                         value="&{template:test} {{name=@{weapon_name1} Attack}} {{rollmade=[[1d100]]}} {{normal=[[@{weapon_tatt1}]]}} {{normalplus=[[@{weapon_tatt1}+1]]}} {{fumble=[[100-floor(((100 - @{weapon_tatt1}) / 20) + 0.55)]]}} {{fumbleminus=[[100-floor(((100 - @{weapon_tatt1}) / 20) + 0.55)-1]]}} {{special=[[round(@{weapon_tatt1}/5)]]}} {{specialplus=[[round(@{weapon_tatt1}/5)+1]]}} {{critical=[[round(@{weapon_tatt1}/20)]]}} {{criticalplus=[[round(@{weapon_tatt1}/20)+1]]}} {{supercritical=[[floor(@{weapon_tatt1}/100)]]}} {{supercriticalplus=[[floor(@{weapon_tatt1}/100)+1]]}} {{hypercritical=[[floor(@{weapon_tatt1}/400)]]}} {{hypercriticalplus=[[floor(@{weapon_tatt1}/400)+1]]}} {{specmin=[[1]]}} {{critmin=[[1]]}}"></button>
                 <input type="number" name="attr_weapon_ap1" class="flex">
                 <input type="number" name="attr_weapon_parry1" value="0" class="flex">
                 <input type="number" name="attr_weapon_tparry1" class="flex" value="@{weapon_magic1}+@{weapon_parry1}+@{dex_primary}+@{str_secondary}+@{siz_negative}+@{agil_enchant}" disabled>
-                <button type="roll" name="roll_parry1"
+                <button type="roll" name="roll_parry1" class="green"
                         value="&{template:test} {{name=@{weapon_name1} Parry}} {{rollmade=[[1d100]]}} {{normal=[[@{weapon_tparry1}]]}} {{normalplus=[[@{weapon_tparry1}+1]]}} {{fumble=[[100-floor(((100 - @{weapon_tparry1}) / 20) + 0.55)]]}} {{fumbleminus=[[100-floor(((100 - @{weapon_tparry1}) / 20) + 0.55)-1]]}} {{special=[[round(@{weapon_tparry1}/5)]]}} {{specialplus=[[round(@{weapon_tparry1}/5)+1]]}} {{critical=[[round(@{weapon_tparry1}/20)]]}} {{criticalplus=[[round(@{weapon_tparry1}/20)+1]]}} {{supercritical=[[floor(@{weapon_tparry1}/100)]]}} {{supercriticalplus=[[floor(@{weapon_tparry1}/100)+1]]}} {{hypercritical=[[floor(@{weapon_tparry1}/400)]]}} {{hypercriticalplus=[[floor(@{weapon_tparry1}/400)+1]]}} {{specmin=[[1]]}} {{critmin=[[1]]}}"></button>
                 <input type="checkbox" name="attr_parry_ticked1" value="1">
                 <button type="roll" name="roll_attackexp1"

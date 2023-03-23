@@ -1,31 +1,23 @@
 /* style for spirit spells grid */
 .sheet-rq35-spirit-spells {
     display: grid;
-    width: 860px;
+    width: 100%;
+    min-width: 860px;
     background: #fff;
     border: thick double #32a1ce;
-    grid-template-columns: repeat(4, 135px 80px);
+    grid-template-columns: minmax(120px, 18%) minmax(100px, 14%) minmax(120px, 18%) 80px 20px minmax(120px, 18%) minmax(100px, 14%) minmax(120px, 18%) 80px;
     grid-template-rows: auto;
 }
 .sheet-rq35-spirit-spells div.repcontainer {
     grid-column-start: 1;
-    grid-column-end: span 8;
+    grid-column-end: span 9;
 }
 .sheet-rq35-spirit-spells div.repcontainer div.repitem {
     display: inline-grid;
-    width: 860px;
-    grid-template-columns: repeat(4, 135px 80px);
+    width: 100%;
+    min-width: 860px;
+    grid-template-columns: minmax(120px, 18%) minmax(100px, 14%) minmax(120px, 18%) 80px 20px minmax(120px, 18%) minmax(100px, 14%) minmax(120px, 18%) 80px;
     grid-template-rows: auto;
-}
-.sheet-rq35-spirit-spells div.repcontainer input[type="text"] {
-    margin-left: auto;
-    margin-right: auto;
-    width: 120px;
-}
-.sheet-rq35-spirit-spells div.repcontainer button {
-    margin-left: auto;
-    margin-right: auto;
-    width: 16px;
 }
 .sheet-rq35-spirit-spells label {
     color: #5e5e5e;
@@ -35,12 +27,16 @@
     font-size: 11px
 }
 .sheet-rq35-spirit-spells input {
-    margin-left: auto;
-    margin-right: auto;
+    margin-bottom: 5px;
 }
 /* spirit-skills multiline display */
 .sheet-rq35-spirit-spells div.repcontrol {
     grid-column-start: 1;
     grid-column-end: span 8;
     padding: 10px 20px 5px 20px;
+}
+.charsheet .sheet-rq35-spirit-spells div.repcontainer button {
+    margin-left: auto;
+    margin-right: auto;
+    width: 16px;
 }

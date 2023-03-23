@@ -24,6 +24,7 @@ spirit/spiritSkills.css
 spirit/spiritSpells.css
 spirit/magicPoints.css
 spirit/spiritSpellTemplate.css
+divine/divineRituals.css
 divine/divineSpells.css
 divine/primalCalculator.css
 divine/divineNotes.css

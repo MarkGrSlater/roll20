@@ -1,10 +1,11 @@
 /* style for magic items grid */
 .sheet-rq35-spell-notes {
     display: grid;
-    width: 860px;
+    width: 100%;
+    min-width: 860px;
     background: #fff;
     border: thick double #32a1ce;
-    grid-template-columns: 860px;
+    grid-template-columns: 100%;
     grid-template-rows: auto;
 }
 .sheet-rq35-spell-notes div.repcontainer {
@@ -13,8 +14,9 @@
 }
 .sheet-rq35-spell-notes div.repcontainer div.repitem {
     display: inline-grid;
-    width: 860px;
-    grid-template-columns: 860px;
+    width: 100%;
+    min-width: 860px;
+    grid-template-columns: 100%;
     grid-template-rows: auto;
 }
 

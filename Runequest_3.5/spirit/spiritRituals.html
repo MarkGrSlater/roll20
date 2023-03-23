@@ -10,34 +10,34 @@
             <label>Being Trained<br/>Experience Roll</label>
             <label>Self-training<br/>Experience Roll</label>
 
-            <input type="text" name="attr_spiritskill_ceremony" value="Ceremony" readonly>
-            <input type="number" name="attr_spiritskill_ceremonybase" value="0">
-            <input type="number" name="attr_spiritskill_ceremonytotal" value="@{spiritskill_ceremonybase}+@{int_primary}+@{pow_primary}+@{dex_secondary}+@{magb_enchant}" disabled >
+            <input type="text" class="flex" name="attr_spiritskill_ceremony" value="Ceremony" readonly>
+            <input type="number" class="flex" name="attr_spiritskill_ceremonybase" value="0">
+            <input type="number" class="flex" name="attr_spiritskill_ceremonytotal" value="@{spiritskill_ceremonybase}+@{int_primary}+@{pow_primary}+@{dex_secondary}+@{magb_enchant}" disabled >
             <button type="roll" name="roll_weapon1"
                     value="&{template:test} {{name=@{spiritskill_ceremony}}} {{rollmade=[[1d100]]}} {{normal=[[@{spiritskill_ceremonybase}+@{int_primary}+@{pow_primary}+@{dex_secondary}+@{magb_enchant}]]}} {{normalplus=[[@{spiritskill_ceremonybase}+@{int_primary}+@{pow_primary}+@{dex_secondary}+@{magb_enchant}+1]]}} {{fumble=[[100-floor(((100 - @{spiritskill_ceremonybase}+@{int_primary}+@{pow_primary}+@{dex_secondary}+@{magb_enchant}) / 20) + 0.55)]]}} {{fumbleminus=[[100-floor(((100 - @{spiritskill_ceremonybase}+@{int_primary}+@{pow_primary}+@{dex_secondary}+@{magb_enchant}) / 20) + 0.55)-1]]}} {{special=[[round((@{spiritskill_ceremonybase}+@{int_primary}+@{pow_primary}+@{dex_secondary}+@{magb_enchant})/5)]]}} {{specialplus=[[round((@{spiritskill_ceremonybase}+@{int_primary}+@{pow_primary}+@{dex_secondary}+@{magb_enchant})/5)+1]]}} {{critical=[[round((@{spiritskill_ceremonybase}+@{int_primary}+@{pow_primary}+@{dex_secondary}+@{magb_enchant})/20)]]}} {{criticalplus=[[round((@{spiritskill_ceremonybase}+@{int_primary}+@{pow_primary}+@{dex_secondary}+@{magb_enchant})/20)+1]]}} {{supercritical=[[0]]}} {{supercriticalplus=[[1]]}} {{hypercritical=[[0]]}} {{hypercriticalplus=[[1]]}} {{specmin=[[1]]}} {{critmin=[[1]]}}"></button>
-            <input type="number" name="attr_spiritskill_ceremonyhours" value="0">
+            <input type="number" class="flex" name="attr_spiritskill_ceremonyhours" value="0">
             <button type="roll" name="roll_training1"
                     value="&{template:training} {{name=@{spiritskill_ceremony}}} {{subtags=Trained Roll}} {{expcheck=[[101]]}} {{rollmade=[[1d6-2]]}} {{baseskill=[[@{spiritskill_ceremonybase}]]}} {{baseskillplus=[[@{spiritskill_ceremonybase}+1]]}} {{minskill=[[1]]}} {{master=[[100-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}} {{masterplus=[[101-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}}"></button>
             <button type="roll" name="roll_training1"
                     value="&{template:training} {{name=@{spiritskill_ceremony}}} {{subtags=Self-Train Roll}} {{expcheck=[[1d100]]}} {{rollmade=[[1d6-2]]}} {{baseskill=[[@{spiritskill_ceremonybase}]]}} {{minskill=[[1]]}} {{baseskillplus=[[@{spiritskill_ceremonybase}+1]]}} {{master=[[100-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}} {{masterplus=[[101-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}}"></button>
 
-            <input type="text" name="attr_spiritskill_enchant" value="Enchant" readonly>
-            <input type="number" name="attr_spiritskill_enchantbase" value="0">
-            <input type="number" name="attr_spiritskill_enchanttotal" value="@{spiritskill_enchantbase}+@{int_primary}+@{pow_primary}+@{dex_secondary}+@{magb_enchant}" disabled >
+            <input type="text" class="flex" name="attr_spiritskill_enchant" value="Enchant" readonly>
+            <input type="number" class="flex" name="attr_spiritskill_enchantbase" value="0">
+            <input type="number" class="flex" name="attr_spiritskill_enchanttotal" value="@{spiritskill_enchantbase}+@{int_primary}+@{pow_primary}+@{dex_secondary}+@{magb_enchant}" disabled >
             <button type="roll" name="roll_weapon1"
                     value="&{template:test} {{name=@{spiritskill_enchant}}} {{rollmade=[[1d100]]}} {{normal=[[@{spiritskill_enchantbase}+@{int_primary}+@{pow_primary}+@{dex_secondary}+@{magb_enchant}]]}} {{normalplus=[[@{spiritskill_enchantbase}+@{int_primary}+@{pow_primary}+@{dex_secondary}+@{magb_enchant}+1]]}} {{fumble=[[100-floor(((100 - @{spiritskill_enchantbase}+@{int_primary}+@{pow_primary}+@{dex_secondary}+@{magb_enchant}) / 20) + 0.55)]]}} {{fumbleminus=[[100-floor(((100 - @{spiritskill_enchantbase}+@{int_primary}+@{pow_primary}+@{dex_secondary}+@{magb_enchant}) / 20) + 0.55)-1]]}} {{special=[[round((@{spiritskill_enchantbase}+@{int_primary}+@{pow_primary}+@{dex_secondary}+@{magb_enchant})/5)]]}} {{specialplus=[[round((@{spiritskill_enchantbase}+@{int_primary}+@{pow_primary}+@{dex_secondary}+@{magb_enchant})/5)+1]]}} {{critical=[[round((@{spiritskill_enchantbase}+@{int_primary}+@{pow_primary}+@{dex_secondary}+@{magb_enchant})/20)]]}} {{criticalplus=[[round((@{spiritskill_enchantbase}+@{int_primary}+@{pow_primary}+@{dex_secondary}+@{magb_enchant})/20)+1]]}} {{supercritical=[[0]]}} {{supercriticalplus=[[1]]}} {{hypercritical=[[0]]}} {{hypercriticalplus=[[1]]}} {{specmin=[[1]]}} {{critmin=[[1]]}}"></button>
-            <input type="number" name="attr_spiritskill_enchanthours" value="0">
+            <input type="number" class="flex" name="attr_spiritskill_enchanthours" value="0">
             <button type="roll" name="roll_training1"
                     value="&{template:training} {{name=@{spiritskill_enchant}}} {{subtags=Trained Roll}} {{expcheck=[[101]]}} {{rollmade=[[1d6-2]]}} {{baseskill=[[@{spiritskill_enchantbase}]]}} {{baseskillplus=[[@{spiritskill_enchantbase}+1]]}} {{minskill=[[1]]}} {{master=[[100-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}} {{masterplus=[[101-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}}"></button>
             <button type="roll" name="roll_training1"
                     value="&{template:training} {{name=@{spiritskill_enchant}}} {{subtags=Self-Train Roll}} {{expcheck=[[1d100]]}} {{rollmade=[[1d6-2]]}} {{baseskill=[[@{spiritskill_enchantbase}]]}} {{baseskillplus=[[@{spiritskill_enchantbase}+1]]}} {{minskill=[[1]]}} {{master=[[100-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}} {{masterplus=[[101-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}}"></button>
 
-            <input type="text" name="attr_spiritskill_summon" value="Summon" readonly>
-            <input type="number" name="attr_spiritskill_summonbase" value="0">
-            <input type="number" name="attr_spiritskill_summontotal" value="@{spiritskill_summonbase}+@{int_primary}+@{pow_primary}+@{dex_secondary}+@{magb_enchant}" disabled >
+            <input type="text" class="flex" name="attr_spiritskill_summon" value="Summon" readonly>
+            <input type="number" class="flex" name="attr_spiritskill_summonbase" value="0">
+            <input type="number" class="flex" name="attr_spiritskill_summontotal" value="@{spiritskill_summonbase}+@{int_primary}+@{pow_primary}+@{dex_secondary}+@{magb_enchant}" disabled >
             <button type="roll" name="roll_weapon1"
                     value="&{template:test} {{name=@{spiritskill_summon}}} {{rollmade=[[1d100]]}} {{normal=[[@{spiritskill_summonbase}+@{int_primary}+@{pow_primary}+@{dex_secondary}+@{magb_enchant}]]}} {{normalplus=[[@{spiritskill_summonbase}+@{int_primary}+@{pow_primary}+@{dex_secondary}+@{magb_enchant}+1]]}} {{fumble=[[100-floor(((100 - @{spiritskill_summonbase}+@{int_primary}+@{pow_primary}+@{dex_secondary}+@{magb_enchant}) / 20) + 0.55)]]}} {{fumbleminus=[[100-floor(((100 - @{spiritskill_summonbase}+@{int_primary}+@{pow_primary}+@{dex_secondary}+@{magb_enchant}) / 20) + 0.55)-1]]}} {{special=[[round((@{spiritskill_summonbase}+@{int_primary}+@{pow_primary}+@{dex_secondary}+@{magb_enchant})/5)]]}} {{specialplus=[[round((@{spiritskill_summonbase}+@{int_primary}+@{pow_primary}+@{dex_secondary}+@{magb_enchant})/5)+1]]}} {{critical=[[round((@{spiritskill_summonbase}+@{int_primary}+@{pow_primary}+@{dex_secondary}+@{magb_enchant})/20)]]}} {{criticalplus=[[round((@{spiritskill_summonbase}+@{int_primary}+@{pow_primary}+@{dex_secondary}+@{magb_enchant})/20)+1]]}} {{supercritical=[[0]]}} {{supercriticalplus=[[1]]}} {{hypercritical=[[0]]}} {{hypercriticalplus=[[1]]}} {{specmin=[[1]]}} {{critmin=[[1]]}}"></button>
-            <input type="number" name="attr_spiritskill_summonhours" value="0">
+            <input type="number" class="flex" name="attr_spiritskill_summonhours" value="0">
             <button type="roll" name="roll_training1"
                     value="&{template:training} {{name=@{spiritskill_summon}}} {{subtags=Trained Roll}} {{expcheck=[[101]]}} {{rollmade=[[1d6-2]]}} {{baseskill=[[@{spiritskill_summonbase}]]}} {{baseskillplus=[[@{spiritskill_summonbase}+1]]}} {{minskill=[[1]]}} {{master=[[100-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}} {{masterplus=[[101-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}}"></button>
             <button type="roll" name="roll_training1"

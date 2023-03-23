@@ -1,10 +1,11 @@
 /* style for spirits and ghosts grid */
 .sheet-rq35-bound-spirit {
     display: grid;
-    width: 860px;
+    min-width: 860px;
+    width: 100%;
     background: #fff;
     border: thick double #32a1ce;
-    grid-template-columns: 120px repeat(2, 80px) 120px 460px;
+    grid-template-columns: minmax(120px, 14%) repeat(2, minmax(80px, 9%)) minmax(120px, 14%) minmax(460px, 54%);
     grid-template-rows: auto;
 }
 .sheet-rq35-bound-spirit div.repcontainer {
@@ -13,20 +14,20 @@
 }
 .sheet-rq35-bound-spirit div.repcontainer div.repitem {
     display: inline-grid;
-    width: 860px;
-    grid-template-columns: 120px repeat(2, 80px) 120px 460px;
+    min-width: 860px;
+    width: 100%;
+    grid-template-columns: minmax(120px, 14%) repeat(2, minmax(80px, 9%)) minmax(120px, 14%) minmax(460px, 54%);
     grid-template-rows: auto;
 }
 .sheet-rq35-bound-spirit div.repcontainer input[type="text"] {
     margin-left: auto;
     margin-right: auto;
-    width: 100px;
     height: 28px;
 }
 .sheet-rq35-bound-spirit div.repcontainer input[type="number"] {
     margin-left: auto;
     margin-right: auto;
-    width: 60px;
+    height: 28px;
 }
 .sheet-rq35-bound-spirit div.repcontainer button {
     margin-left: auto;
