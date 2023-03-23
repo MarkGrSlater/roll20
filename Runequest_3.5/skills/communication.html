@@ -9,10 +9,10 @@
         <label>Skill Exp.</label>
         <fieldset class="repeating_commskills">
             <input type="checkbox" name="attr_commskill_ticked1" value="1">
-            <input type="text" name="attr_commskill_name1">
-            <input type="number" name="attr_commskill_hours1" value="0">
-            <input type="number" name="attr_commskill_base1" value="0">
-            <input type="number" name="attr_commskill_total1" value="@{commskill_base1}+@{int_primary}+@{pow_secondary}+@{app_secondary}+@{comm_enchant}" disabled>
+            <input type="text" class="flex" name="attr_commskill_name1">
+            <input type="number" class="flex" name="attr_commskill_hours1" value="0">
+            <input type="number" class="flex" name="attr_commskill_base1" value="0">
+            <input type="number" class="flex" name="attr_commskill_total1" value="@{commskill_base1}+@{int_primary}+@{pow_secondary}+@{app_secondary}+@{comm_enchant}" disabled>
             <button type="roll" name="roll_weapon1"
                     value="&{template:test} {{name=@{commskill_name1}}}  {{rollmade=[[1d100]]}} {{normal=[[@{commskill_total1}]]}} {{normalplus=[[@{commskill_total1}+1]]}} {{fumble=[[100-floor(((100 - @{commskill_total1}) / 20) + 0.55)]]}} {{fumbleminus=[[100-floor(((100 - @{commskill_total1}) / 20) + 0.55)-1]]}} {{special=[[round(@{commskill_total1}/5)]]}} {{specialplus=[[round(@{commskill_total1}/5)+1]]}} {{critical=[[round(@{commskill_total1}/20)]]}} {{criticalplus=[[round(@{commskill_total1}/20)+1]]}} {{supercritical=[[0]]}} {{supercriticalplus=[[1]]}} {{hypercritical=[[0]]}} {{hypercriticalplus=[[1]]}} {{specmin=[[1]]}} {{critmin=[[1]]}}"></button>
             <button type="roll" name="roll_attackexp1"

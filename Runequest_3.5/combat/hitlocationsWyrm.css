@@ -2,21 +2,26 @@
     display: grid;
     background: #fff;
     border: thick double #32a1ce;
-    width: 860px;
-    grid-template-columns: 60px 60px 60px 260px 60px 60px 60px 60px repeat(3, 60px);
+    min-width: 860px;
+    width: 100%;
+    grid-template-columns: minmax(60px, 6%) minmax(60px, 6%) minmax(60px, 6%) minmax(60px, 26%) repeat(7, minmax(60px, 8%));
     grid-template-rows: repeat(7,3em);
 }
-
+.sheet-wyrm-armour input.armour-description {
+    align-self: left;
+    width: 100% !important;
+}
 .sheet-wyrm-armour input.sheet-stats  {
     align-self: center;
     margin-left: auto;
     margin-right: auto;
+    width: 95% !important;
 }
 
 .sheet-wyrm-armour label {
     color: #5e5e5e;
     text-align: center;
-    padding: 5px;
+    padding: 5px 0;
     font-weight: bold;
     font-size: 11px;
 }

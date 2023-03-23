@@ -13,7 +13,8 @@
 }
 .sheet-rq35-title {
     display: grid;
-    width: 860px;
+    min-width: 860px;
+    width: 100%;
     background: #fff;
     border: thick double #32a1ce;
     grid-template-columns:
@@ -32,24 +33,36 @@
 }
 .sheet-rq35-title input {
     align-self: center;
-    width: 129px;
+    min-width: 129px;
+    width: 100%;
 }
 .center {
     text-align: center!important;
 }
 .red {
     color: #ce3232 !important;
+}
+.green {
+    color: chartreuse !important;
+}
+input[type="text"].flex {
+    width: 95% !important
+}
+input[type="number"].flex {
+    width: 95% !important
 }.sheet-rq35-stats {
     display: grid;
     background: #fff;
     border: thick double #32a1ce;
-    width: 860px;
+    min-width: 860px;
+    width: 100%;
     grid-template-columns: 100px 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     padding: 5px 0;
 }
 .sheet-rq35-stats input {
-    width: 90px;
+    min-width: 90px;
+    width: 100%;
     alignment: center;
 }
 .sheet-rq35-stats label {
@@ -82,19 +95,25 @@ p.sheet-header {
     display: grid;
     background: #fff;
     border: thick double #32a1ce;
-    width: 860px;
-    grid-template-columns: 60px 60px 60px 260px 60px 60px 60px 60px repeat(3, 60px);
+    min-width: 860px;
+    width: 100%;
+    grid-template-columns: minmax(60px, 6%) minmax(60px, 6%) minmax(60px, 6%) minmax(60px, 26%) repeat(7, minmax(60px, 8%));
     grid-template-rows: repeat(8,3em);
+}
+.sheet-rq35-armour input.armour-description {
+    align-self: left;
+    width: 100% !important;
 }
 .sheet-rq35-armour input.sheet-stats {
     align-self: center;
     margin-left: auto;
     margin-right: auto;
+    width: 95% !important;
 }
 .sheet-rq35-armour label {
     color: #5e5e5e;
     text-align: center;
-    padding: 5px;
+    padding: 5px 0;
     font-weight: bold;
     font-size: 11px;
 }
@@ -115,19 +134,25 @@ p.sheet-header {
     display: grid;
     background: #fff;
     border: thick double #32a1ce;
-    width: 860px;
-    grid-template-columns: 59px 60px 100px 220px 60px 60px 60px 60px repeat(3, 59px);
+    min-width: 860px;
+    width: 100%;
+    grid-template-columns: minmax(60px, 6%) minmax(60px, 6%) minmax(60px, 6%) minmax(60px, 26%) repeat(7, minmax(60px, 8%));
     grid-template-rows: repeat(8,3em);
+}
+.sheet-fourlegged-armour input.armour-description {
+    align-self: left;
+    width: 100% !important;
 }
 .sheet-fourlegged-armour input.sheet-stats {
     align-self: center;
     margin-left: auto;
     margin-right: auto;
+    width: 95% !important;
 }
 .sheet-fourlegged-armour label {
     color: #5e5e5e;
     text-align: center;
-    padding: 5px;
+    padding: 5px, 0;
     font-weight: bold;
     font-size: 11px;
 }
@@ -142,19 +167,25 @@ p.sheet-header {
     display: grid;
     background: #fff;
     border: thick double #32a1ce;
-    width: 860px;
-    grid-template-columns: 59px 60px 100px 220px 60px 60px 60px 60px repeat(3, 59px);
+    min-width: 860px;
+    width: 100%;
+    grid-template-columns: minmax(60px, 6%) minmax(60px, 6%) minmax(60px, 6%) minmax(60px, 26%) repeat(7, minmax(60px, 8%));
     grid-template-rows: repeat(10,3em);
+}
+.sheet-griffin-armour input.armour-description {
+    align-self: left;
+    width: 100% !important;
 }
 .sheet-griffin-armour input.sheet-stats {
     align-self: center;
     margin-left: auto;
     margin-right: auto;
+    width: 95% !important;
 }
 .sheet-griffin-armour label {
     color: #5e5e5e;
     text-align: center;
-    padding: 5px;
+    padding: 5px, 0;
     font-weight: bold;
     font-size: 11px;
 }
@@ -168,21 +199,26 @@ p.sheet-header {
     display: grid;
     background: #fff;
     border: thick double #32a1ce;
-    width: 860px;
-    grid-template-columns: 60px 60px 60px 260px 60px 60px 60px 60px repeat(3, 60px);
+    min-width: 860px;
+    width: 100%;
+    grid-template-columns: minmax(60px, 6%) minmax(60px, 6%) minmax(60px, 6%) minmax(60px, 26%) repeat(7, minmax(60px, 8%));
     grid-template-rows: repeat(7,3em);
 }
-
+.sheet-wyrm-armour input.armour-description {
+    align-self: left;
+    width: 100% !important;
+}
 .sheet-wyrm-armour input.sheet-stats  {
     align-self: center;
     margin-left: auto;
     margin-right: auto;
+    width: 95% !important;
 }
 
 .sheet-wyrm-armour label {
     color: #5e5e5e;
     text-align: center;
-    padding: 5px;
+    padding: 5px 0;
     font-weight: bold;
     font-size: 11px;
 }
@@ -196,20 +232,23 @@ p.sheet-header {
 /* style for attributes grid */
 .sheet-rq35-attributes {
     display: grid;
-    width: 860px;
+    min-width: 860px;
+    width: 100%;
     background: #fff;
     border: thick double #32a1ce;
-    grid-template-columns: repeat(4, 135px 80px);
+    grid-template-columns: repeat(4, minmax(125px, 14%) minmax(80px, 10%));
     grid-template-rows: repeat(2, 3em);
     padding: 5px 0;
 }
 .sheet-rq35-attributes input {
-    width: 90px;
+    min-width: 90px;
+    width: 80% !important;
     align-self: center;
     margin-left: 5px;
 }
 .sheet-rq35-attributes input[type="text"] {
-    width: 46px;
+    min-width: 46px;
+    max-width: 80% !important;
     align-self: center;
 }
 .sheet-rq35-attributes label {
@@ -222,10 +261,11 @@ p.sheet-header {
 /* style for power gain qualified grid */
 .sheet-rq35-power-gain {
     display: grid;
-    width: 860px;
+    min-width: 860px;
+    width: 100%;
     background: #fff;
     border: thick double #32a1ce;
-    grid-template-columns: 80px 400px repeat(3, 100px);
+    grid-template-columns: 80px minmax(420px, 55%) repeat(3, minmax(120px, 15%));
     grid-template-rows: auto;
     padding: 5px 0;
 }
@@ -235,14 +275,16 @@ p.sheet-header {
 }
 .sheet-rq35-power-gain div.repcontainer div.repitem {
     display: inline-grid;
-    width: 860px;
-    grid-template-columns: 80px 400px repeat(3, 100px);
+    min-width: 860px;
+    width: 100%;
+    grid-template-columns: 80px minmax(420px, 55%) repeat(3, minmax(120px, 15%));
     grid-template-rows: auto;
 }
 .sheet-rq35-power-gain div.repcontainer input[type="text"] {
     margin-left: auto;
     margin-right: auto;
-    width: 400px;
+    min-width: 420px;
+    width: 80% !important;
 }
 .sheet-rq35-power-gain div.repcontainer button {
     margin-left: auto;
@@ -263,7 +305,8 @@ p.sheet-header {
 .sheet-rq35-power-gain input[type="text"] {
     margin-left: auto;
     margin-right: auto;
-    width: 400px;
+    min-width: 420px;
+    width: 80%;
 }
 .sheet-rq35-power-gain button {
     margin-left: auto !important;
@@ -274,10 +317,11 @@ p.sheet-header {
 /* style for encumbrance grid */
 .sheet-rq35-encumbrance {
     display: grid;
-    width: 860px;
+    min-width: 860px;
+    width: 100%;
     background: #fff;
     border: thick double #32a1ce;
-    grid-template-columns: repeat(5, 140px) 160px;
+    grid-template-columns: repeat(5, minmax(140px, 16%)) minmax(160px, 20%);
     grid-template-rows: auto;
 }
 .sheet-rq35-encumbrance div.repcontainer {
@@ -287,12 +331,13 @@ p.sheet-header {
 .sheet-rq35-encumbrance div.repcontainer div.repitem {
     display: inline-grid;
     width: 860px;
-    grid-template-columns: repeat(5, 140px) 160px;
+    grid-template-columns: repeat(5, minmax(140px, 16%)) minmax(160px, 20%);
     grid-template-rows: auto;
 }
 .sheet-rq35-encumbrance input[type="number"] {
     margin: 0 auto 10px auto;
-    width: 50px;
+    min-width: 50px;
+    width: 80% !important;
 }
 .sheet-rq35-encumbrance div.repcontainer button {
     margin-left: auto;
@@ -423,22 +468,25 @@ input.sheet-armour-description {
 /* style for dodge skill grid */
 .sheet-rq35-dodge {
     display: grid;
-    width: 860px;
+    min-width: 860px;
+    width: 100%;
     background: #fff;
     border: thick double #32a1ce;
-    grid-template-columns: 70px repeat(4,90px) 70px 70px 90px 100px 100px;
+    grid-template-columns: minmax(70px, 8%) repeat(4, minmax(90px, 10%)) minmax(70px, 8%) minmax(70px, 8%) minmax(90px, 10%) minmax(100px, 12%) minmax(100px, 12%);
     grid-template-rows: auto;
 }
 
 .sheet-rq35-dodge  input[type="text"] {
     margin-left: auto;
     margin-right: auto;
-    width: 160px;
+    min-width: 160px;
+    width: 80% !important;
 }
 .sheet-rq35-dodge  input[type="number"] {
     margin-left: auto;
     margin-right: auto;
-    width: 60px;
+    min-width: 60px;
+    width: 80% !important;
 }
 .sheet-rq35-dodge button {
     margin-left: auto !important;
@@ -461,10 +509,11 @@ input.sheet-armour-description {
 /* style for melee combat grid */
 .sheet-rq35-combat {
     display: grid;
-    width: 860px;
+    min-width: 860px;
+    width: 100%;
     background: #fff;
     border: thick double #32a1ce;
-    grid-template-columns: 45px 119px repeat(5, 60px) 45px 55px 55px 55px 50px 45px 45px 45px;
+    grid-template-columns: 45px minmax(120px, 26%) 60px 60px repeat(3, minmax(60px, 12%)) 45px minmax(55px, 12%) minmax(55px, 12%) minmax(55px, 12%) 50px 45px 45px 45px;
     grid-template-rows: auto;
 }
 .sheet-rq35-combat div.repcontainer {
@@ -473,18 +522,19 @@ input.sheet-armour-description {
 }
 .sheet-rq35-combat div.repcontainer div.repitem {
     display: inline-grid;
-    width: 860px;
-    grid-template-columns: 45px 119px repeat(5, 60px) 45px 55px 55px 55px 50px 45px 45px 45px;
+    min-width: 860px;
+    width: 100%;
+    grid-template-columns: 45px minmax(120px, 26%) 60px 60px repeat(3, minmax(60px, 12%)) 45px minmax(55px, 12%) minmax(55px, 12%) minmax(55px, 12%) 50px 45px 45px 45px;
     grid-template-rows: auto;
 }
 .sheet-rq35-combat div.repcontainer input[type="checkbox"] {
-    margin: 6px 0 0 5px;
+    margin: 5px 0 10px 0;
     width: 45px;
 }
 .sheet-rq35-combat div.repcontainer input[type="text"] {
     margin-left: auto;
     margin-right: auto;
-    width: 115px;
+    width: 100% !important;
 }
 .sheet-rq35-combat div.repcontainer button {
     margin-left: auto;
@@ -732,10 +782,11 @@ div.sheet-armour-tabs > button {
 }/* style for melee damage grid */
 .sheet-rq35-melee-damage {
     display: grid;
-    width: 860px;
+    min-width: 860px;
+    width: 100%;
     background: #fff;
     border: thick double #32a1ce;
-    grid-template-columns:  160px repeat(7, 100px);
+    grid-template-columns:  minmax(160px, 28%) repeat(3, minmax(100px, 18%)) 100px minmax(100px, 18%) 100px 100px;
     grid-template-rows: auto;
 }
 .sheet-rq35-melee-damage div.repcontainer {
@@ -744,8 +795,9 @@ div.sheet-armour-tabs > button {
 }
 .sheet-rq35-melee-damage div.repitem {
     display: inline-grid;
-    width: 860px;
-    grid-template-columns: 160px repeat(7, 100px);
+    min-width: 860px;
+    width: 100%;
+    grid-template-columns:  minmax(160px, 28%) repeat(3, minmax(100px, 18%)) 100px minmax(100px, 18%) 100px 100px;
     grid-template-rows: auto;
 }
 .charsheet .sheet-rq35-melee-damage label {
@@ -758,16 +810,6 @@ div.sheet-armour-tabs > button {
 .charsheet .sheet-rq35-melee-damage input {
     margin-left: auto;
     margin-right: auto;
-}
-.sheet-rq35-melee-damage div.repcontainer input[type="text"] {
-    margin-left: auto;
-    margin-right: auto;
-    width: 130px;
-}
-.sheet-rq35-melee-damage div.repcontainer input.sheet-small-text {
-    margin-left: auto;
-    margin-right: auto;
-    width: 80px;
 }
 .charsheet .sheet-rq35-melee-damage div.repcontainer button {
     margin-left: auto;
@@ -783,10 +825,11 @@ div.sheet-rq35-melee-damage div.repcontrol {
 /* style for missile grid */
 .sheet-rq35-missile {
     display: grid;
-    width: 860px;
+    min-width: 860px;
+    width: 100%;
     background: #fff;
     border: thick double #32a1ce;
-    grid-template-columns: 45px 130px 87px 100px 70px 80px 75px repeat(3, 90px);
+    grid-template-columns: 45px minmax(130px, 36%) 87px 100px minmax(70px, 20%) minmax(80px, 22%) minmax(75px, 21%) repeat(3, 90px);
     grid-template-rows: auto;
 }
 .sheet-rq35-missile div.repcontainer {
@@ -795,8 +838,9 @@ div.sheet-rq35-melee-damage div.repcontrol {
 }
 .sheet-rq35-missile div.repitem {
     display: inline-grid;
-    width: 860px;
-    grid-template-columns: 45px 130px 87px 100px 70px 80px 75px repeat(3, 90px);
+    min-width: 860px;
+    width: 100%;
+    grid-template-columns: 45px minmax(130px, 36%) 87px 100px minmax(70px, 20%) minmax(80px, 22%) minmax(75px, 21%) repeat(3, 90px);
     grid-template-rows: auto;
 }
 .charsheet .sheet-rq35-missile label {
@@ -809,16 +853,6 @@ div.sheet-rq35-melee-damage div.repcontrol {
 .charsheet .sheet-rq35-missile input {
     margin-left: auto;
     margin-right: auto;
-}
-.sheet-rq35-missile div.repcontainer input[type="text"] {
-    margin-left: auto;
-    margin-right: auto;
-    width: 115px;
-}
-.sheet-rq35-missile div.repcontainer input.sheet-small-text {
-    margin-left: auto;
-    margin-right: auto;
-    width: 80px;
 }
 .charsheet .sheet-rq35-missile div.repcontainer button {
     margin-left: auto;
@@ -833,27 +867,31 @@ div.sheet-rq35-missile div.repcontrol {
 }
 .sheet-rqskills-main {
     display: grid;
-    width: 860px;
+    min-width: 860px;
+    width: 100%;
     background: #fff;
-    grid-template-columns:  420px 20px 420px;
+    grid-template-columns:  minmax(420px, 49%) minmax(20px, 2%) minmax(420px, 49%);
     grid-template-rows: auto;
 }
 .sheet-rqskills-left {
     display: inline-grid;
-    width: 420px;
+    min-width: 420px;
+    width: 100%;
     grid-column-start: 1;
 }
 .sheet-rqskills-right {
     display: inline-grid;
-    width: 420px;
+    min-width: 420px;
+    width: 100%;
     grid-column-start: 3;
 }
 .sheet-rq35-skills {
     display: grid;
-    width: 420px;
+    min-width: 420px;
+    width: 100%;
     background: #fff;
     border: thick double #32a1ce;
-    grid-template-columns: 40px 110px 60px 60px 60px 45px 45px;
+    grid-template-columns: 40px minmax(110px, 37%) repeat(3, minmax(60px, 21%)) 45px 45px;
     grid-template-rows: auto;
 }
 .charsheet .sheet-rq35-skills label {
@@ -865,21 +903,25 @@ div.sheet-rq35-missile div.repcontrol {
 }
 .sheet-rq35-skills div.repcontainer {
     grid-column-start: 1;
-    grid-column-end: span 5;
+    grid-column-end: span 7;
 }
 .sheet-rq35-skills div.repitem
 {
     display: inline-grid;
-    width: 420px;
-    grid-template-columns: 40px 110px 60px 60px 60px 45px 45px;
+    min-width: 420px;
+    width: 100%;
+    grid-template-columns: 40px minmax(110px, 37%) repeat(3, minmax(60px, 21%)) 45px 45px;
     grid-template-rows: auto;
 }
 .sheet-rq35-skills div.sheet-fixeditem
 {
     display: inline-grid;
-    width: 420px;
-    grid-template-columns: 40px 110px 60px 60px 60px 45px 45px;
+    min-width: 420px;
+    width: 100%;
+    grid-template-columns: 40px minmax(110px, 37%) repeat(3, minmax(60px, 21%)) 45px 45px;
     grid-template-rows: repeat(6, 34px);
+    grid-column-start: 1;
+    grid-column-end: span 7;
 }
 .charsheet .sheet-rq35-skills label {
     color: #5e5e5e;
@@ -897,16 +939,9 @@ div.sheet-rq35-missile div.repcontrol {
 {
     margin-left: auto;
     margin-right: auto;
-    width: 118px;
 }
 .sheet-rq35-skills div.sheet-fixeditem input {
     margin-bottom: 6px;
-}
-.sheet-rq35-skills div.repcontainer input.sheet-small-text,
-.sheet-rq35-skills div.sheet-fixeditem input.sheet-small-text {
-    margin-left: auto;
-    margin-right: auto;
-    width: 80px;
 }
 .charsheet .sheet-rq35-skills div.repcontainer button,
 .charsheet .sheet-rq35-skills div.sheet-fixeditem button {

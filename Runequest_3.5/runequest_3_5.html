@@ -513,7 +513,7 @@
             <input name="attr_rarm_total_ap" value="@{rarm_ap}+@{rarm_enchant}" type="number" class="sheet-stats" disabled>
             <input name="attr_rarm_damage" value="0" type="number" class="sheet-stats">
 
-            <em>Front Leg</em>
+            <em> </em>
             <input name="attr_head_hp_total" type="number" value="@{3_location}-@{head_damage}" disabled class="sheet-stats">
             <em> </em>
 
@@ -724,27 +724,27 @@
             <label>Base Attack</label>
             <label>Magic Bonus</label>
             <label>Total Attack %</label>
-            <label>Attack Roll</label>
+            <label class="red">Attack Roll</label>
             <label>Weapon AP</label>
             <label>Base Parry</label>
             <label>Total Parry %</label>
-            <label>Parry Roll</label>
+            <label class="green">Parry Roll</label>
             <label>Parry Tick</label>
             <label>Attack Exp</label>
             <label>Parry Exp</label>
             <fieldset class="repeating_meleeskills">
                 <input type="checkbox" name="attr_weapon_ticked1" value="1">
-                <input type="text" name="attr_weapon_name1">
+                <input type="text" name="attr_weapon_name1" class="flex">
                 <input type="number" name="attr_weapon_sr1" value="0">
                 <input type="number" name="attr_weapon_tsr1" value="@{weapon_sr1}+@{meleesr}" disabled>
-                <input type="number" name="attr_weapon_attack1" value="0">
-                <input type="number" name="attr_weapon_magic1" value="0">
-                <input type="number" name="attr_weapon_tatt1" value="@{weapon_magic1}+@{weapon_attack1}+@{int_primary}+@{dex_primary}+@{str_secondary}+@{mani_enchant}" disabled >
+                <input type="number" name="attr_weapon_attack1" value="0" class="flex">
+                <input type="number" name="attr_weapon_magic1" value="0" class="flex">
+                <input type="number" name="attr_weapon_tatt1" class="flex" value="@{weapon_magic1}+@{weapon_attack1}+@{int_primary}+@{dex_primary}+@{str_secondary}+@{mani_enchant}" disabled >
                 <button type="roll" name="roll_weapon1"
                         value="&{template:test} {{name=@{weapon_name1} Attack}} {{rollmade=[[1d100]]}} {{normal=[[@{weapon_tatt1}]]}} {{normalplus=[[@{weapon_tatt1}+1]]}} {{fumble=[[100-floor(((100 - @{weapon_tatt1}) / 20) + 0.55)]]}} {{fumbleminus=[[100-floor(((100 - @{weapon_tatt1}) / 20) + 0.55)-1]]}} {{special=[[round(@{weapon_tatt1}/5)]]}} {{specialplus=[[round(@{weapon_tatt1}/5)+1]]}} {{critical=[[round(@{weapon_tatt1}/20)]]}} {{criticalplus=[[round(@{weapon_tatt1}/20)+1]]}} {{supercritical=[[floor(@{weapon_tatt1}/100)]]}} {{supercriticalplus=[[floor(@{weapon_tatt1}/100)+1]]}} {{hypercritical=[[floor(@{weapon_tatt1}/400)]]}} {{hypercriticalplus=[[floor(@{weapon_tatt1}/400)+1]]}} {{specmin=[[1]]}} {{critmin=[[1]]}}"></button>
-                <input type="number" name="attr_weapon_ap1">
-                <input type="number" name="attr_weapon_parry1" value="0">
-                <input type="number" name="attr_weapon_tparry1" value="@{weapon_magic1}+@{weapon_parry1}+@{dex_primary}+@{str_secondary}+@{siz_negative}+@{agil_enchant}" disabled>
+                <input type="number" name="attr_weapon_ap1" class="flex">
+                <input type="number" name="attr_weapon_parry1" value="0" class="flex">
+                <input type="number" name="attr_weapon_tparry1" class="flex" value="@{weapon_magic1}+@{weapon_parry1}+@{dex_primary}+@{str_secondary}+@{siz_negative}+@{agil_enchant}" disabled>
                 <button type="roll" name="roll_parry1"
                         value="&{template:test} {{name=@{weapon_name1} Parry}} {{rollmade=[[1d100]]}} {{normal=[[@{weapon_tparry1}]]}} {{normalplus=[[@{weapon_tparry1}+1]]}} {{fumble=[[100-floor(((100 - @{weapon_tparry1}) / 20) + 0.55)]]}} {{fumbleminus=[[100-floor(((100 - @{weapon_tparry1}) / 20) + 0.55)-1]]}} {{special=[[round(@{weapon_tparry1}/5)]]}} {{specialplus=[[round(@{weapon_tparry1}/5)+1]]}} {{critical=[[round(@{weapon_tparry1}/20)]]}} {{criticalplus=[[round(@{weapon_tparry1}/20)+1]]}} {{supercritical=[[floor(@{weapon_tparry1}/100)]]}} {{supercriticalplus=[[floor(@{weapon_tparry1}/100)+1]]}} {{hypercritical=[[floor(@{weapon_tparry1}/400)]]}} {{hypercriticalplus=[[floor(@{weapon_tparry1}/400)+1]]}} {{specmin=[[1]]}} {{critmin=[[1]]}}"></button>
                 <input type="checkbox" name="attr_parry_ticked1" value="1">
@@ -769,13 +769,13 @@
             <label>Experience Roll</label>
             <fieldset class="repeating_missileattack">
                 <input type="checkbox" name="attr_missile_ticked1" value="1">
-                <input type="text" name="attr_missile_name1">
-                <input type="text" class="sheet-small-text" name="attr_missile_rof1">
-                <input type="text" class="sheet-small-text" name="attr_missile_range1">
-                <input type="number" name="attr_missile_attack1" value="0">
-                <input type="number" name="attr_missile_magic1" value="0">
-                <input type="number" name="attr_missile_tatt1" value="@{missile_magic1}+@{missile_attack1}+@{dex_primary}+@{str_secondary}+@{siz_negative}+@{agil_enchant}" disabled >
-                <input type="number" name="attr_missile_tattmax1" value="floor((@{missile_magic1}+@{missile_attack1}+@{dex_primary}+@{str_secondary}+@{siz_negative}+@{agil_enchant})/2)" disabled hidden>
+                <input type="text" class="flex" name="attr_missile_name1">
+                <input type="text" class="flex" name="attr_missile_rof1">
+                <input type="text" class="flex" name="attr_missile_range1">
+                <input type="number" class="flex" name="attr_missile_attack1" value="0">
+                <input type="number" class="flex" name="attr_missile_magic1" value="0">
+                <input type="number" class="flex" name="attr_missile_tatt1" value="@{missile_magic1}+@{missile_attack1}+@{dex_primary}+@{str_secondary}+@{siz_negative}+@{agil_enchant}" disabled >
+                <input type="number" class="flex" name="attr_missile_tattmax1" value="floor((@{missile_magic1}+@{missile_attack1}+@{dex_primary}+@{str_secondary}+@{siz_negative}+@{agil_enchant})/2)" disabled hidden>
                 <button type="roll" name="roll_weapon1"
                         value="&{template:test} {{name=@{missile_name1} Attack}}  {{rollmade=[[1d100]]}} {{normal=[[@{missile_tatt1}]]}} {{normalplus=[[@{missile_tatt1}+1]]}} {{fumble=[[100-floor(((100 - @{missile_tatt1}) / 20) + 0.55)]]}} {{fumbleminus=[[100-floor(((100 - @{missile_tatt1}) / 20) + 0.55)-1]]}} {{special=[[round(@{missile_tatt1}/5)]]}} {{specialplus=[[round(@{missile_tatt1}/5)+1]]}} {{critical=[[round(@{missile_tatt1}/20)]]}} {{criticalplus=[[round(@{missile_tatt1}/20)+1]]}} {{supercritical=[[floor(@{missile_tatt1}/100)]]}} {{supercriticalplus=[[floor(@{missile_tatt1}/100)+1]]}} {{hypercritical=[[floor(@{missile_tatt1}/400)]]}} {{hypercriticalplus=[[floor(@{missile_tatt1}/400)+1]]}} {{specmin=[[1]]}} {{critmin=[[1]]}}"></button>
                 <button type="roll" name="roll_maxweapon1"
@@ -795,13 +795,13 @@
             <label>Roll Special</label>
             <label>Roll Critical</label>
             <fieldset class="repeating_meleedamage">
-                <input type="text" name="attr_meleedamage_name1">
-                <input type="text" class="sheet-small-text" name="attr_meleedamage_base1">
-                <input type="number" name="attr_meleedamage_magic1" value="0">
-                <input type="text" class="sheet-small-text" name="attr_meleedamage_mod1" >
+                <input type="text" name="attr_meleedamage_name1" class="flex">
+                <input type="text" class="flex" name="attr_meleedamage_base1">
+                <input type="number" class="flex" name="attr_meleedamage_magic1" value="0">
+                <input type="text" class="flex" name="attr_meleedamage_mod1" >
                 <button type="roll" name="roll_weapon1"
                         value="&{template:meleedamage} {{name=@{meleedamage_name1}}} {{subtags=Normal hit}} {{location=[[1d20]]}} {{damage=[[@{meleedamage_base1}+@{meleedamage_magic1}+@{meleedamage_mod1}]]}}"></button>
-                <input type="text" class="sheet-small-text" name="attr_specialdamage1">
+                <input type="text" class="flex" name="attr_specialdamage1">
                 <button type="roll" name="roll_weapon1"
                         value="&{template:meleedamage} {{name=@{meleedamage_name1}}} {{subtags=Special hit}} {{location=[[1d20]]}} {{damage=[[@{specialdamage1}+@{meleedamage_magic1}+@{meleedamage_mod1}]]}}"></button>
                 <button type="roll" name="roll_weapon1"
@@ -832,11 +832,11 @@
         <label>Skill Exp.</label>
         <fieldset class="repeating_agilityskills">
             <input type="checkbox" name="attr_agilityskill_ticked1" value="1">
-            <input type="text" name="attr_agilityskill_name1">
-            <input type="number" name="attr_agilityskill_hours1" value="0">
-            <input type="number" name="attr_agilityskill_base1" value="0">
-            <input type="number" name="attr_agilityskill_total1" value="@{agilityskill_base1}+@{dex_primary}+@{str_secondary}+@{siz_negative}+@{agil_enchant}" disabled>
-            <input type="number" name="attr_agilityskill_modified1" value="@{agilityskill_base1}+@{dex_primary}+@{str_secondary}+@{siz_negative}+@{agil_enchant}" hidden disabled>
+            <input type="text" class="flex" name="attr_agilityskill_name1">
+            <input type="number" class="flex" name="attr_agilityskill_hours1" value="0">
+            <input type="number" class="flex" name="attr_agilityskill_base1" value="0">
+            <input type="number" class="flex" name="attr_agilityskill_total1" value="@{agilityskill_base1}+@{dex_primary}+@{str_secondary}+@{siz_negative}+@{agil_enchant}" disabled>
+            <input type="number" class="flex" name="attr_agilityskill_modified1" value="@{agilityskill_base1}+@{dex_primary}+@{str_secondary}+@{siz_negative}+@{agil_enchant}" hidden disabled>
             <button type="roll" name="roll_weapon1"
                     value="&{template:test} {{name=@{agilityskill_name1}}} {{rollmade=[[1d100]]}} {{normal=[[@{agilityskill_modified1}]]}} {{normalplus=[[@{agilityskill_modified1}+1]]}} {{fumble=[[100-floor(((100 - @{agilityskill_modified1}) / 20) + 0.55)]]}} {{fumbleminus=[[100-floor(((100 - @{agilityskill_modified1}) / 20) + 0.55)-1]]}} {{special=[[round(@{agilityskill_modified1}/5)]]}} {{specialplus=[[round(@{agilityskill_modified1}/5)+1]]}} {{critical=[[round(@{agilityskill_modified1}/20)]]}} {{criticalplus=[[round(@{agilityskill_modified1}/20)+1]]}} {{supercritical=[[0]]}} {{supercriticalplus=[[1]]}} {{hypercritical=[[0]]}} {{hypercriticalplus=[[1]]}} {{specmin=[[1]]}} {{critmin=[[1]]}}"></button>
             <button type="roll" name="roll_attackexp1"
@@ -854,10 +854,10 @@
         <label>Skill Exp.</label>
         <fieldset class="repeating_commskills">
             <input type="checkbox" name="attr_commskill_ticked1" value="1">
-            <input type="text" name="attr_commskill_name1">
-            <input type="number" name="attr_commskill_hours1" value="0">
-            <input type="number" name="attr_commskill_base1" value="0">
-            <input type="number" name="attr_commskill_total1" value="@{commskill_base1}+@{int_primary}+@{pow_secondary}+@{app_secondary}+@{comm_enchant}" disabled>
+            <input type="text" class="flex" name="attr_commskill_name1">
+            <input type="number" class="flex" name="attr_commskill_hours1" value="0">
+            <input type="number" class="flex" name="attr_commskill_base1" value="0">
+            <input type="number" class="flex" name="attr_commskill_total1" value="@{commskill_base1}+@{int_primary}+@{pow_secondary}+@{app_secondary}+@{comm_enchant}" disabled>
             <button type="roll" name="roll_weapon1"
                     value="&{template:test} {{name=@{commskill_name1}}}  {{rollmade=[[1d100]]}} {{normal=[[@{commskill_total1}]]}} {{normalplus=[[@{commskill_total1}+1]]}} {{fumble=[[100-floor(((100 - @{commskill_total1}) / 20) + 0.55)]]}} {{fumbleminus=[[100-floor(((100 - @{commskill_total1}) / 20) + 0.55)-1]]}} {{special=[[round(@{commskill_total1}/5)]]}} {{specialplus=[[round(@{commskill_total1}/5)+1]]}} {{critical=[[round(@{commskill_total1}/20)]]}} {{criticalplus=[[round(@{commskill_total1}/20)+1]]}} {{supercritical=[[0]]}} {{supercriticalplus=[[1]]}} {{hypercritical=[[0]]}} {{hypercriticalplus=[[1]]}} {{specmin=[[1]]}} {{critmin=[[1]]}}"></button>
             <button type="roll" name="roll_attackexp1"
@@ -875,10 +875,10 @@
         <label>Skill Exp.</label>
         <fieldset class="repeating_manipulationskills">
             <input type="checkbox" name="attr_manipulationskill_ticked1" value="1">
-            <input type="text" name="attr_manipulationskill_name1">
-            <input type="number" name="attr_manipulationskill_hours1" value="0">
-            <input type="number" name="attr_manipulationskill_base1" value="0">
-            <input type="number" name="attr_manipulationskill_total1" value="@{manipulationskill_base1}+@{dex_primary}+@{int_primary}+@{str_secondary}+@{mani_enchant}" disabled>
+            <input type="text" class="flex" name="attr_manipulationskill_name1">
+            <input type="number" class="flex" name="attr_manipulationskill_hours1" value="0">
+            <input type="number" class="flex" name="attr_manipulationskill_base1" value="0">
+            <input type="number" class="flex" name="attr_manipulationskill_total1" value="@{manipulationskill_base1}+@{dex_primary}+@{int_primary}+@{str_secondary}+@{mani_enchant}" disabled>
             <button type="roll" name="roll_weapon1"
                     value="&{template:test} {{name=@{manipulationskill_name1}}}  {{rollmade=[[1d100]]}} {{normal=[[@{manipulationskill_total1}]]}} {{normalplus=[[@{manipulationskill_total1}+1]]}} {{fumble=[[100-floor(((100 - @{manipulationskill_total1}) / 20) + 0.55)]]}} {{fumbleminus=[[100-floor(((100 - @{manipulationskill_total1}) / 20) + 0.55)-1]]}} {{special=[[round(@{manipulationskill_total1}/5)]]}} {{specialplus=[[round(@{manipulationskill_total1}/5)+1]]}} {{critical=[[round(@{manipulationskill_total1}/20)]]}} {{criticalplus=[[round(@{manipulationskill_total1}/20)+1]]}} {{supercritical=[[0]]}} {{supercriticalplus=[[1]]}} {{hypercritical=[[0]]}} {{hypercriticalplus=[[1]]}} {{specmin=[[1]]}} {{critmin=[[1]]}}"></button>
             <button type="roll" name="roll_attackexp1"
@@ -898,56 +898,56 @@
         <label>Skill Exp.</label>
         <div class="sheet-fixeditem">
         <span></span>
-        <input type="text" name="attr_animal_lore" value="Animal Lore" readonly>
-        <input type="number" name="attr_animallore_hours" value="0">
-        <input type="number" name="attr_animallore_base" value="5">
-        <input type="number" name="attr_animallore_total" value="(@{animallore_base}+@{int_primary}+@{know_enchant})" disabled>
+        <input type="text" class="flex" name="attr_animal_lore" value="Animal Lore" readonly>
+        <input type="number" class="flex" name="attr_animallore_hours" value="0">
+        <input type="number" class="flex" name="attr_animallore_base" value="5">
+        <input type="number" class="flex" name="attr_animallore_total" value="(@{animallore_base}+@{int_primary}+@{know_enchant})" disabled>
         <button type="roll" name="roll_animallore"
                     value="&{template:test} {{name=@{animal_lore}}} {{rollmade=[[1d100]]}} {{normal=[[@{animallore_total}]]}} {{normalplus=[[@{animallore_total}+1]]}} {{fumble=[[100-floor(((100 - @{animallore_total}) / 20) + 0.55)]]}} {{fumbleminus=[[100-floor(((100 - @{animallore_total}) / 20) + 0.55)-1]]}} {{special=[[round(@{animallore_total}/5)]]}} {{specialplus=[[round(@{animallore_total}/5)+1]]}} {{critical=[[round(@{animallore_total}/20)]]}} {{criticalplus=[[round(@{animallore_total}/20)+1]]}} {{supercritical=[[0]]}} {{supercriticalplus=[[1]]}} {{hypercritical=[[0]]}} {{hypercriticalplus=[[1]]}} {{specmin=[[1]]}} {{critmin=[[1]]}}"></button>
         <button type="roll" name="roll_attackexp1"
                     value="&{template:training} {{name=@{animal_lore}}} {{subtags=Self-Train Roll}} {{expcheck=[[1d100]]}} {{rollmade=[[1d6-2]]}} {{baseskill=[[@{animallore_base}]]}} {{baseskillplus=[[@{animallore_base}+1]]}} {{minskill=[[1]]}} {{master=[[100-(@{dex_primary}+@{str_secondary}+@{siz_negative})]]}} {{masterplus=[[101-(@{dex_primary}+@{str_secondary}+@{siz_negative})]]}}"></button>
 
         <span></span>
-        <input type="text" name="attr_human_lore" value="Human Lore" readonly>
-        <input type="number" name="attr_humanlore_hours" value="0">
-        <input type="number" name="attr_humanlore_base" value="5">
-        <input type="number" name="attr_humanlore_total" value="(@{humanlore_base}+@{int_primary}+@{know_enchant})" disabled>
+        <input type="text" class="flex" name="attr_human_lore" value="Human Lore" readonly>
+        <input type="number" class="flex" name="attr_humanlore_hours" value="0">
+        <input type="number" class="flex" name="attr_humanlore_base" value="5">
+        <input type="number" class="flex" name="attr_humanlore_total" value="(@{humanlore_base}+@{int_primary}+@{know_enchant})" disabled>
         <button type="roll" name="roll_weapon1"
                     value="&{template:test} {{name=@{human_lore}}}  {{rollmade=[[1d100]]}} {{normal=[[@{humanlore_total}]]}} {{normalplus=[[@{humanlore_total}+1]]}} {{fumble=[[100-floor(((100 - @{humanlore_total}) / 20) + 0.55)]]}} {{fumbleminus=[[100-floor(((100 - @{humanlore_total}) / 20) + 0.55)-1]]}} {{special=[[round(@{humanlore_total}/5)]]}} {{specialplus=[[round(@{humanlore_total}/5)+1]]}} {{critical=[[round(@{humanlore_total}/20)]]}} {{criticalplus=[[round(@{humanlore_total}/20)+1]]}} {{supercritical=[[0]]}} {{supercriticalplus=[[1]]}} {{hypercritical=[[0]]}} {{hypercriticalplus=[[1]]}} {{specmin=[[1]]}} {{critmin=[[1]]}}"></button>
         <button type="roll" name="roll_attackexp1"
                     value="&{template:training} {{name=@{human_lore}}} {{subtags=Self-Train Roll}} {{expcheck=[[1d100]]}} {{rollmade=[[1d6-2]]}} {{baseskill=[[@{humanlore_base}]]}} {{baseskillplus=[[@{humanlore_base}+1]]}} {{minskill=[[1]]}} {{master=[[100-(@{dex_primary}+@{str_secondary}+@{siz_negative})]]}} {{masterplus=[[101-(@{dex_primary}+@{str_secondary}+@{siz_negative})]]}}"></button>
         <span></span>
-        <input type="text" name="attr_mineral_lore" value="Mineral Lore" readonly>
-        <input type="number" name="attr_minerallore_hours" value="0">
-        <input type="number" name="attr_minerallore_base" value="5">
-        <input type="number" name="attr_minerallore_total" value="(@{minerallore_base}+@{int_primary}+@{know_enchant})" disabled>
+        <input type="text" class="flex" name="attr_mineral_lore" value="Mineral Lore" readonly>
+        <input type="number" class="flex" name="attr_minerallore_hours" value="0">
+        <input type="number" class="flex" name="attr_minerallore_base" value="5">
+        <input type="number" class="flex" name="attr_minerallore_total" value="(@{minerallore_base}+@{int_primary}+@{know_enchant})" disabled>
         <button type="roll" name="roll_weapon1"
                     value="&{template:test} {{name=@{mineral_lore}}}  {{rollmade=[[1d100]]}} {{normal=[[@{minerallore_total}]]}} {{normalplus=[[@{minerallore_total}+1]]}} {{fumble=[[100-floor(((100 - @{minerallore_total}) / 20) + 0.55)]]}} {{fumbleminus=[[100-floor(((100 - @{minerallore_total}) / 20) + 0.55)-1]]}} {{special=[[round(@{minerallore_total}/5)]]}} {{specialplus=[[round(@{minerallore_total}/5)+1]]}} {{critical=[[round(@{minerallore_total}/20)]]}} {{criticalplus=[[round(@{minerallore_total}/20)+1]]}} {{supercritical=[[0]]}} {{supercriticalplus=[[1]]}} {{hypercritical=[[0]]}} {{hypercriticalplus=[[1]]}} {{specmin=[[1]]}} {{critmin=[[1]]}}"></button>
         <button type="roll" name="roll_attackexp1"
                     value="&{template:training} {{name=@{mineral_lore}}} {{subtags=Self-Train Roll}} {{expcheck=[[1d100]]}} {{rollmade=[[1d6-2]]}} {{baseskill=[[@{minerallore_base}]]}} {{baseskillplus=[[@{minerallore_base}+1]]}} {{minskill=[[1]]}} {{master=[[100-(@{dex_primary}+@{str_secondary}+@{siz_negative})]]}} {{masterplus=[[101-(@{dex_primary}+@{str_secondary}+@{siz_negative})]]}}"></button>
         <span></span>
-        <input type="text" name="attr_plant_lore" value="Plant Lore" readonly>
-        <input type="number" name="attr_plantlore_hours" value="0">
-        <input type="number" name="attr_plantlore_base" value="5">
-        <input type="number" name="attr_plantlore_total" value="(@{plantlore_base}+@{int_primary}+@{know_enchant})" disabled>
+        <input type="text" class="flex" name="attr_plant_lore" value="Plant Lore" readonly>
+        <input type="number" class="flex" name="attr_plantlore_hours" value="0">
+        <input type="number" class="flex" name="attr_plantlore_base" value="5">
+        <input type="number" class="flex" name="attr_plantlore_total" value="(@{plantlore_base}+@{int_primary}+@{know_enchant})" disabled>
         <button type="roll" name="roll_weapon1"
                     value="&{template:test} {{name=@{plant_lore}}}  {{rollmade=[[1d100]]}} {{normal=[[@{plantlore_total}]]}} {{normalplus=[[@{plantlore_total}+1]]}} {{fumble=[[100-floor(((100 - @{plantlore_total}) / 20) + 0.55)]]}} {{fumbleminus=[[100-floor(((100 - @{plantlore_total}) / 20) + 0.55)-1]]}} {{special=[[round(@{plantlore_total}/5)]]}} {{specialplus=[[round(@{plantlore_total}/5)+1]]}} {{critical=[[round(@{plantlore_total}/20)]]}} {{criticalplus=[[round(@{plantlore_total}/20)+1]]}} {{supercritical=[[0]]}} {{supercriticalplus=[[1]]}} {{hypercritical=[[0]]}} {{hypercriticalplus=[[1]]}} {{specmin=[[1]]}} {{critmin=[[1]]}}"></button>
         <button type="roll" name="roll_attackexp1"
                     value="&{template:training} {{name=@{plant_lore}}} {{subtags=Self-Train Roll}} {{expcheck=[[1d100]]}} {{rollmade=[[1d6-2]]}} {{baseskill=[[@{plantlore_base}]]}} {{baseskillplus=[[@{plantlore_base}+1]]}} {{minskill=[[1]]}} {{master=[[100-(@{dex_primary}+@{str_secondary}+@{siz_negative})]]}} {{masterplus=[[101-(@{dex_primary}+@{str_secondary}+@{siz_negative})]]}}"></button>
         <span></span>
-        <input type="text" name="attr_weather_lore" value="Weather Lore" readonly>
-        <input type="number" name="attr_weatherlore_hours" value="0">
-        <input type="number" name="attr_weatherlore_base" value="5">
-        <input type="number" name="attr_weatherlore_total" value="(@{weatherlore_base}+@{int_primary}+@{know_enchant})" disabled>
+        <input type="text" class="flex" name="attr_weather_lore" value="Weather Lore" readonly>
+        <input type="number" class="flex" name="attr_weatherlore_hours" value="0">
+        <input type="number" class="flex" name="attr_weatherlore_base" value="5">
+        <input type="number" class="flex" name="attr_weatherlore_total" value="(@{weatherlore_base}+@{int_primary}+@{know_enchant})" disabled>
         <button type="roll" name="roll_weapon1"
                     value="&{template:test} {{name=@{weather_lore}}}  {{rollmade=[[1d100]]}} {{normal=[[@{weatherlore_total}]]}} {{normalplus=[[@{weatherlore_total}+1]]}} {{fumble=[[100-floor(((100 - @{weatherlore_total}) / 20) + 0.55)]]}} {{fumbleminus=[[100-floor(((100 - @{weatherlore_total}) / 20) + 0.55)-1]]}} {{special=[[round(@{weatherlore_total}/5)]]}} {{specialplus=[[round(@{weatherlore_total}/5)+1]]}} {{critical=[[round(@{weatherlore_total}/20)]]}} {{criticalplus=[[round(@{weatherlore_total}/20)+1]]}} {{supercritical=[[0]]}} {{supercriticalplus=[[1]]}} {{hypercritical=[[0]]}} {{hypercriticalplus=[[1]]}} {{specmin=[[1]]}} {{critmin=[[1]]}}"></button>
         <button type="roll" name="roll_attackexp1"
                     value="&{template:training} {{name=@{weather_lore}}} {{subtags=Self-Train Roll}} {{expcheck=[[1d100]]}} {{rollmade=[[1d6-2]]}} {{baseskill=[[@{weatherlore_base}]]}} {{baseskillplus=[[@{weatherlore_base}+1]]}} {{minskill=[[1]]}} {{master=[[100-(@{dex_primary}+@{str_secondary}+@{siz_negative})]]}} {{masterplus=[[101-(@{dex_primary}+@{str_secondary}+@{siz_negative})]]}}"></button>
         <span></span>
-        <input type="text" name="attr_world_lore" value="World Lore" readonly>
-        <input type="number" name="attr_worldlore_hours" value="0">
-        <input type="number" name="attr_worldlore_base" value="5">
-        <input type="number" name="attr_worldlore_total" value="(@{worldlore_base}+@{int_primary}+@{know_enchant})" disabled>
+        <input type="text" class="flex" name="attr_world_lore" value="World Lore" readonly>
+        <input type="number" class="flex" name="attr_worldlore_hours" value="0">
+        <input type="number" class="flex" name="attr_worldlore_base" value="5">
+        <input type="number" class="flex" name="attr_worldlore_total" value="(@{worldlore_base}+@{int_primary}+@{know_enchant})" disabled>
         <button type="roll" name="roll_weapon1"
                     value="&{template:test} {{name=@{world_lore}}}  {{rollmade=[[1d100]]}} {{normal=[[@{worldlore_total}]]}} {{normalplus=[[@{worldlore_total}+1]]}} {{fumble=[[100-floor(((100 - @{worldlore_total}) / 20) + 0.55)]]}} {{fumbleminus=[[100-floor(((100 - @{worldlore_total}) / 20) + 0.55)-1]]}} {{special=[[round(@{worldlore_total}/5)]]}} {{specialplus=[[round(@{worldlore_total}/5)+1]]}} {{critical=[[round(@{worldlore_total}/20)]]}} {{criticalplus=[[round(@{worldlore_total}/20)+1]]}} {{supercritical=[[0]]}} {{supercriticalplus=[[1]]}} {{hypercritical=[[0]]}} {{hypercriticalplus=[[1]]}} {{specmin=[[1]]}} {{critmin=[[1]]}}"></button>
         <button type="roll" name="roll_attackexp1"
@@ -956,10 +956,10 @@
         </div>
         <fieldset class="repeating_knowledgeskills">
             <input type="checkbox" name="attr_knowskill_ticked1" value="1">
-            <input type="text" name="attr_knowskill_name1">
-            <input type="number" name="attr_knowskill_hours1" value="0">
-            <input type="number" name="attr_knowskill_base1" value="0">
-            <input type="number" name="attr_knowskill_total1" value="@{knowskill_base1}+@{int_primary}+@{know_enchant}" disabled>
+            <input type="text" class="flex" name="attr_knowskill_name1">
+            <input type="number" class="flex" name="attr_knowskill_hours1" value="0">
+            <input type="number" class="flex" name="attr_knowskill_base1" value="0">
+            <input type="number" class="flex" name="attr_knowskill_total1" value="@{knowskill_base1}+@{int_primary}+@{know_enchant}" disabled>
             <button type="roll" name="roll_weapon1"
                     value="&{template:test} {{name=@{knowskill_name1}}}  {{rollmade=[[1d100]]}} {{normal=[[@{knowskill_total1}]]}} {{normalplus=[[@{knowskill_total1}+1]]}} {{fumble=[[100-floor(((100 - @{knowskill_total1}) / 20) + 0.55)]]}} {{fumbleminus=[[100-floor(((100 - @{knowskill_total1}) / 20) + 0.55)-1]]}} {{special=[[round(@{knowskill_total1}/5)]]}} {{specialplus=[[round(@{knowskill_total1}/5)+1]]}} {{critical=[[round(@{knowskill_total1}/20)]]}} {{criticalplus=[[round(@{knowskill_total1}/20)+1]]}} {{supercritical=[[0]]}} {{supercriticalplus=[[1]]}} {{hypercritical=[[0]]}} {{hypercriticalplus=[[1]]}} {{specmin=[[1]]}} {{critmin=[[1]]}}"></button>
             <button type="roll" name="roll_attackexp1"
@@ -977,10 +977,10 @@
         <label>Skill Exp.</label>
         <fieldset class="repeating_stealthskills">
             <input type="checkbox" name="attr_stealthskill_ticked1" value="1">
-            <input type="text" name="attr_stealthskill_name1">
-            <input type="number" name="attr_stealthskill_hours1" value="0">
-            <input type="number" name="attr_stealthskill_base1" value="0">
-            <input type="number" name="attr_stealthskill_total1" value="@{stealthskill_base1}+@{dex_primary}+@{pow_negative}+@{siz_negative}+@{stea_enchant}" disabled>
+            <input type="text" class="flex" name="attr_stealthskill_name1">
+            <input type="number" class="flex" name="attr_stealthskill_hours1" value="0">
+            <input type="number" class="flex" name="attr_stealthskill_base1" value="0">
+            <input type="number" class="flex" name="attr_stealthskill_total1" value="@{stealthskill_base1}+@{dex_primary}+@{pow_negative}+@{siz_negative}+@{stea_enchant}" disabled>
             <button type="roll" name="roll_weapon1"
                     value="&{template:test} {{name=@{stealthskill_name1}}}  {{rollmade=[[1d100]]}} {{normal=[[@{stealthskill_total1}]]}} {{normalplus=[[@{stealthskill_total1}+1]]}} {{fumble=[[100-floor(((100 - @{stealthskill_total1}) / 20) + 0.55)]]}} {{fumbleminus=[[100-floor(((100 - @{stealthskill_total1}) / 20) + 0.55)-1]]}} {{special=[[round(@{stealthskill_total1}/5)]]}} {{specialplus=[[round(@{stealthskill_total1}/5)+1]]}} {{critical=[[round(@{stealthskill_total1}/20)]]}} {{criticalplus=[[round(@{stealthskill_total1}/20)+1]]}} {{supercritical=[[0]]}} {{supercriticalplus=[[1]]}} {{hypercritical=[[0]]}} {{hypercriticalplus=[[1]]}} {{specmin=[[1]]}} {{critmin=[[1]]}}"></button>
             <button type="roll" name="roll_attackexp1"
@@ -998,10 +998,10 @@
         <label>Skill Exp.</label>
         <fieldset class="repeating_perceptionskills">
             <input type="checkbox" name="attr_perceptionskill_ticked1" value="1">
-            <input type="text" name="attr_perceptionskill_name1">
-            <input type="number" name="attr_perceptionskill_hours1" value="0">
-            <input type="number" name="attr_perceptionskill_base1" value="0">
-            <input type="number" name="attr_perceptionskill_total1" value="@{perceptionskill_base1}+@{int_primary}+@{pow_secondary}+@{con_secondary}+@{perc_enchant}" disabled>
+            <input type="text" class="flex" name="attr_perceptionskill_name1">
+            <input type="number" class="flex" name="attr_perceptionskill_hours1" value="0">
+            <input type="number" class="flex" name="attr_perceptionskill_base1" value="0">
+            <input type="number" class="flex" name="attr_perceptionskill_total1" value="@{perceptionskill_base1}+@{int_primary}+@{pow_secondary}+@{con_secondary}+@{perc_enchant}" disabled>
             <button type="roll" name="roll_weapon1"
                     value="&{template:test} {{name=@{perceptionskill_name1}}}  {{rollmade=[[1d100]]}} {{normal=[[@{perceptionskill_total1}]]}} {{normalplus=[[@{perceptionskill_total1}+1]]}} {{fumble=[[100-floor(((100 - @{perceptionskill_total1}) / 20) + 0.55)]]}} {{fumbleminus=[[100-floor(((100 - @{perceptionskill_total1}) / 20) + 0.55)-1]]}} {{special=[[round(@{perceptionskill_total1}/5)]]}} {{specialplus=[[round(@{perceptionskill_total1}/5)+1]]}} {{critical=[[round(@{perceptionskill_total1}/20)]]}} {{criticalplus=[[round(@{perceptionskill_total1}/20)+1]]}} {{supercritical=[[0]]}} {{supercriticalplus=[[1]]}} {{hypercritical=[[0]]}} {{hypercriticalplus=[[1]]}} {{specmin=[[1]]}} {{critmin=[[1]]}}"></button>
             <button type="roll" name="roll_attackexp1"

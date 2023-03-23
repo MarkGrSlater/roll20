@@ -2,13 +2,15 @@
     display: grid;
     background: #fff;
     border: thick double #32a1ce;
-    width: 860px;
+    min-width: 860px;
+    width: 100%;
     grid-template-columns: 100px 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     padding: 5px 0;
 }
 .sheet-rq35-stats input {
-    width: 90px;
+    min-width: 90px;
+    width: 100%;
     alignment: center;
 }
 .sheet-rq35-stats label {

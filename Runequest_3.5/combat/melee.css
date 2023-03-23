@@ -1,10 +1,11 @@
 /* style for melee combat grid */
 .sheet-rq35-combat {
     display: grid;
-    width: 860px;
+    min-width: 860px;
+    width: 100%;
     background: #fff;
     border: thick double #32a1ce;
-    grid-template-columns: 45px 119px repeat(5, 60px) 45px 55px 55px 55px 50px 45px 45px 45px;
+    grid-template-columns: 45px minmax(120px, 26%) 60px 60px repeat(3, minmax(60px, 12%)) 45px minmax(55px, 12%) minmax(55px, 12%) minmax(55px, 12%) 50px 45px 45px 45px;
     grid-template-rows: auto;
 }
 .sheet-rq35-combat div.repcontainer {
@@ -13,18 +14,19 @@
 }
 .sheet-rq35-combat div.repcontainer div.repitem {
     display: inline-grid;
-    width: 860px;
-    grid-template-columns: 45px 119px repeat(5, 60px) 45px 55px 55px 55px 50px 45px 45px 45px;
+    min-width: 860px;
+    width: 100%;
+    grid-template-columns: 45px minmax(120px, 26%) 60px 60px repeat(3, minmax(60px, 12%)) 45px minmax(55px, 12%) minmax(55px, 12%) minmax(55px, 12%) 50px 45px 45px 45px;
     grid-template-rows: auto;
 }
 .sheet-rq35-combat div.repcontainer input[type="checkbox"] {
-    margin: 6px 0 0 5px;
+    margin: 5px 0 10px 0;
     width: 45px;
 }
 .sheet-rq35-combat div.repcontainer input[type="text"] {
     margin-left: auto;
     margin-right: auto;
-    width: 115px;
+    width: 100% !important;
 }
 .sheet-rq35-combat div.repcontainer button {
     margin-left: auto;

@@ -1,22 +1,25 @@
 /* style for dodge skill grid */
 .sheet-rq35-dodge {
     display: grid;
-    width: 860px;
+    min-width: 860px;
+    width: 100%;
     background: #fff;
     border: thick double #32a1ce;
-    grid-template-columns: 70px repeat(4,90px) 70px 70px 90px 100px 100px;
+    grid-template-columns: minmax(70px, 8%) repeat(4, minmax(90px, 10%)) minmax(70px, 8%) minmax(70px, 8%) minmax(90px, 10%) minmax(100px, 12%) minmax(100px, 12%);
     grid-template-rows: auto;
 }
 
 .sheet-rq35-dodge  input[type="text"] {
     margin-left: auto;
     margin-right: auto;
-    width: 160px;
+    min-width: 160px;
+    width: 80% !important;
 }
 .sheet-rq35-dodge  input[type="number"] {
     margin-left: auto;
     margin-right: auto;
-    width: 60px;
+    min-width: 60px;
+    width: 80% !important;
 }
 .sheet-rq35-dodge button {
     margin-left: auto !important;

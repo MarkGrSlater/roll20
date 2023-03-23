@@ -1,10 +1,11 @@
 /* style for melee damage grid */
 .sheet-rq35-melee-damage {
     display: grid;
-    width: 860px;
+    min-width: 860px;
+    width: 100%;
     background: #fff;
     border: thick double #32a1ce;
-    grid-template-columns:  160px repeat(7, 100px);
+    grid-template-columns:  minmax(160px, 28%) repeat(3, minmax(100px, 18%)) 100px minmax(100px, 18%) 100px 100px;
     grid-template-rows: auto;
 }
 .sheet-rq35-melee-damage div.repcontainer {
@@ -13,8 +14,9 @@
 }
 .sheet-rq35-melee-damage div.repitem {
     display: inline-grid;
-    width: 860px;
-    grid-template-columns: 160px repeat(7, 100px);
+    min-width: 860px;
+    width: 100%;
+    grid-template-columns:  minmax(160px, 28%) repeat(3, minmax(100px, 18%)) 100px minmax(100px, 18%) 100px 100px;
     grid-template-rows: auto;
 }
 .charsheet .sheet-rq35-melee-damage label {
@@ -27,16 +29,6 @@
 .charsheet .sheet-rq35-melee-damage input {
     margin-left: auto;
     margin-right: auto;
-}
-.sheet-rq35-melee-damage div.repcontainer input[type="text"] {
-    margin-left: auto;
-    margin-right: auto;
-    width: 130px;
-}
-.sheet-rq35-melee-damage div.repcontainer input.sheet-small-text {
-    margin-left: auto;
-    margin-right: auto;
-    width: 80px;
 }
 .charsheet .sheet-rq35-melee-damage div.repcontainer button {
     margin-left: auto;

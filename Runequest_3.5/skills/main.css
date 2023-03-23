@@ -1,26 +1,30 @@
 .sheet-rqskills-main {
     display: grid;
-    width: 860px;
+    min-width: 860px;
+    width: 100%;
     background: #fff;
-    grid-template-columns:  420px 20px 420px;
+    grid-template-columns:  minmax(420px, 49%) minmax(20px, 2%) minmax(420px, 49%);
     grid-template-rows: auto;
 }
 .sheet-rqskills-left {
     display: inline-grid;
-    width: 420px;
+    min-width: 420px;
+    width: 100%;
     grid-column-start: 1;
 }
 .sheet-rqskills-right {
     display: inline-grid;
-    width: 420px;
+    min-width: 420px;
+    width: 100%;
     grid-column-start: 3;
 }
 .sheet-rq35-skills {
     display: grid;
-    width: 420px;
+    min-width: 420px;
+    width: 100%;
     background: #fff;
     border: thick double #32a1ce;
-    grid-template-columns: 40px 110px 60px 60px 60px 45px 45px;
+    grid-template-columns: 40px minmax(110px, 37%) repeat(3, minmax(60px, 21%)) 45px 45px;
     grid-template-rows: auto;
 }
 .charsheet .sheet-rq35-skills label {
@@ -32,21 +36,25 @@
 }
 .sheet-rq35-skills div.repcontainer {
     grid-column-start: 1;
-    grid-column-end: span 5;
+    grid-column-end: span 7;
 }
 .sheet-rq35-skills div.repitem
 {
     display: inline-grid;
-    width: 420px;
-    grid-template-columns: 40px 110px 60px 60px 60px 45px 45px;
+    min-width: 420px;
+    width: 100%;
+    grid-template-columns: 40px minmax(110px, 37%) repeat(3, minmax(60px, 21%)) 45px 45px;
     grid-template-rows: auto;
 }
 .sheet-rq35-skills div.sheet-fixeditem
 {
     display: inline-grid;
-    width: 420px;
-    grid-template-columns: 40px 110px 60px 60px 60px 45px 45px;
+    min-width: 420px;
+    width: 100%;
+    grid-template-columns: 40px minmax(110px, 37%) repeat(3, minmax(60px, 21%)) 45px 45px;
     grid-template-rows: repeat(6, 34px);
+    grid-column-start: 1;
+    grid-column-end: span 7;
 }
 .charsheet .sheet-rq35-skills label {
     color: #5e5e5e;
@@ -64,16 +72,9 @@
 {
     margin-left: auto;
     margin-right: auto;
-    width: 118px;
 }
 .sheet-rq35-skills div.sheet-fixeditem input {
     margin-bottom: 6px;
-}
-.sheet-rq35-skills div.repcontainer input.sheet-small-text,
-.sheet-rq35-skills div.sheet-fixeditem input.sheet-small-text {
-    margin-left: auto;
-    margin-right: auto;
-    width: 80px;
 }
 .charsheet .sheet-rq35-skills div.repcontainer button,
 .charsheet .sheet-rq35-skills div.sheet-fixeditem button {

@@ -9,11 +9,11 @@
         <label>Skill Exp.</label>
         <fieldset class="repeating_agilityskills">
             <input type="checkbox" name="attr_agilityskill_ticked1" value="1">
-            <input type="text" name="attr_agilityskill_name1">
-            <input type="number" name="attr_agilityskill_hours1" value="0">
-            <input type="number" name="attr_agilityskill_base1" value="0">
-            <input type="number" name="attr_agilityskill_total1" value="@{agilityskill_base1}+@{dex_primary}+@{str_secondary}+@{siz_negative}+@{agil_enchant}" disabled>
-            <input type="number" name="attr_agilityskill_modified1" value="@{agilityskill_base1}+@{dex_primary}+@{str_secondary}+@{siz_negative}+@{agil_enchant}" hidden disabled>
+            <input type="text" class="flex" name="attr_agilityskill_name1">
+            <input type="number" class="flex" name="attr_agilityskill_hours1" value="0">
+            <input type="number" class="flex" name="attr_agilityskill_base1" value="0">
+            <input type="number" class="flex" name="attr_agilityskill_total1" value="@{agilityskill_base1}+@{dex_primary}+@{str_secondary}+@{siz_negative}+@{agil_enchant}" disabled>
+            <input type="number" class="flex" name="attr_agilityskill_modified1" value="@{agilityskill_base1}+@{dex_primary}+@{str_secondary}+@{siz_negative}+@{agil_enchant}" hidden disabled>
             <button type="roll" name="roll_weapon1"
                     value="&{template:test} {{name=@{agilityskill_name1}}} {{rollmade=[[1d100]]}} {{normal=[[@{agilityskill_modified1}]]}} {{normalplus=[[@{agilityskill_modified1}+1]]}} {{fumble=[[100-floor(((100 - @{agilityskill_modified1}) / 20) + 0.55)]]}} {{fumbleminus=[[100-floor(((100 - @{agilityskill_modified1}) / 20) + 0.55)-1]]}} {{special=[[round(@{agilityskill_modified1}/5)]]}} {{specialplus=[[round(@{agilityskill_modified1}/5)+1]]}} {{critical=[[round(@{agilityskill_modified1}/20)]]}} {{criticalplus=[[round(@{agilityskill_modified1}/20)+1]]}} {{supercritical=[[0]]}} {{supercriticalplus=[[1]]}} {{hypercritical=[[0]]}} {{hypercriticalplus=[[1]]}} {{specmin=[[1]]}} {{critmin=[[1]]}}"></button>
             <button type="roll" name="roll_attackexp1"

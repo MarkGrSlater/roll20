@@ -13,7 +13,8 @@
 }
 .sheet-rq35-title {
     display: grid;
-    width: 860px;
+    min-width: 860px;
+    width: 100%;
     background: #fff;
     border: thick double #32a1ce;
     grid-template-columns:
@@ -32,11 +33,21 @@
 }
 .sheet-rq35-title input {
     align-self: center;
-    width: 129px;
+    min-width: 129px;
+    width: 100%;
 }
 .center {
     text-align: center!important;
 }
 .red {
     color: #ce3232 !important;
+}
+.green {
+    color: chartreuse !important;
+}
+input[type="text"].flex {
+    width: 95% !important
+}
+input[type="number"].flex {
+    width: 95% !important
 }

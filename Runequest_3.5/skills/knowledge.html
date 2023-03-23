@@ -9,56 +9,56 @@
         <label>Skill Exp.</label>
         <div class="sheet-fixeditem">
         <span></span>
-        <input type="text" name="attr_animal_lore" value="Animal Lore" readonly>
-        <input type="number" name="attr_animallore_hours" value="0">
-        <input type="number" name="attr_animallore_base" value="5">
-        <input type="number" name="attr_animallore_total" value="(@{animallore_base}+@{int_primary}+@{know_enchant})" disabled>
+        <input type="text" class="flex" name="attr_animal_lore" value="Animal Lore" readonly>
+        <input type="number" class="flex" name="attr_animallore_hours" value="0">
+        <input type="number" class="flex" name="attr_animallore_base" value="5">
+        <input type="number" class="flex" name="attr_animallore_total" value="(@{animallore_base}+@{int_primary}+@{know_enchant})" disabled>
         <button type="roll" name="roll_animallore"
                     value="&{template:test} {{name=@{animal_lore}}} {{rollmade=[[1d100]]}} {{normal=[[@{animallore_total}]]}} {{normalplus=[[@{animallore_total}+1]]}} {{fumble=[[100-floor(((100 - @{animallore_total}) / 20) + 0.55)]]}} {{fumbleminus=[[100-floor(((100 - @{animallore_total}) / 20) + 0.55)-1]]}} {{special=[[round(@{animallore_total}/5)]]}} {{specialplus=[[round(@{animallore_total}/5)+1]]}} {{critical=[[round(@{animallore_total}/20)]]}} {{criticalplus=[[round(@{animallore_total}/20)+1]]}} {{supercritical=[[0]]}} {{supercriticalplus=[[1]]}} {{hypercritical=[[0]]}} {{hypercriticalplus=[[1]]}} {{specmin=[[1]]}} {{critmin=[[1]]}}"></button>
         <button type="roll" name="roll_attackexp1"
                     value="&{template:training} {{name=@{animal_lore}}} {{subtags=Self-Train Roll}} {{expcheck=[[1d100]]}} {{rollmade=[[1d6-2]]}} {{baseskill=[[@{animallore_base}]]}} {{baseskillplus=[[@{animallore_base}+1]]}} {{minskill=[[1]]}} {{master=[[100-(@{dex_primary}+@{str_secondary}+@{siz_negative})]]}} {{masterplus=[[101-(@{dex_primary}+@{str_secondary}+@{siz_negative})]]}}"></button>
 
         <span></span>
-        <input type="text" name="attr_human_lore" value="Human Lore" readonly>
-        <input type="number" name="attr_humanlore_hours" value="0">
-        <input type="number" name="attr_humanlore_base" value="5">
-        <input type="number" name="attr_humanlore_total" value="(@{humanlore_base}+@{int_primary}+@{know_enchant})" disabled>
+        <input type="text" class="flex" name="attr_human_lore" value="Human Lore" readonly>
+        <input type="number" class="flex" name="attr_humanlore_hours" value="0">
+        <input type="number" class="flex" name="attr_humanlore_base" value="5">
+        <input type="number" class="flex" name="attr_humanlore_total" value="(@{humanlore_base}+@{int_primary}+@{know_enchant})" disabled>
         <button type="roll" name="roll_weapon1"
                     value="&{template:test} {{name=@{human_lore}}}  {{rollmade=[[1d100]]}} {{normal=[[@{humanlore_total}]]}} {{normalplus=[[@{humanlore_total}+1]]}} {{fumble=[[100-floor(((100 - @{humanlore_total}) / 20) + 0.55)]]}} {{fumbleminus=[[100-floor(((100 - @{humanlore_total}) / 20) + 0.55)-1]]}} {{special=[[round(@{humanlore_total}/5)]]}} {{specialplus=[[round(@{humanlore_total}/5)+1]]}} {{critical=[[round(@{humanlore_total}/20)]]}} {{criticalplus=[[round(@{humanlore_total}/20)+1]]}} {{supercritical=[[0]]}} {{supercriticalplus=[[1]]}} {{hypercritical=[[0]]}} {{hypercriticalplus=[[1]]}} {{specmin=[[1]]}} {{critmin=[[1]]}}"></button>
         <button type="roll" name="roll_attackexp1"
                     value="&{template:training} {{name=@{human_lore}}} {{subtags=Self-Train Roll}} {{expcheck=[[1d100]]}} {{rollmade=[[1d6-2]]}} {{baseskill=[[@{humanlore_base}]]}} {{baseskillplus=[[@{humanlore_base}+1]]}} {{minskill=[[1]]}} {{master=[[100-(@{dex_primary}+@{str_secondary}+@{siz_negative})]]}} {{masterplus=[[101-(@{dex_primary}+@{str_secondary}+@{siz_negative})]]}}"></button>
         <span></span>
-        <input type="text" name="attr_mineral_lore" value="Mineral Lore" readonly>
-        <input type="number" name="attr_minerallore_hours" value="0">
-        <input type="number" name="attr_minerallore_base" value="5">
-        <input type="number" name="attr_minerallore_total" value="(@{minerallore_base}+@{int_primary}+@{know_enchant})" disabled>
+        <input type="text" class="flex" name="attr_mineral_lore" value="Mineral Lore" readonly>
+        <input type="number" class="flex" name="attr_minerallore_hours" value="0">
+        <input type="number" class="flex" name="attr_minerallore_base" value="5">
+        <input type="number" class="flex" name="attr_minerallore_total" value="(@{minerallore_base}+@{int_primary}+@{know_enchant})" disabled>
         <button type="roll" name="roll_weapon1"
                     value="&{template:test} {{name=@{mineral_lore}}}  {{rollmade=[[1d100]]}} {{normal=[[@{minerallore_total}]]}} {{normalplus=[[@{minerallore_total}+1]]}} {{fumble=[[100-floor(((100 - @{minerallore_total}) / 20) + 0.55)]]}} {{fumbleminus=[[100-floor(((100 - @{minerallore_total}) / 20) + 0.55)-1]]}} {{special=[[round(@{minerallore_total}/5)]]}} {{specialplus=[[round(@{minerallore_total}/5)+1]]}} {{critical=[[round(@{minerallore_total}/20)]]}} {{criticalplus=[[round(@{minerallore_total}/20)+1]]}} {{supercritical=[[0]]}} {{supercriticalplus=[[1]]}} {{hypercritical=[[0]]}} {{hypercriticalplus=[[1]]}} {{specmin=[[1]]}} {{critmin=[[1]]}}"></button>
         <button type="roll" name="roll_attackexp1"
                     value="&{template:training} {{name=@{mineral_lore}}} {{subtags=Self-Train Roll}} {{expcheck=[[1d100]]}} {{rollmade=[[1d6-2]]}} {{baseskill=[[@{minerallore_base}]]}} {{baseskillplus=[[@{minerallore_base}+1]]}} {{minskill=[[1]]}} {{master=[[100-(@{dex_primary}+@{str_secondary}+@{siz_negative})]]}} {{masterplus=[[101-(@{dex_primary}+@{str_secondary}+@{siz_negative})]]}}"></button>
         <span></span>
-        <input type="text" name="attr_plant_lore" value="Plant Lore" readonly>
-        <input type="number" name="attr_plantlore_hours" value="0">
-        <input type="number" name="attr_plantlore_base" value="5">
-        <input type="number" name="attr_plantlore_total" value="(@{plantlore_base}+@{int_primary}+@{know_enchant})" disabled>
+        <input type="text" class="flex" name="attr_plant_lore" value="Plant Lore" readonly>
+        <input type="number" class="flex" name="attr_plantlore_hours" value="0">
+        <input type="number" class="flex" name="attr_plantlore_base" value="5">
+        <input type="number" class="flex" name="attr_plantlore_total" value="(@{plantlore_base}+@{int_primary}+@{know_enchant})" disabled>
         <button type="roll" name="roll_weapon1"
                     value="&{template:test} {{name=@{plant_lore}}}  {{rollmade=[[1d100]]}} {{normal=[[@{plantlore_total}]]}} {{normalplus=[[@{plantlore_total}+1]]}} {{fumble=[[100-floor(((100 - @{plantlore_total}) / 20) + 0.55)]]}} {{fumbleminus=[[100-floor(((100 - @{plantlore_total}) / 20) + 0.55)-1]]}} {{special=[[round(@{plantlore_total}/5)]]}} {{specialplus=[[round(@{plantlore_total}/5)+1]]}} {{critical=[[round(@{plantlore_total}/20)]]}} {{criticalplus=[[round(@{plantlore_total}/20)+1]]}} {{supercritical=[[0]]}} {{supercriticalplus=[[1]]}} {{hypercritical=[[0]]}} {{hypercriticalplus=[[1]]}} {{specmin=[[1]]}} {{critmin=[[1]]}}"></button>
         <button type="roll" name="roll_attackexp1"
                     value="&{template:training} {{name=@{plant_lore}}} {{subtags=Self-Train Roll}} {{expcheck=[[1d100]]}} {{rollmade=[[1d6-2]]}} {{baseskill=[[@{plantlore_base}]]}} {{baseskillplus=[[@{plantlore_base}+1]]}} {{minskill=[[1]]}} {{master=[[100-(@{dex_primary}+@{str_secondary}+@{siz_negative})]]}} {{masterplus=[[101-(@{dex_primary}+@{str_secondary}+@{siz_negative})]]}}"></button>
         <span></span>
-        <input type="text" name="attr_weather_lore" value="Weather Lore" readonly>
-        <input type="number" name="attr_weatherlore_hours" value="0">
-        <input type="number" name="attr_weatherlore_base" value="5">
-        <input type="number" name="attr_weatherlore_total" value="(@{weatherlore_base}+@{int_primary}+@{know_enchant})" disabled>
+        <input type="text" class="flex" name="attr_weather_lore" value="Weather Lore" readonly>
+        <input type="number" class="flex" name="attr_weatherlore_hours" value="0">
+        <input type="number" class="flex" name="attr_weatherlore_base" value="5">
+        <input type="number" class="flex" name="attr_weatherlore_total" value="(@{weatherlore_base}+@{int_primary}+@{know_enchant})" disabled>
         <button type="roll" name="roll_weapon1"
                     value="&{template:test} {{name=@{weather_lore}}}  {{rollmade=[[1d100]]}} {{normal=[[@{weatherlore_total}]]}} {{normalplus=[[@{weatherlore_total}+1]]}} {{fumble=[[100-floor(((100 - @{weatherlore_total}) / 20) + 0.55)]]}} {{fumbleminus=[[100-floor(((100 - @{weatherlore_total}) / 20) + 0.55)-1]]}} {{special=[[round(@{weatherlore_total}/5)]]}} {{specialplus=[[round(@{weatherlore_total}/5)+1]]}} {{critical=[[round(@{weatherlore_total}/20)]]}} {{criticalplus=[[round(@{weatherlore_total}/20)+1]]}} {{supercritical=[[0]]}} {{supercriticalplus=[[1]]}} {{hypercritical=[[0]]}} {{hypercriticalplus=[[1]]}} {{specmin=[[1]]}} {{critmin=[[1]]}}"></button>
         <button type="roll" name="roll_attackexp1"
                     value="&{template:training} {{name=@{weather_lore}}} {{subtags=Self-Train Roll}} {{expcheck=[[1d100]]}} {{rollmade=[[1d6-2]]}} {{baseskill=[[@{weatherlore_base}]]}} {{baseskillplus=[[@{weatherlore_base}+1]]}} {{minskill=[[1]]}} {{master=[[100-(@{dex_primary}+@{str_secondary}+@{siz_negative})]]}} {{masterplus=[[101-(@{dex_primary}+@{str_secondary}+@{siz_negative})]]}}"></button>
         <span></span>
-        <input type="text" name="attr_world_lore" value="World Lore" readonly>
-        <input type="number" name="attr_worldlore_hours" value="0">
-        <input type="number" name="attr_worldlore_base" value="5">
-        <input type="number" name="attr_worldlore_total" value="(@{worldlore_base}+@{int_primary}+@{know_enchant})" disabled>
+        <input type="text" class="flex" name="attr_world_lore" value="World Lore" readonly>
+        <input type="number" class="flex" name="attr_worldlore_hours" value="0">
+        <input type="number" class="flex" name="attr_worldlore_base" value="5">
+        <input type="number" class="flex" name="attr_worldlore_total" value="(@{worldlore_base}+@{int_primary}+@{know_enchant})" disabled>
         <button type="roll" name="roll_weapon1"
                     value="&{template:test} {{name=@{world_lore}}}  {{rollmade=[[1d100]]}} {{normal=[[@{worldlore_total}]]}} {{normalplus=[[@{worldlore_total}+1]]}} {{fumble=[[100-floor(((100 - @{worldlore_total}) / 20) + 0.55)]]}} {{fumbleminus=[[100-floor(((100 - @{worldlore_total}) / 20) + 0.55)-1]]}} {{special=[[round(@{worldlore_total}/5)]]}} {{specialplus=[[round(@{worldlore_total}/5)+1]]}} {{critical=[[round(@{worldlore_total}/20)]]}} {{criticalplus=[[round(@{worldlore_total}/20)+1]]}} {{supercritical=[[0]]}} {{supercriticalplus=[[1]]}} {{hypercritical=[[0]]}} {{hypercriticalplus=[[1]]}} {{specmin=[[1]]}} {{critmin=[[1]]}}"></button>
         <button type="roll" name="roll_attackexp1"
@@ -67,10 +67,10 @@
         </div>
         <fieldset class="repeating_knowledgeskills">
             <input type="checkbox" name="attr_knowskill_ticked1" value="1">
-            <input type="text" name="attr_knowskill_name1">
-            <input type="number" name="attr_knowskill_hours1" value="0">
-            <input type="number" name="attr_knowskill_base1" value="0">
-            <input type="number" name="attr_knowskill_total1" value="@{knowskill_base1}+@{int_primary}+@{know_enchant}" disabled>
+            <input type="text" class="flex" name="attr_knowskill_name1">
+            <input type="number" class="flex" name="attr_knowskill_hours1" value="0">
+            <input type="number" class="flex" name="attr_knowskill_base1" value="0">
+            <input type="number" class="flex" name="attr_knowskill_total1" value="@{knowskill_base1}+@{int_primary}+@{know_enchant}" disabled>
             <button type="roll" name="roll_weapon1"
                     value="&{template:test} {{name=@{knowskill_name1}}}  {{rollmade=[[1d100]]}} {{normal=[[@{knowskill_total1}]]}} {{normalplus=[[@{knowskill_total1}+1]]}} {{fumble=[[100-floor(((100 - @{knowskill_total1}) / 20) + 0.55)]]}} {{fumbleminus=[[100-floor(((100 - @{knowskill_total1}) / 20) + 0.55)-1]]}} {{special=[[round(@{knowskill_total1}/5)]]}} {{specialplus=[[round(@{knowskill_total1}/5)+1]]}} {{critical=[[round(@{knowskill_total1}/20)]]}} {{criticalplus=[[round(@{knowskill_total1}/20)+1]]}} {{supercritical=[[0]]}} {{supercriticalplus=[[1]]}} {{hypercritical=[[0]]}} {{hypercriticalplus=[[1]]}} {{specmin=[[1]]}} {{critmin=[[1]]}}"></button>
             <button type="roll" name="roll_attackexp1"

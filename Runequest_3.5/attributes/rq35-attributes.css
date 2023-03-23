@@ -1,20 +1,23 @@
 /* style for attributes grid */
 .sheet-rq35-attributes {
     display: grid;
-    width: 860px;
+    min-width: 860px;
+    width: 100%;
     background: #fff;
     border: thick double #32a1ce;
-    grid-template-columns: repeat(4, 135px 80px);
+    grid-template-columns: repeat(4, minmax(125px, 14%) minmax(80px, 10%));
     grid-template-rows: repeat(2, 3em);
     padding: 5px 0;
 }
 .sheet-rq35-attributes input {
-    width: 90px;
+    min-width: 90px;
+    width: 80% !important;
     align-self: center;
     margin-left: 5px;
 }
 .sheet-rq35-attributes input[type="text"] {
-    width: 46px;
+    min-width: 46px;
+    max-width: 80% !important;
     align-self: center;
 }
 .sheet-rq35-attributes label {
