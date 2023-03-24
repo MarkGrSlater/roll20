@@ -1021,7 +1021,7 @@
             <label>Value (d)</label>
             <label>Encumbrance</label>
             <label>Where Located</label>
-
+            
             <fieldset class="repeating_equipment">
                 <input type="number" class="flex" name="attr_equipment_ticked1">
                 <input type="text" class="flex" name="attr_equipment_name1">
@@ -1283,7 +1283,7 @@
                 <input type="number" class="flex" name="attr_divinespell_extensions1" value="0">
                 <input type="text" class="flex" name="attr_divinespell_god1">
                 <button type="roll" name="roll_spiritspell"
-                        value="&{template:spiritspell} {{name=@{divinespell_name1} }} {{rollmade=[[1d100]]}} {{x5=[[100+@{dodge_encumbrance}]]}} {{x5plus=[[100+@{dodge_encumbrance}+1]]}}"></button>
+                        value="&{template:divinespell} {{name=@{divinespell_name1}}} {{power=[[@{divinespell_power1}]]}} {{checked=[[@{divinespell_number1}]]}} {{newchecked=[[@{divinespell_number1}-1]]}} {{rollmade=[[1d100]]}} {{x5=[[100+@{dodge_encumbrance}]]}} {{x5plus=[[100+@{dodge_encumbrance}+1]]}}"></button>
             </fieldset>
         </div>
         <!-- Divine Ritual Skills -->
@@ -1322,7 +1322,7 @@
             <button type="roll" name="roll_training1"
                     value="&{template:training} {{name=@{divineskill_enchant}}} {{subtags=Self-Train Roll}} {{expcheck=[[1d100]]}} {{rollmade=[[1d6-2]]}} {{baseskill=[[@{divineskill_enchantbase}]]}} {{baseskillplus=[[@{divineskill_enchantbase}+1]]}} {{minskill=[[1]]}} {{master=[[100-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}} {{masterplus=[[101-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}}"></button>
 
-            <em> </em>
+            <em> </em>            
             <input type="text" class="flex" name="attr_divineskill_summon" value="Summon" readonly>
             <input type="number" class="flex" name="attr_divineskill_summonbase" value="0">
             <input type="number" class="flex" name="attr_divineskill_summontotal" value="@{divineskill_summonbase}+@{int_primary}+@{pow_primary}+@{dex_secondary}+@{magb_enchant}" disabled >
@@ -1334,7 +1334,7 @@
             <button type="roll" name="roll_training1"
                     value="&{template:training} {{name=@{divineskill_summon}}} {{subtags=Self-Train Roll}} {{expcheck=[[1d100]]}} {{rollmade=[[1d6-2]]}} {{baseskill=[[@{divineskill_summonbase}]]}} {{baseskillplus=[[@{divineskill_summonbase}+1]]}} {{minskill=[[1]]}} {{master=[[100-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}} {{masterplus=[[101-(@{int_primary}+@{pow_primary}+@{dex_secondary})]]}}"></button>
 
-            <input type="checkbox" name="attr_divineskill_lacing_tick" value="1">
+            <input type="checkbox" name="attr_divineskill_lacing_tick" value="1">        
             <input type="text" class="flex" name="attr_divineskill_lacing" value="Primal Lacing" readonly>
             <input type="number" class="flex" name="attr_divineskill_lacingbase" value="0">
             <input type="number" class="flex" name="attr_divineskill_lacingtotal" value="@{divineskill_lacingbase}+@{int_primary}+@{pow_primary}+@{dex_secondary}+@{magb_enchant}" disabled >
@@ -2093,7 +2093,7 @@
             <label>Hit Points</label>
             <label>Damage</label>
             <label>Move Rate</label>
-
+            
             <fieldset class="repeating_elementals">
                 <input type="checkbox" name="attr_elemental_ticked1" value="1">
                 <input type="text" class="flex" name="attr_elemental_name1">
@@ -2403,7 +2403,40 @@
             {{/rollLess() gain 41}}
         {{/rollLess() rollmade normalplus}}
     </div>
-</rolltemplate><!-- spiritSpellTemplate -->
+</rolltemplate><!-- DivineSpellTemplate -->
+<rolltemplate class="sheet-rolltemplate-divinespell">
+    <div class="sheet-template-container">
+	    <div class="sheet-template-header">Casting {{name}}: {{rollmade}}</div>
+        <!-- if roll over 95 automatic fail -->
+        {{#rollGreater() rollmade 95 }}
+            <div class="sheet-fail">
+                <span>Failed to cast:&nbsp;&nbsp;&nbsp;{{ rollmade }} &#10005; <br>Automatic fail</span>
+            </div>
+        {{/rollGreater() rollmade 95 }}
+        {{#rollLess() rollmade 96}}
+            <!-- Not an automatic miss so check against their skill -->
+            {{#rollGreater() rollmade x5}}
+                <div class="sheet-fail">
+                    <span>{{name}} Failed to cast<br>Needed: {{ x5 }} or less </span>
+                </div>
+            {{/rollGreater() rollmade x5}}
+            {{#rollLess() rollmade x5plus}}
+                {{#rollLess() checked 1}}
+                    <div class="sheet-fail">
+                        <span>The held spell <strong>{{name}}</strong> has already been released - try another</span>
+                    </div>
+                {{/rollLess() checked 1}}
+                {{#rollGreater() checked 0}}
+                    <div class="sheet-normal">
+                        <span><strong>{{name}} {{power}}</strong> cast successfully:<br>Needed:  {{ x5 }} &#10004;</span><br>
+                        <em>Reduce <strong>Number Held</strong> to {{newchecked}} for this spell.</em>
+                    </div>
+                {{/rollGreater() checked 0}}
+            {{/rollLess() rollmade x5plus}}
+        {{/rollLess() rollmade 96}}
+    </div>
+</rolltemplate>
+<!-- spiritSpellTemplate -->
 <rolltemplate class="sheet-rolltemplate-spiritspell">
     <div class="sheet-template-container">
 	    <div class="sheet-template-header">Casting {{name}}: {{rollmade}}</div>
@@ -2863,7 +2896,7 @@
 
     </div>
 </rolltemplate>
-
+ 
 <script type="text/worker">
     on("change:str change:str_enchant change:con change:con_enchant change:siz change:siz_enchant " +
         "change:int change:int_enchant change:dex change:dex_enchant change:pow change:pow_enchant " +
