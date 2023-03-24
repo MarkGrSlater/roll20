@@ -36,44 +36,50 @@
     min-width: 129px;
     width: 100%;
 }
-.center {
+.sheet-center {
     text-align: center!important;
 }
-.red {
+.sheet-red {
     color: #ce3232 !important;
 }
-.green {
+.sheet-green {
     color: limegreen !important;
 }
-input[type="text"].flex {
+input[type="text"].sheet-flex {
     width: 95% !important;
     margin-left: auto !important;
     margin-right: auto !important;
+    margin-bottom: 5px !important;
 }
-input[type="number"].flex {
+input[type="number"].sheet-flex {
     width: 95% !important;
     margin-left: auto !important;
     margin-right: auto !important;
+    margin-bottom: 5px !important;
 }
-input[type="text"].flex-left {
+input[type="text"].sheet-flex-left {
     width: 95% !important;
     margin-left: 0;
     margin-right: auto;
+    margin-bottom: 5px !important;
 }
-input[type="number"].flex-left {
+input[type="number"].sheet-flex-left {
     width: 95% !important;
     margin-left: 0;
     margin-right: auto;
+    margin-bottom: 5px !important;
 }
-input[type="text"].flex-right {
+input[type="text"].sheet-flex-right {
     width: 95% !important;
     margin-left: auto;
     margin-right: 0;
+    margin-bottom: 5px !important;
 }
-input[type="number"].flex-right {
+input[type="number"].sheet-flex-right {
     width: 95% !important;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 5px !important;
 }
 div.repcontainer input[type="checkbox"] {
     margin: 5px 0 10px 0 !important;

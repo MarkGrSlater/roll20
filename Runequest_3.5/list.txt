@@ -84,6 +84,7 @@ combat/attackExperienceTemplate.html
 combat/meleeDamageTemplate.html
 attributes/attributeTemplate.html
 attributes/powerGainTemplate.html
+divine/divineSpellTemplate.html
 spirit/spiritSpellTemplate.html
 spirit/trainingTemplate.html
 sorcery/heldSpellTemplate.html

@@ -28,6 +28,7 @@ divine/divineRituals.css
 divine/divineSpells.css
 divine/primalCalculator.css
 divine/divineNotes.css
+divine/divineSpellTemplate.css
 dragon/dragonSkills.css
 dragon/dragonMagic.css
 dragon/dragonHeldSpells.css

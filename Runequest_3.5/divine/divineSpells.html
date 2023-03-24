@@ -16,6 +16,6 @@
                 <input type="number" class="flex" name="attr_divinespell_extensions1" value="0">
                 <input type="text" class="flex" name="attr_divinespell_god1">
                 <button type="roll" name="roll_spiritspell"
-                        value="&{template:spiritspell} {{name=@{divinespell_name1} }} {{rollmade=[[1d100]]}} {{x5=[[100+@{dodge_encumbrance}]]}} {{x5plus=[[100+@{dodge_encumbrance}+1]]}}"></button>
+                        value="&{template:divinespell} {{name=@{divinespell_name1} }} {{power=@{divinespell_power1} }} {{checked=@{divinespell_number1} }} {{newchecked=@{divinespell_number1}+1 }} {{rollmade=[[1d100]]}} {{x5=[[100+@{dodge_encumbrance}]]}} {{x5plus=[[100+@{dodge_encumbrance}+1]]}}"></button>
             </fieldset>
         </div>
