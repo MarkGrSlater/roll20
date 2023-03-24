@@ -1,31 +1,29 @@
 /* style for held spells grid */
 .sheet-rq35-held-spells {
     display: grid;
-    width: 860px;
+    min-width: 860px;
+    width: 100%;
     background: #fff;
     border: thick double #32a1ce;
-    grid-template-columns: 60px 40px 140px 60px 60px 60px 20px 60px 40px 140px 60px 60px 60px;
+    grid-template-columns: 60px 40px minmax(110px, 17%) minmax(70px, 11%) minmax(70px, 11%) minmax(70px, 11%) 20px 60px 40px minmax(110px, 17%) minmax(70px, 11%) minmax(70px, 11%) minmax(70px, 11%);
     grid-template-rows: auto;
 }
 .sheet-rq35-held-spells div.repcontainer {
     grid-column-start: 1;
-    grid-column-end: span 11;
+    grid-column-end: span 13;
 }
 .sheet-rq35-held-spells div.repcontainer div.repitem {
     display: inline-grid;
-    width: 860px;
-    grid-template-columns: 60px 40px 140px 60px 60px 60px 20px 60px 40px 140px 60px 60px 60px;
+    min-width: 860px;
+    width: 100%;
+    grid-template-columns: 60px 40px minmax(110px, 17%) minmax(70px, 11%) minmax(70px, 11%) minmax(70px, 11%) 20px 60px 40px minmax(110px, 17%) minmax(70px, 11%) minmax(70px, 11%) minmax(70px, 11%);
     grid-template-rows: auto;
 }
-.sheet-rq35-held-spells div.repcontainer input[type="text"] {
-    margin-left: auto;
-    margin-right: auto;
-    width: 140px;
-}
-.sheet-rq35-held-spells div.repcontainer button {
+.charsheet .sheet-rq35-held-spells div.repcontainer button {
     margin-left: auto;
     margin-right: auto;
     width: 16px;
+    height: 21px;
 }
 .sheet-rq35-held-spells label {
     color: #5e5e5e;
@@ -35,16 +33,11 @@
     font-size: 11px
 }
 .sheet-rq35-held-spells input {
-    margin-left: auto;
-    margin-right: auto;
+    margin-bottom: 5px;
 }
 /* sorcery-spells multiline display */
 .sheet-rq35-held-spells div.repcontrol {
     grid-column-start: 1;
-    grid-column-end: span 11;
+    grid-column-end: span 13;
     padding: 10px 20px 5px 20px;
-}
-input.sheet-range-meters {
-    width: 70px !important;
-    text-align: right;
 }

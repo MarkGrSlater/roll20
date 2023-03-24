@@ -1,10 +1,11 @@
 /* style for sorcery skills grid */
 .sheet-rq35-sorcery-skills {
     display: grid;
-    width: 860px;
+    min-width: 860px;
+    width: 100%;
     background: #fff;
     border: thick double #32a1ce;
-    grid-template-columns: 180px 91px 91px repeat(3, 166px);
+    grid-template-columns: minmax(170px, 32%) minmax(96px, 18%) minmax(96px, 18%) minmax(166px, 32%) repeat(2, 166px);
     grid-template-rows: auto;
 }
 .sheet-rq35-sorcery-skills div.repcontainer {
@@ -13,19 +14,10 @@
 }
 .sheet-rq35-sorcery-skills div.repcontainer div.repitem {
     display: inline-grid;
-    width: 860px;
-    grid-template-columns: 180px 91px 91px repeat(3, 166px);
+    min-width: 860px;
+    width: 100%;
+    grid-template-columns: minmax(170px, 32%) minmax(96px, 18%) minmax(96px, 18%) minmax(166px, 32%) repeat(2, 166px);
     grid-template-rows: auto;
-}
-.sheet-rq35-sorcery-skills  input[type="text"] {
-    margin-left: auto;
-    margin-right: auto;
-    width: 160px;
-}
-.sheet-rq35-sorcery-skills  input[type="number"] {
-    margin-left: auto;
-    margin-right: auto;
-    width: 60px;
 }
 .sheet-rq35-sorcery-skills button {
     margin-left: auto !important;
@@ -41,7 +33,5 @@
     font-size: 11px
 }
 .sheet-rq35-sorcery-skills input {
-    margin-left: auto;
-    margin-right: auto;
     margin-bottom: 5px;
 }
