@@ -60,6 +60,59 @@
                     <span>Times 1: {{ x1 }} &#10004;&#10004;&#10004;&#10004;&#10004;</span>
                 </div>
             {{/rollLess() rollmade x1plus}}
+            <!-- special must be a minimum of 1 (use specmin) -->
+                {{#rollLess() special 1}}
+                    {{#rollLess() rollmade 2}}
+                        <div class="sheet-special">
+                            <span>Special success: {{ specmin }} &#10004;&#10004;</span>
+                        </div>
+                    {{/rollLess() rollmade 2}}
+                {{/rollLess() special 1}}
+
+                <!-- player has special of at least 1 (use special) -->
+                {{#rollGreater() special 0}}
+                    {{#rollLess() rollmade specialplus}}
+                        <div class="sheet-special">
+                            <span>Special success: {{ special }} &#10004;</span>
+                        </div>
+                    {{/rollLess() rollmade specialplus}}
+                {{/rollGreater() special 0}}
+
+                <!-- critical must be minimum 1 -->
+                {{#rollLess() critical 1}}
+                    {{#rollLess() rollmade 2}}
+                        <div class="sheet-critical">
+                            <span>Critical success:&nbsp;&nbsp;{{ critmin }} &#10004;&#10004;</span>
+                        </div>
+                    {{/rollLess() rollmade 2}}
+                {{/rollLess() critical 1}}
+
+                <!-- player has critical of at least 1 -->
+                {{#rollGreater() critical 0}}
+                    {{#rollLess() rollmade criticalplus}}
+                        <div class="sheet-critical">
+                            <span>Critical success:&nbsp;&nbsp;{{ critical }} &#10004;&#10004;</span>
+                        </div>
+                    {{/rollLess() rollmade criticalplus}}
+                {{/rollGreater() critical 0}}
+
+                <!-- only display supercritical if they can roll it -->
+                {{#rollGreater() supercritical 0}}
+                    {{#rollLess() rollmade supercriticalplus}}
+                        <div class="sheet-supercritical">
+                            <span>Supercritical:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ supercritical }} &#10004;&#10004;&#10004;</span>
+                        </div>
+                    {{/rollLess() rollmade supercriticalplus}}
+                {{/rollGreater() supercritical 0}}
+
+                <!-- only display hypercritical if they can roll it -->
+                {{#rollGreater() hypercritical 0}}
+                    {{#rollLess() rollmade hypercriticalplus}}
+                        <div class="sheet-hypercritical">
+                            <span>Hypercritical:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ hypercritical }} &#10004;&#10004;&#10004;&#10004;</span>
+                        </div>
+                    {{/rollLess() rollmade hypercriticalplus}}
+                {{/rollGreater() hypercritical 0}}
         {{/rollLess() rollmade 96}}
     </div>
 </rolltemplate>
